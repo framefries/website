@@ -29,10 +29,10 @@
 				/>
 			</h1>
 			<a
-				href="mailto:contact@framefries.com"
+				href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`}
 				class="block mt-10 text-gray-400 hover:underline"
 			>
-				contact@framefries.com
+				{import.meta.env.VITE_CONTACT_EMAIL}
 			</a>
 		</div>
 	</section>
