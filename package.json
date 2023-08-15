@@ -3,16 +3,19 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
+		"clear": "rimraf .svelte-kit build",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"postbuild": "npx svelte-sitemap -d $VITE_BASE_URL"
+		"postbuild": "node sitemap.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^2.0.3",
 		"@sveltejs/kit": "^1.20.4",
 		"autoprefixer": "^10.4.15",
+		"dotenv": "^16.3.1",
 		"postcss": "^8.4.27",
+		"rimraf": "^5.0.1",
 		"svelte": "^4.0.5",
 		"svelte-sitemap": "^2.6.0",
 		"tailwindcss": "^3.3.3",
