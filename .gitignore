@@ -1,0 +1,22 @@
+# misc
+.DS_Store
+/NOTES.md
+
+# local env files
+.env*
+!.env.example
+
+# dependencies
+node_modules
+
+# build & tmp
+/build
+/.svelte-kit
+/package
+.vercel
+.output
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# log files
+*.log*
