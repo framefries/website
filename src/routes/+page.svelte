@@ -14,7 +14,7 @@
 			<p class="mt-6 text-gray-700">
 				Meanwhile, you can browse
 				<a href="https://dribbble.com/romanklco" target="_blank" class="text-accent-500 hover:underline">Roman’s</a>
-				or
+				and
 				<a href="https://dribbble.com/reijo" target="_blank" class="text-accent-500 hover:underline">Reijo’s</a>
 				portfolios.
 			</p>
