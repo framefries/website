@@ -1,5 +1,6 @@
 <script>
 	import Logo from '$lib/components/Logo.svelte';
+	import Arrow from '$lib/components/Arrow.svelte';
 </script>
 
 <main class="h-full p-7">
@@ -12,12 +13,15 @@
 				Frame Fries is a new illustration agency on the block.
 				<br />Sit tight, we’re preparing to open soon.
 			</p>
-			<p class="mt-6 text-gray-700">
-				Meanwhile, you can browse
-				<a href="https://dribbble.com/romanklco" target="_blank" class="text-accent-500 hover:underline">Roman’s</a>
-				and
-				<a href="https://dribbble.com/reijo" target="_blank" class="text-accent-500 hover:underline">Reijo’s</a>
-				portfolios.
+			<p class="mt-6">
+				<a
+					href={import.meta.env.VITE_CTA_URL}
+					target="_blank"
+					class="btn variant-primary"
+				>
+					Get in touch
+					<Arrow size="manual" class="h-3.5" />
+				</a>
 			</p>
 		</div>
 		<div class="absolute inset-x-6 bottom-6 text-center">

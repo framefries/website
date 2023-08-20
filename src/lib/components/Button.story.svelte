@@ -1,6 +1,5 @@
 <script>
   import Arrow from './Arrow.svelte';
-  import Link from './Link.svelte';
 
   export let Hst;
 </script>
@@ -27,7 +26,6 @@
       class="btn variant-alt"
     >
       Get started
-      <Arrow />
     </button>
   </Hst.Variant>
 </Hst.Story>

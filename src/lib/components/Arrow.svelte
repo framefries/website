@@ -2,12 +2,23 @@
   import cx from 'clsx';
   
   export let size;
+  export let long;
 </script>
 
 <svg
-  viewBox="0 0 14 14"
-  class="inline-flex w-auto h-3.5 stroke-current"
+  viewBox={long ? "0 0 41 16" : "0 0 16 16"}
   stroke-linecap="round"
+  class={cx(
+    'inline-flex w-auto stroke-current select-none',
+    {
+      'h-[1em]': size !== 'manual',
+    },
+    $$props.class,
+  )}
 >
-  <path d="M1 7h12m0 0v0a19.55 19.55 0 0 1-5.74-5.94L7.23 1M13 7v0a19.55 19.55 0 0 0-5.74 5.94l-.03.06" />
+  {#if long}
+    <path d="M1 8h38.5m0 0-.22-.12c-3-1.73-5.6-4.07-7.62-6.88m7.84 7-.22.12c-3 1.73-5.6 4.07-7.62 6.88" />
+  {:else}
+    <path d="M1 8h13.5m0 0-.22-.12c-3-1.73-5.6-4.07-7.61-6.88m7.83 7-.22.12c-3 1.73-5.6 4.07-7.61 6.88" />
+  {/if}
 </svg>

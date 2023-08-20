@@ -86,15 +86,24 @@ export default {
           'font-size': theme('fontSize.base'),
           'font-weight': '500',
           'color': theme('colors.gray.700'),
+          '&:hover': {
+            'background-color': theme('colors.gray.100'),
+          }
         },
         '.btn.variant-primary': {
           'background-color': theme('colors.accent.500'),
           'color': theme('colors.cream.50'),
           '-webkit-font-smoothing': 'antialiased',
+          '&:hover': {
+            'background-color': theme('colors.accent.600'),
+          }
         },
         '.btn.variant-alt': {
           'background-color': theme('colors.cream.50'),
           'color': theme('colors.accent.500'),
+          '&:hover': {
+            'background-color': theme('colors.cream.100'),
+          }
         },
       });
     }),
