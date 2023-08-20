@@ -1,4 +1,5 @@
 <script>
+	import Logo from '$lib/components/Logo.svelte';
 </script>
 
 <main class="h-full p-7">
@@ -20,13 +21,9 @@
 			</p>
 		</div>
 		<div class="absolute inset-x-6 bottom-6 text-center">
-			<h1>
+			<h1 class="text-center text-accent-500">
 				<span class="sr-only">Frame Fries</span>
-				<img
-					src="/logo.png" 
-					alt="Frame Fries logo"
-					class="block mx-auto w-auto h-[72px] select-none"
-				/>
+				<Logo size="original" />
 			</h1>
 			<a
 				href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`}

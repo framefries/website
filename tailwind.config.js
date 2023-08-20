@@ -10,12 +10,12 @@ export default {
       sans: ['"Instrument Sans"', ...defaultTheme.fontFamily.sans],
     },
     colors: {
-      'transparent': 'transparent',
-      'current': 'currentColor',
-      'inherit': 'inherit',
-      'black': '#000',
-      'white': '#fff',
-      'accent': {
+      transparent: 'transparent',
+      current: 'currentColor',
+      inherit: 'inherit',
+      black: '#000',
+      white: '#fff',
+      accent: {
         '50': '#fff1f1',
         '100': '#ffdfdf',
         '200': '#ffc5c5',
@@ -28,7 +28,7 @@ export default {
         '900': '#881414',
         '950': '#4b0404',
       },
-      'cream': {
+      cream: {
         '50': '#fff9e9',
         '100': '#feefc7',
         '200': '#fdde8a',
