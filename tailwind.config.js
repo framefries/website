@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
+const plugin = require('tailwindcss/plugin');
 
 export default {
   content: ['./src/**/*.{html,js,svelte}'],
@@ -10,12 +11,12 @@ export default {
       sans: ['"Instrument Sans"', ...defaultTheme.fontFamily.sans],
     },
     colors: {
-      'transparent': 'transparent',
-      'current': 'currentColor',
-      'inherit': 'inherit',
-      'black': '#000',
-      'white': '#fff',
-      'accent': {
+      transparent: 'transparent',
+      current: 'currentColor',
+      inherit: 'inherit',
+      black: '#000',
+      white: '#fff',
+      accent: {
         '50': '#fff1f1',
         '100': '#ffdfdf',
         '200': '#ffc5c5',
@@ -28,7 +29,7 @@ export default {
         '900': '#881414',
         '950': '#4b0404',
       },
-      'cream': {
+      cream: {
         '50': '#fff9e9',
         '100': '#feefc7',
         '200': '#fdde8a',
@@ -67,5 +68,44 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addComponents, theme }) => {
+      addComponents({
+        '.btn': {
+          'appearance': 'none',
+          'display': 'inline-flex',
+          'align-items': 'center',
+          'justify-content': 'center',
+          'column-gap': theme('spacing[1.5]'),
+          'height': theme('spacing.10'),
+          'padding-left': theme('spacing.6'),
+          'padding-right': theme('spacing.6'),
+          'border-radius': theme('borderRadius.md'),
+          'background-color': theme('colors.white'),
+          'line-height': theme('lineHeight.6'),
+          'font-size': theme('fontSize.base'),
+          'font-weight': '500',
+          'color': theme('colors.gray.700'),
+          '&:hover': {
+            'background-color': theme('colors.gray.100'),
+          }
+        },
+        '.btn.variant-primary': {
+          'background-color': theme('colors.accent.500'),
+          'color': theme('colors.cream.50'),
+          '-webkit-font-smoothing': 'antialiased',
+          '&:hover': {
+            'background-color': theme('colors.accent.600'),
+          }
+        },
+        '.btn.variant-alt': {
+          'background-color': theme('colors.cream.50'),
+          'color': theme('colors.accent.500'),
+          '&:hover': {
+            'background-color': theme('colors.cream.100'),
+          }
+        },
+      });
+    }),
+  ],
 };
