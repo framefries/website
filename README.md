@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./static/logo.png" height="72px" width="auto" alt="Frame Fries logo" />
+  <img src="./static/framefries-logo.png" width="auto" height="72px" alt="Frame Fries logo" />
 </p>
 
 <h1 align="center">
@@ -7,6 +7,16 @@
 </h1>
 
 Please visit [framefries.com](https://framefries.com).
+
+## 📚 Resources
+
+This software relies on dependencies for better productivity, carefully picked considering usability, performance and popularity. Here are the most important documentations to refer to:
+
+| Package | Purpose |
+| --- | --- |
+| [Histoire](https://histoire.dev) | Components sandbox & docs. |
+| [SvelteKit](https://kit.svelte.dev) | Application framework. |
+| [TailwindCSS](https://tailwindcss.com) | Utility-first CSS framework. |
 
 ## Run locally
 
