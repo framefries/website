@@ -3,9 +3,12 @@
 	import Arrow from '$lib/components/Arrow.svelte';
 </script>
 
-<main class="h-full p-7">
-	<section class="relative px-6 pt-12 pb-52 flex items-center justify-center min-h-full rounded-lg bg-cream-50">
+<main class="h-full p-6">
+	<section class="relative px-6 py-12 flex items-center justify-center min-h-full rounded-lg bg-cream-50">
 		<div class="mx-auto text-center">
+			<h1 class="text-center text-accent-500">
+				<span class="sr-only">Frame Fries</span>
+			</h1>
 			<h2 class="text-accent-500 text-3xl md:text-7xl font-light font-display">
 				Coming soon.
 			</h2>
@@ -23,18 +26,9 @@
 					<Arrow size="manual" class="h-3.5" />
 				</a>
 			</p>
-		</div>
-		<div class="absolute inset-x-6 bottom-6 text-center">
-			<h1 class="text-center text-accent-500">
-				<span class="sr-only">Frame Fries</span>
+			<footer class="mt-16 text-accent-500">
 				<Logo size="original" />
-			</h1>
-			<a
-				href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`}
-				class="block mt-10 text-gray-400 hover:underline"
-			>
-				{import.meta.env.VITE_CONTACT_EMAIL}
-			</a>
+			</footer>
 		</div>
 	</section>
 </main>
