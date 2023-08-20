@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
+const plugin = require('tailwindcss/plugin');
 
 export default {
   content: ['./src/**/*.{html,js,svelte}'],
@@ -67,5 +68,35 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addComponents, theme }) => {
+      addComponents({
+        '.btn': {
+          'appearance': 'none',
+          'display': 'inline-flex',
+          'align-items': 'center',
+          'justify-content': 'center',
+          'column-gap': theme('spacing[1.5]'),
+          'height': theme('spacing.10'),
+          'padding-left': theme('spacing.6'),
+          'padding-right': theme('spacing.6'),
+          'border-radius': theme('borderRadius.md'),
+          'background-color': theme('colors.white'),
+          'line-height': theme('lineHeight.6'),
+          'font-size': theme('fontSize.base'),
+          'font-weight': '500',
+          'color': theme('colors.gray.700'),
+        },
+        '.btn.variant-primary': {
+          'background-color': theme('colors.accent.500'),
+          'color': theme('colors.cream.50'),
+          '-webkit-font-smoothing': 'antialiased',
+        },
+        '.btn.variant-alt': {
+          'background-color': theme('colors.cream.50'),
+          'color': theme('colors.accent.500'),
+        },
+      });
+    }),
+  ],
 };

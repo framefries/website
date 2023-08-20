@@ -1,5 +1,6 @@
 <script>
   import cx from 'clsx';
+  
   export let size;
 </script>
 
@@ -7,7 +8,7 @@
   aria-label="Frame Fries logo"
   viewBox="0 0 107 72"
   class={cx(
-    'inline-block w-auto fill-current select-none',
+    'inline-flex w-auto fill-current select-none',
     {
       'h-[1em]': size === 'current',
       'h-[72px]': size === 'original',
