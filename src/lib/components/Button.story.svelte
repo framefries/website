@@ -10,6 +10,7 @@
       class="btn"
     >
       Get started
+      <Arrow size="manual" class="h-3.5" long={true} />
     </button>
   </Hst.Variant>
 

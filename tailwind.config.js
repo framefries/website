@@ -76,19 +76,21 @@ export default {
           'display': 'inline-flex',
           'align-items': 'center',
           'justify-content': 'center',
-          'column-gap': theme('spacing[1.5]'),
+          'column-gap': theme('spacing.2'),
+          'line-height': theme('lineHeight.6'),
+          'font-size': theme('fontSize.base'),
+          'font-weight': '500',
+          'color': theme('colors.accent.500'),
+          'cursor': 'pointer',
+          '&:hover': {
+            'color': theme('colors.accent.600'),
+          }
+        },
+        '.btn.variant-primary,.btn.variant-alt': {
           'height': theme('spacing.10'),
           'padding-left': theme('spacing.6'),
           'padding-right': theme('spacing.6'),
           'border-radius': theme('borderRadius.md'),
-          'background-color': theme('colors.white'),
-          'line-height': theme('lineHeight.6'),
-          'font-size': theme('fontSize.base'),
-          'font-weight': '500',
-          'color': theme('colors.gray.700'),
-          '&:hover': {
-            'background-color': theme('colors.gray.100'),
-          }
         },
         '.btn.variant-primary': {
           'background-color': theme('colors.accent.500'),
@@ -96,6 +98,7 @@ export default {
           '-webkit-font-smoothing': 'antialiased',
           '&:hover': {
             'background-color': theme('colors.accent.600'),
+            'color': theme('colors.cream.50'),
           }
         },
         '.btn.variant-alt': {
@@ -103,6 +106,7 @@ export default {
           'color': theme('colors.accent.500'),
           '&:hover': {
             'background-color': theme('colors.cream.100'),
+            'color': theme('colors.accent.600'),
           }
         },
       });
