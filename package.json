@@ -7,18 +7,26 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"postbuild": "node sitemap.js"
+		"postbuild": "node sitemap.js",
+		"story:dev": "histoire dev",
+		"story:build": "histoire build",
+		"story:preview": "histoire preview"
 	},
 	"devDependencies": {
+		"@histoire/plugin-svelte": "^0.16.5",
 		"@sveltejs/adapter-static": "^2.0.3",
 		"@sveltejs/kit": "^1.20.4",
 		"autoprefixer": "^10.4.15",
 		"dotenv": "^16.3.1",
+		"histoire": "^0.16.5",
 		"postcss": "^8.4.27",
 		"rimraf": "^5.0.1",
 		"svelte": "^4.0.5",
 		"svelte-sitemap": "^2.6.0",
 		"tailwindcss": "^3.3.3",
 		"vite": "^4.4.2"
+	},
+	"dependencies": {
+		"clsx": "^2.0.0"
 	}
 }
