@@ -1,7 +1,7 @@
 <script>
   import cx from 'clsx';
 
-  import smooth from '$lib/actions/smooth.js';
+  import smooth from '$lib/features/smooth.action.js';
   import HeroImg from '$lib/assets/hero-desktop.png';
   import Logo from '$lib/components/Logo.svelte';
   import Arrow from '$lib/icons/Arrow.svelte';
@@ -10,6 +10,7 @@
   let navOpen = false;
   function toggleNav() {
     navOpen = !navOpen;
+    document.body.classList.toggle('overflow-hidden', navOpen);
   }
 
   const nav = [
@@ -78,7 +79,7 @@
     </nav>
   </div>
 
-  <figure class="absolute z-0 inset-0">
+  <figure class="absolute z-0 inset-0 select-none pointer-events-none">
     <img
       src={HeroImg}
       alt="Hero illustration"

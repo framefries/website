@@ -1,8 +1,8 @@
 <script>
   import cx from 'clsx';
 
-  import parallax from '$lib/actions/parallax.js';
-  import smooth from '$lib/actions/smooth.js';
+  import parallax from '$lib/features/parallax.action.js';
+  import smooth from '$lib/features/smooth.action.js';
   import Clock from '$lib/components/Clock.svelte';
   import Logo from '$lib/components/Logo.svelte';
   import Sticker from '$lib/components/Sticker.svelte';

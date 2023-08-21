@@ -12,7 +12,9 @@ export default function(node, amplitude = 100) {
 
   const update = () => {
     if (typeof target !== 'undefined') {
-      const shift = amplitude * (container.scrollTop - target) / container.clientHeight;
+      const distance = Math.min(1, Math.abs(container.scrollTop - target) / container.clientHeight);
+      const direction = container.scrollTop > target ? 1 : -1;
+      const shift = amplitude * direction * distance;
       node.style.transform = `translateY(${-shift}px)`;
     }
   };
