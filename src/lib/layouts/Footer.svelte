@@ -1,0 +1,80 @@
+<script>
+  import cx from 'clsx';
+
+  import smooth from '$lib/actions/smooth.js';
+  import Clock from '$lib/components/Clock.svelte';
+  import Logo from '$lib/components/Logo.svelte';
+  import Sticker from '$lib/components/Sticker.svelte';
+  import Arrow from '$lib/icons/Arrow.svelte';
+
+  const nav = [
+    { label: 'Back to top', href: '#home' },
+    { label: 'Work', href: '#work' },
+    { label: 'Pricing', href: '#pricing' },
+    { label: 'Process', href: '#process' },
+    { label: 'Testimonials', href: '#testimonials' },
+  ];
+
+  const social = [
+    { label: 'Instagram', href: 'https://instagram.com' },
+    { label: 'Dribbble', href: 'https://dribbble.com' },
+    { label: 'Behance', href: 'https://behance.com' },
+  ];
+</script>
+
+<section class={cx('flex flex-col gap-12 md:gap-20 p-6 md:p-20 rounded-md bg-accent text-white md:text-xl', $$props.class)}>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="md:col-span-2 space-y-5">
+      <h3 class="text-5xl font-display">Sounds good?</h3>
+      <p class="max-w-lg">
+        Let’s get a fire going and create something memorable for you and your brand.
+      </p>
+      <p>
+        <a
+          use:smooth
+          href="#contact"
+          class="group btn text-white md:text-xl"
+        >
+          <span class="group-hover:underline underline-offset-4 decoration-white/0 group-hover:decoration-white transition duration-150">Get in touch</span>
+          <Arrow size="small" long />
+        </a>
+      </p>
+    </div>
+    <nav class="grid grid-cols-2 gap-6">
+      <ul class="flex flex-col gap-2">
+        {#each nav as link}
+          <li>
+            <a href={link.href} class="hover:underline underline-offset-4 decoration-white/0 hover:decoration-white transition duration-150">
+              {link.label}
+            </a>
+          </li>
+        {/each}
+      </ul>
+      <ul class="flex flex-col gap-2">
+        {#each social as link}
+          <li>
+            <a href={link.href} target="_blank" class="hover:underline underline-offset-4 decoration-white/0 hover:decoration-white transition duration-150">
+              {link.label}
+            </a>
+          </li>
+        {/each}
+      </ul>
+    </nav>
+  </div>
+  <div class="md:order-first grid md:grid-cols-3 gap-6">
+    {#each ['Europe/Paris', 'Europe/Bratislava', 'Europe/Tallinn'] as timezone}
+      <Clock timezone={timezone} />
+    {/each}
+  </div>
+  <div class="pt-4 grid md:grid-cols-3 max-md:justify-items-center gap-6">
+    <div class="md:col-span-2">
+      <Logo size="original" />
+    </div>
+    <div class="">
+      <Sticker
+        title="Heartfelt"
+        sub="But not in a cholesterol way"
+      />
+    </div>
+  </div>
+</section>

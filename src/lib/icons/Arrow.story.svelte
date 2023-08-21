@@ -4,14 +4,14 @@
   export let Hst;
   
   let color = '#ff3c3c';
-  let long = false;
   let fontSize = 1;
+  let long = false;
 </script>
 
 <Hst.Story title="Arrow">
   <Hst.Variant title="current font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Arrow long={long} />
+      <Arrow {long} size="current" />
     </div>
 
     <svelte:fragment slot="controls">
@@ -32,13 +32,41 @@
       />
     </svelte:fragment>
   </Hst.Variant>
+  <Hst.Variant title="small">
+    <div style={`color: ${color};`}>
+      <Arrow size="small" {long} />
+    </div>
+
+    <svelte:fragment slot="controls">
+      <Hst.ColorSelect
+        bind:value={color}
+        title="Color"
+      />
+      <Hst.Checkbox
+        bind:value={long}
+        title="Long arrow"
+      />
+    </svelte:fragment>
+  </Hst.Variant>
+  <Hst.Variant title="default">
+    <div style={`color: ${color};`}>
+      <Arrow {long} />
+    </div>
+
+    <svelte:fragment slot="controls">
+      <Hst.ColorSelect
+        bind:value={color}
+        title="Color"
+      />
+      <Hst.Checkbox
+        bind:value={long}
+        title="Long arrow"
+      />
+    </svelte:fragment>
+  </Hst.Variant>
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
-      <Arrow
-        long={long}
-        size="manual"
-        class="h-3.5"
-      />
+      <Arrow {long} size="manual" class="h-12" />
     </div>
 
     <svelte:fragment slot="controls">

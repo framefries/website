@@ -9,9 +9,11 @@
   viewBox={long ? "0 0 41 16" : "0 0 16 16"}
   stroke-linecap="round"
   class={cx(
-    'inline-flex w-auto stroke-current select-none',
+    'inline-flex w-auto stroke-current fill-none select-none',
     {
-      'h-[1em]': size !== 'manual',
+      'h-[1em]': size === 'current',
+      'h-3.5': size === 'small',
+      'h-6': !size || size === 'normal',
     },
     $$props.class,
   )}
