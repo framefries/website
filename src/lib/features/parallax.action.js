@@ -5,6 +5,7 @@ export default function(node, amplitude = 100) {
   let target;
 
   const init = () => {
+    node.style.willChange = 'transform';
     const pos = node.getBoundingClientRect();
     const center = (pos.top + pos.bottom) / 2 + container.scrollTop - container.clientHeight/2;
     target = Math.max(0, Math.min(center, container.scrollHeight - container.clientHeight));

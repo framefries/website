@@ -23,7 +23,7 @@
   ];
 </script>
 
-<section class={cx('flex flex-col gap-12 md:gap-20 p-6 md:p-20 rounded-md bg-accent text-white md:text-xl', $$props.class)}>
+<section class={cx('flex flex-col gap-12 md:gap-20 p-6 md:p-20 rounded-md bg-accent text-cream md:text-xl', $$props.class)}>
   <div class="grid md:grid-cols-3 gap-6">
     <div class="md:col-span-2 space-y-5">
       <h3 class="text-5xl font-display">Sounds good?</h3>
@@ -76,7 +76,7 @@
       <Logo size="original" />
     </div>
     <div class="">
-      <div use:parallax={100}>
+      <div use:parallax={120}>
         <Sticker
           title="Heartfelt"
           sub="But not in a cholesterol way"

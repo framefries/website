@@ -61,6 +61,7 @@ export default {
           '-webkit-font-smoothing': 'antialiased',
           '-moz-osx-font-smoothing': 'grayscale',
           'font-size': theme('fontSize.base'),
+          'color': theme('colors.gray.900'),
         },
       });
     }),

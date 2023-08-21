@@ -1,7 +1,11 @@
 <script>
+  import cx from 'clsx';
 </script>
 
-<div class={`text-center ${$$props.class}`}>
+<div
+  role="presentation"
+  class={cx('text-center', $$props.class)}
+>
   <svg
     viewBox="0 0 130 30"
     stroke-linecap="round"
