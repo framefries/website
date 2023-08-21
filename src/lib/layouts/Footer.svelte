@@ -45,7 +45,11 @@
       <ul class="flex flex-col gap-2">
         {#each nav as link}
           <li>
-            <a href={link.href} class="btn variant-neutral">
+            <a
+              use:smooth
+              href={link.href}
+              class="btn variant-neutral"
+            >
               {link.label}
             </a>
           </li>

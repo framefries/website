@@ -11,7 +11,7 @@
   stroke-linecap="round"
   stroke-linejoin="round"
   class={cx(
-    'inline-flex w-auto stroke-current fill-none select-none',
+    'shrink-0 inline-flex w-auto stroke-current fill-none select-none',
     {
       'h-[1em]': size === 'current',
     },

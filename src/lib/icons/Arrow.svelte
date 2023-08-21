@@ -9,7 +9,7 @@
   viewBox={long ? "0 0 41 16" : "0 0 16 16"}
   stroke-linecap="round"
   class={cx(
-    'inline-flex w-auto stroke-current fill-none select-none',
+    'shrink-0 inline-flex w-auto stroke-current fill-none select-none',
     {
       'h-[1em]': size === 'current',
     },

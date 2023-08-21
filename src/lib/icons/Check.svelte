@@ -7,7 +7,7 @@
 <svg
   viewBox="0 0 72 72"
   class={cx(
-    'inline-flex w-auto stroke-none fill-current select-none',
+    'shrink-0 inline-flex w-auto stroke-none fill-current select-none',
     {
       'h-[1em]': size === 'current',
     },

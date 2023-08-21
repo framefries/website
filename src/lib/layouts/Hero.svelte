@@ -24,7 +24,7 @@
 <section class={cx('relative overflow-hidden md:flex md:flex-col md:aspect-[1396/820] md:justify-between p-6 md:py-12 md:px-20 rounded-md bg-cream', $$props.class)}>
   <div class="relative z-2">
     <div class="flex items-center justify-between gap-8">
-      <Logo size="original" class="shrink-0 text-accent" />
+      <Logo size="original" class="text-accent" />
       <nav>
         <button
           class="md:hidden btn variant-primary variant-icon !text-xl"

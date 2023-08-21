@@ -8,7 +8,7 @@
   aria-label="Frame Fries logo"
   viewBox="0 0 107 72"
   class={cx(
-    'inline-flex w-auto fill-current select-none',
+    'shrink-0 inline-flex w-auto fill-current select-none',
     {
       'h-[1em]': size === 'current',
       'h-[72px]': size === 'original',
