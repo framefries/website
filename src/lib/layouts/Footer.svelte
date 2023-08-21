@@ -66,7 +66,7 @@
       <Clock timezone={timezone} />
     {/each}
   </div>
-  <div class="pt-4 grid md:grid-cols-3 max-md:justify-items-center gap-6">
+  <div class="grid md:grid-cols-3 max-md:justify-items-center md:content-center gap-6">
     <div class="md:col-span-2">
       <Logo size="original" />
     </div>

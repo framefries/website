@@ -1,9 +1,6 @@
 name: Deploy website
 
-on:
-  workflow_dispatch:
-  push:
-    branches: ['main']
+on: pull_request
 
 permissions:
   contents: read
@@ -31,7 +28,6 @@ jobs:
           VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
           VITE_CONTACT_EMAIL: ${{ vars.VITE_CONTACT_EMAIL }}
           VITE_CTA_URL: ${{ vars.VITE_CTA_URL }}
-          VITE_INDEXING: ${{ vars.VITE_INDEXING }}
       - uses: actions/configure-pages@v3
       - uses: actions/upload-pages-artifact@v2
         with:
@@ -45,3 +41,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/deploy-pages@v2
+        with:
+          preview: true
