@@ -33,9 +33,9 @@
         <a
           use:smooth
           href="#contact"
-          class="group btn text-white md:text-xl"
+          class="btn variant-neutral"
         >
-          <span class="group-hover:underline underline-offset-4 decoration-white/0 group-hover:decoration-white transition duration-150">Get in touch</span>
+          Get in touch
           <Arrow size="small" long />
         </a>
       </p>
@@ -44,7 +44,7 @@
       <ul class="flex flex-col gap-2">
         {#each nav as link}
           <li>
-            <a href={link.href} class="hover:underline underline-offset-4 decoration-white/0 hover:decoration-white transition duration-150">
+            <a href={link.href} class="btn variant-neutral">
               {link.label}
             </a>
           </li>
@@ -53,7 +53,7 @@
       <ul class="flex flex-col gap-2">
         {#each social as link}
           <li>
-            <a href={link.href} target="_blank" class="hover:underline underline-offset-4 decoration-white/0 hover:decoration-white transition duration-150">
+            <a href={link.href} target="_blank" class="btn variant-neutral">
               {link.label}
             </a>
           </li>

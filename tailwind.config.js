@@ -65,21 +65,30 @@ export default {
       addComponents({
         '.btn': {
           'appearance': 'none',
+          'flex-shrink': '0',
           'display': 'inline-flex',
           'align-items': 'center',
           'justify-content': 'center',
           'column-gap': theme('spacing.2'),
-          'line-height': theme('lineHeight.6'),
-          'font-size': theme('fontSize.base'),
+          'white-space': 'nowrap',
           'font-weight': '200',
-          'color': theme('colors.accent'),
+          'color': 'inherit',
           'cursor': 'pointer',
+        },
+        '.btn.variant-neutral': {
+          'text-decoration-thickness': '1px',
+          'text-underline-offset': '4px',
+          '&:hover': {
+            'text-decoration': 'underline',
+          },
         },
         '.btn.variant-primary,.btn.variant-alt': {
           'height': theme('spacing.10'),
           'padding-left': theme('spacing.6'),
           'padding-right': theme('spacing.6'),
           'border-radius': theme('borderRadius.md'),
+          'line-height': theme('lineHeight.6'),
+          'font-size': theme('fontSize.base'),
           'font-weight': '500',
         },
         '.btn.variant-primary': {
@@ -91,8 +100,9 @@ export default {
           'color': theme('colors.accent'),
         },
         '.btn.variant-icon': {
-          'padding-left': theme('spacing.2'),
-          'padding-right': theme('spacing.2'),
+          'width': theme('spacing.10'),
+          'padding-left': '0',
+          'padding-right': '0',
         },
       });
     }),

@@ -27,7 +27,7 @@
       <nav>
         <button
           class="md:hidden btn variant-primary variant-icon text-2xl"
-          aria-label="Open navigation"
+          aria-label="Open menu"
           on:click={toggleNav}
         >
           <Burger size="current" />
@@ -38,7 +38,7 @@
               <a
                 use:smooth
                 href={link.href}
-                class="hover:underline underline-offset-4 decoration-accent/0 hover:decoration-accent transition duration-150"
+                class="btn variant-neutral"
                 class:font-normal={link.accent}
                 class:text-accent={link.accent}
               >
@@ -61,7 +61,7 @@
       <Logo size="manual" class="absolute top-6 left-6 h-10" />
       <button
         class="absolute top-6 right-6 z-1 btn variant-alt variant-icon text-2xl"
-        aria-label="Close navigation"
+        aria-label="Close menu"
         on:click={toggleNav}
       >
         <Burger open size="current" />
@@ -69,10 +69,7 @@
       <ul class="h-full flex flex-col items-center justify-center gap-6 text-2xl font-light">
         {#each nav as link}
           <li>
-            <a
-              href={link.href}
-              class:font-medium={link.accent}
-            >
+            <a href={link.href} class:font-medium={link.accent}>
               {link.label}
             </a>
           </li>
@@ -102,9 +99,9 @@
     <a
       use:smooth
       href="#contact"
-      class="mt-6 group btn text-lg md:text-xl"
+      class="mt-6 btn variant-neutral text-lg md:text-xl text-accent"
     >
-      <span class="group-hover:underline underline-offset-4 decoration-accent/0 group-hover:decoration-accent transition duration-150">Get in touch</span>
+      Get in touch
       <Arrow size="small" long />
     </a>
   </header>
