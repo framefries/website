@@ -1,0 +1,38 @@
+name: Deploy preview to Pages
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+concurrency: preview-${{ github.ref }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+      - run: npm ci --ignore-scripts
+      - run: npm run build
+        env:
+          NODE_ENV: production
+          VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
+          VITE_CONTACT_EMAIL: ${{ vars.VITE_CONTACT_EMAIL }}
+          VITE_CTA_URL: ${{ vars.VITE_CTA_URL }}
+
+  deploy:
+    needs: build
+    uses: rossjrw/pr-preview-action@v1
+    with:
+      source-dir: ./build/
+      preview-branch: main
+      umbrella-dir: preview
+      custom-url: ${{ vars.VITE_BASE_URL }}

@@ -6,4 +6,16 @@ export default defineConfig({
   plugins: [
     HstSvelte(),
   ],
+  tree: {
+    groups: [
+      {
+        title: 'Components',
+        include: file => /components/i.test(file.path),
+      },
+      {
+        title: 'Layouts',
+        include: file => /layouts/i.test(file.path),
+      },
+    ],
+  },
 });
