@@ -37,7 +37,7 @@
           class="btn variant-neutral"
         >
           Get in touch
-          <Arrow size="small" long />
+          <Arrow size="manual" class="h-3.5" long={true} />
         </a>
       </p>
     </div>

@@ -3,7 +3,7 @@
 	import Footer from '$lib/layouts/Footer.svelte';
 </script>
 
-<main id="home" class="max-w-[1440px] mx-auto p-6 space-y-12 overflow-hidden">
+<main id="home" class="max-w-[1440px] mx-auto p-4 md:p-6 space-y-12 overflow-hidden">
 	<Hero />
 	<Footer />
 </main>

@@ -10,7 +10,7 @@
 <Hst.Story title="Check">
   <Hst.Variant title="current font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Check {open} size="current" />
+      <Check {open} />
     </div>
 
     <svelte:fragment slot="controls">

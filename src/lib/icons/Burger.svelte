@@ -1,7 +1,7 @@
 <script>
   import cx from 'clsx';
   
-  export let size = 'normal';
+  export let size = 'current';
   export let open = false;
 </script>
 
@@ -14,8 +14,6 @@
     'inline-flex w-auto stroke-current fill-none select-none',
     {
       'h-[1em]': size === 'current',
-      'h-3.5': size === 'small',
-      'h-6': size === 'normal',
     },
     $$props.class,
   )}

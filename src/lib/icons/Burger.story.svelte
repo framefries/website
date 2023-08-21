@@ -11,7 +11,7 @@
 <Hst.Story title="Burger">
   <Hst.Variant title="current font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Burger {open} size="current" />
+      <Burger {open} />
     </div>
 
     <svelte:fragment slot="controls">
@@ -32,38 +32,7 @@
       />
     </svelte:fragment>
   </Hst.Variant>
-  <Hst.Variant title="small">
-    <div style={`color: ${color};`}>
-      <Burger {open} size="small" />
-    </div>
-
-    <svelte:fragment slot="controls">
-      <Hst.ColorSelect
-        bind:value={color}
-        title="Color"
-      />
-      <Hst.Checkbox
-        bind:value={open}
-        title="Toggle"
-      />
-    </svelte:fragment>
-  </Hst.Variant>
-  <Hst.Variant title="default">
-    <div style={`color: ${color};`}>
-      <Burger {open} />
-    </div>
-
-    <svelte:fragment slot="controls">
-      <Hst.ColorSelect
-        bind:value={color}
-        title="Color"
-      />
-      <Hst.Checkbox
-        bind:value={open}
-        title="Toggle"
-      />
-    </svelte:fragment>
-  </Hst.Variant>
+  
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
       <Burger {open} size="manual" class="h-12" />

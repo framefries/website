@@ -31,7 +31,7 @@
           aria-label="Open menu"
           on:click={toggleNav}
         >
-          <Burger size="current" />
+          <Burger />
         </button>
         <ul class="hidden md:flex items-center justify-center gap-6 text-xl font-light max-xl:drop-shadow-2xl">
           {#each nav as link}
@@ -65,7 +65,7 @@
         aria-label="Close menu"
         on:click={toggleNav}
       >
-        <Burger open size="current" />
+        <Burger open />
       </button>
       <ul class="h-full flex flex-col items-center justify-center gap-6 text-2xl font-light">
         {#each nav as link}
@@ -103,7 +103,7 @@
       class="mt-6 btn variant-neutral text-lg md:text-xl text-accent"
     >
       Get in touch
-      <Arrow size="small" long />
+      <Arrow size="manual" class="h-3.5" long={true} />
     </a>
   </header>
 </section>

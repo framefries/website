@@ -32,38 +32,7 @@
       />
     </svelte:fragment>
   </Hst.Variant>
-  <Hst.Variant title="small">
-    <div style={`color: ${color};`}>
-      <Arrow size="small" {long} />
-    </div>
 
-    <svelte:fragment slot="controls">
-      <Hst.ColorSelect
-        bind:value={color}
-        title="Color"
-      />
-      <Hst.Checkbox
-        bind:value={long}
-        title="Long arrow"
-      />
-    </svelte:fragment>
-  </Hst.Variant>
-  <Hst.Variant title="default">
-    <div style={`color: ${color};`}>
-      <Arrow {long} />
-    </div>
-
-    <svelte:fragment slot="controls">
-      <Hst.ColorSelect
-        bind:value={color}
-        title="Color"
-      />
-      <Hst.Checkbox
-        bind:value={long}
-        title="Long arrow"
-      />
-    </svelte:fragment>
-  </Hst.Variant>
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
       <Arrow {long} size="manual" class="h-12" />
