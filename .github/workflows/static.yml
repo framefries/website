@@ -1,4 +1,4 @@
-name: Deploy static content to Pages
+name: Deploy website
 
 on:
   workflow_dispatch:
