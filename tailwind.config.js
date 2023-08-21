@@ -4,6 +4,9 @@ const plugin = require('tailwindcss/plugin');
 
 export default {
   content: ['./src/**/*.{html,js,svelte}'],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     fontFamily: {
       display: ['"Benfritz"', ...defaultTheme.fontFamily.sans],
@@ -78,9 +81,11 @@ export default {
         '.btn.variant-neutral': {
           'text-decoration-thickness': '1px',
           'text-underline-offset': '4px',
-          '&:hover': {
-            'text-decoration': 'underline',
-          },
+          '@media (hover: hover) and (pointer: fine)': {
+            '&:hover': {
+              'text-decoration': 'underline',
+            },
+          }
         },
         '.btn.variant-primary,.btn.variant-alt': {
           'height': theme('spacing.10'),

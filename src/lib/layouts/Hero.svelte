@@ -26,7 +26,7 @@
       <Logo size="original" class="shrink-0 text-accent" />
       <nav>
         <button
-          class="md:hidden btn variant-primary variant-icon text-2xl"
+          class="md:hidden btn variant-primary variant-icon !text-xl"
           aria-label="Open menu"
           on:click={toggleNav}
         >
@@ -60,7 +60,7 @@
     )}>
       <Logo size="manual" class="absolute top-6 left-6 h-10" />
       <button
-        class="absolute top-6 right-6 z-1 btn variant-alt variant-icon text-2xl"
+        class="absolute top-6 right-6 z-1 btn variant-alt variant-icon !text-xl"
         aria-label="Close menu"
         on:click={toggleNav}
       >
