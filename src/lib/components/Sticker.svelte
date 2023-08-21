@@ -1,9 +1,9 @@
 <script>
   import cx from 'clsx';
 
-  export let title;
-  export let sub;
-  export let kind;
+  export let title = '';
+  export let sub = '';
+  export let kind = 'default';
 </script>
 
 <div

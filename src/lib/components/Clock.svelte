@@ -8,13 +8,12 @@
   dayjs.extend(utc);
   dayjs.extend(tz);
 
-  export let date;
   export let timezone;
   $: city = timezone.split('/')[1];
   let time = dayjs();
 
   function update() {
-    time = dayjs.utc(date).tz(timezone);
+    time = dayjs.utc().tz(timezone);
     setTimeout(update, 1000);
   }
 

@@ -1,6 +1,7 @@
 <script>
   import cx from 'clsx';
 
+  import parallax from '$lib/actions/parallax.js';
   import smooth from '$lib/actions/smooth.js';
   import Clock from '$lib/components/Clock.svelte';
   import Logo from '$lib/components/Logo.svelte';
@@ -71,10 +72,12 @@
       <Logo size="original" />
     </div>
     <div class="">
-      <Sticker
-        title="Heartfelt"
-        sub="But not in a cholesterol way"
-      />
+      <div use:parallax={100}>
+        <Sticker
+          title="Heartfelt"
+          sub="But not in a cholesterol way"
+        />
+      </div>
     </div>
   </div>
 </section>

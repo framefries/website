@@ -1,8 +1,8 @@
 <script>
   import cx from 'clsx';
   
-  export let size;
-  export let long;
+  export let size = 'normal';
+  export let long = false;
 </script>
 
 <svg
@@ -13,7 +13,7 @@
     {
       'h-[1em]': size === 'current',
       'h-3.5': size === 'small',
-      'h-6': !size || size === 'normal',
+      'h-6': size === 'normal',
     },
     $$props.class,
   )}
