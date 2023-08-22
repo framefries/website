@@ -32,7 +32,7 @@
     <span class="animate-blink">:</span>
     {time.format('mm')}
   </time>
-  <span class="md:-mt-2 leading-none uppercase md:text-lg lg:text-xl font-thin">
+  <span class="md:-mt-2 leading-none uppercase md:text-lg lg:text-xl">
     {city}
   </span>
 </div>

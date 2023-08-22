@@ -1,11 +1,11 @@
 <script>
   import cx from 'clsx';
 
-  import smooth from '$lib/features/smooth.action.js';
   import HeroImg from '$lib/assets/hero-desktop.png';
   import Logo from '$lib/components/Logo.svelte';
   import Arrow from '$lib/components/Arrow.svelte';
   import Burger from '$lib/components/Burger.svelte';
+  import smooth from '$lib/features/smooth.action.js';
 
   let navOpen = false;
   function toggleNav() {
@@ -94,7 +94,7 @@
       <span class="text-xl md:text-2xl">Hello there,</span>
       <span class="text-4xl md:text-5xl lg:text-6xl">What can we get you?</span>
     </h2>
-    <p class="mt-3 max-w-lg text-lg md:text-xl font-thin">
+    <p class="mt-3 max-w-lg text-lg md:text-xl">
       Frame Fries is a small independent illustration studio serving with speed, efficiency and transparency
     </p>
     <a
