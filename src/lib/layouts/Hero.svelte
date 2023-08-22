@@ -4,8 +4,8 @@
   import smooth from '$lib/features/smooth.action.js';
   import HeroImg from '$lib/assets/hero-desktop.png';
   import Logo from '$lib/components/Logo.svelte';
-  import Arrow from '$lib/icons/Arrow.svelte';
-  import Burger from '$lib/icons/Burger.svelte';
+  import Arrow from '$lib/components/Arrow.svelte';
+  import Burger from '$lib/components/Burger.svelte';
 
   let navOpen = false;
   function toggleNav() {

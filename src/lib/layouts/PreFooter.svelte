@@ -4,7 +4,7 @@
   import parallax from '$lib/features/parallax.action.js';
   import Sticker from '$lib/components/Sticker.svelte';
   import Divider from '$lib/components/Divider.svelte';
-  import Heart from '$lib/icons/Heart.svelte';
+  import Heart from '$lib/components/Heart.svelte';
 </script>
 
 <section class={cx('flex flex-col items-center gap-6 md:gap-12', $$props.class)}>

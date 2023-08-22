@@ -1,11 +1,11 @@
 <script>
-  import Arrow from '$lib/icons/Arrow.svelte';
-  import Burger from '$lib/icons/Burger.svelte';
+  import Arrow from './Arrow.svelte';
+  import Burger from './Burger.svelte';
 
   export let Hst;
 </script>
 
-<Hst.Story title="Button">
+<Hst.Story title="Components/Button">
   <Hst.Variant title="default">
     <button class="btn">
       Get started

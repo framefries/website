@@ -1,5 +1,5 @@
 <script>
-  import Heart from '$lib/icons/Heart.svelte';
+  import Heart from './Heart.svelte';
   import Sticker from './Sticker.svelte';
 
   export let Hst;
@@ -8,7 +8,7 @@
   let sub = 'But not in a cholesterol way';
 </script>
 
-<Hst.Story title="Sticker">
+<Hst.Story title="Components/Sticker">
   <Hst.Variant title="default">
     <Sticker {title} {sub} />
 

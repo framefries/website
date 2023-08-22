@@ -7,7 +7,7 @@
   let fontSize = 1;
 </script>
 
-<Hst.Story title="Check">
+<Hst.Story title="Icons/Check">
   <Hst.Variant title="current font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
       <Check {open} />

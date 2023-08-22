@@ -6,7 +6,7 @@
   let color = '#292524';
 </script>
 
-<Hst.Story title="Divider">
+<Hst.Story title="Components/Divider">
   <Hst.Variant title="default">
     <div style={`color: ${color};`}>
       <Divider />

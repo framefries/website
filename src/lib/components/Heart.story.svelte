@@ -1,17 +1,16 @@
 <script>
-  import Arrow from './Arrow.svelte';
+  import Heart from './Heart.svelte';
 
   export let Hst;
   
   let color = '#ff3c3c';
   let fontSize = 1;
-  let long = false;
 </script>
 
-<Hst.Story title="Arrow">
+<Hst.Story title="Icons/Heart">
   <Hst.Variant title="current font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Arrow {long} size="current" />
+      <Heart {open} />
     </div>
 
     <svelte:fragment slot="controls">
@@ -26,26 +25,17 @@
         min="1"
         max="7"
       />
-      <Hst.Checkbox
-        bind:value={long}
-        title="Long arrow"
-      />
     </svelte:fragment>
   </Hst.Variant>
-
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
-      <Arrow {long} size="manual" class="h-12" />
+      <Heart {open} size="manual" class="h-12" />
     </div>
 
     <svelte:fragment slot="controls">
       <Hst.ColorSelect
         bind:value={color}
         title="Color"
-      />
-      <Hst.Checkbox
-        bind:value={long}
-        title="Long arrow"
       />
     </svelte:fragment>
   </Hst.Variant>

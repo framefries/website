@@ -14,7 +14,7 @@
 
   function update() {
     time = dayjs.utc().tz(timezone);
-    setTimeout(update, 1000);
+    setTimeout(update, 2000);
   }
 
   onMount(update);

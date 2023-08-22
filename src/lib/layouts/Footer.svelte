@@ -6,7 +6,7 @@
   import Clock from '$lib/components/Clock.svelte';
   import Logo from '$lib/components/Logo.svelte';
   import Sticker from '$lib/components/Sticker.svelte';
-  import Arrow from '$lib/icons/Arrow.svelte';
+  import Arrow from '$lib/components/Arrow.svelte';
 
   const nav = [
     { label: 'Back to top', href: '#home' },

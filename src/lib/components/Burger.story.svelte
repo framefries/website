@@ -1,16 +1,17 @@
 <script>
-  import Fire from './Fire.svelte';
+  import Burger from './Burger.svelte';
 
   export let Hst;
   
   let color = '#ff3c3c';
   let fontSize = 1;
+  let open = false;
 </script>
 
-<Hst.Story title="Fire">
+<Hst.Story title="Icons/Burger">
   <Hst.Variant title="current font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Fire {open} />
+      <Burger {open} />
     </div>
 
     <svelte:fragment slot="controls">
@@ -25,17 +26,26 @@
         min="1"
         max="7"
       />
+      <Hst.Checkbox
+        bind:value={open}
+        title="Toggle"
+      />
     </svelte:fragment>
   </Hst.Variant>
+  
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
-      <Fire {open} size="manual" class="h-12" />
+      <Burger {open} size="manual" class="h-12" />
     </div>
 
     <svelte:fragment slot="controls">
       <Hst.ColorSelect
         bind:value={color}
         title="Color"
+      />
+      <Hst.Checkbox
+        bind:value={open}
+        title="Toggle"
       />
     </svelte:fragment>
   </Hst.Variant>

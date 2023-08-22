@@ -8,7 +8,7 @@
   let height = 96;
 </script>
 
-<Hst.Story title="Logo">
+<Hst.Story title="Components/Logo">
   <Hst.Variant title="current font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
       <Logo size="current" />

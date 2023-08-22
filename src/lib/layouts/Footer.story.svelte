@@ -4,7 +4,7 @@
   export let Hst;
 </script>
 
-<Hst.Story title="Footer">
+<Hst.Story title="Sections/Footer">
   <div class="p-6 bg-white">
     <Footer />
   </div>

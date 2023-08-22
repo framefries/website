@@ -11,7 +11,7 @@
   let timezone = 'Europe/Paris';
 </script>
 
-<Hst.Story title="Clock">
+<Hst.Story title="Components/Clock">
   <div class="text-accent">
     <Clock timezone={timezone} />
   </div>
