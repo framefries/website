@@ -83,6 +83,7 @@
     <img
       src={HeroImg}
       alt="Hero illustration"
+      loading="lazy"
       class="block w-full h-full object-cover"
     />
     <div class="xl:hidden absolute z-1 inset-0 bg-gradient-to-tr from-cream/90 from-10% via-cream/30 via-60% to-cream/90" />

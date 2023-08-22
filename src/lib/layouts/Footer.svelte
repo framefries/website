@@ -5,7 +5,6 @@
   import Logo from '$lib/components/Logo.svelte';
   import Sticker from '$lib/components/Sticker.svelte';
   import Arrow from '$lib/components/Arrow.svelte';
-  import parallax from '$lib/features/parallax.action.js';
   import smooth from '$lib/features/smooth.action.js';
 
   const nav = [
@@ -75,16 +74,12 @@
     <div class="md:col-span-2">
       <Logo size="original" />
     </div>
-    <div class="">
-      <div
-        role="presentation"
-        use:parallax={120}
-      >
-        <Sticker
-          title="Heartfelt"
-          sub="But not in a cholesterol way"
-        />
-      </div>
+    <div>
+      <Sticker
+        title="Heartfelt"
+        sub="But not in a cholesterol way"
+        parallax={80}
+      />
     </div>
   </div>
 </section>

@@ -5,51 +5,48 @@
   import Check from '$lib/components/Check.svelte';
   import Fire from '$lib/components/Fire.svelte';
   import Sticker from '$lib/components/Sticker.svelte';
-  import parallax from '$lib/features/parallax.action.js';
 </script>
 
 <section class={cx('flex max-lg:flex-col gap-6 sm:px-6 md:px-20', $$props.class)}>
-  <div class="basis-1/2 relative p-6 md:p-14 rounded-xl bg-accent text-cream">
-    <div
-      role="presentation"
-      use:parallax={40}
-      class="absolute z-1 top-0 right-2 md:right-4"
+  <div class="basis-1/2 relative z-1 rounded-xl bg-accent text-cream">
+    <Sticker
+      parallax={40}
+      class="absolute z-1 -top-10 right-2 md:right-4 rotate-12"
     >
-      <Sticker class="-translate-y-1/2 rotate-12">
-        <Check size="manual" class="h-full" />
-      </Sticker>
-    </div>
-    <div
-      role="presentation"
-      use:parallax={40}
-      class="absolute z-1 -left-8 lg:-left-6 bottom-0 md:bottom-4 xl:bottom-28"
+      <Check size="manual" class="h-full" />
+    </Sticker>
+    <Sticker
+      parallax={40}
+      class="absolute z-1 -left-8 lg:-left-4 -bottom-1 md:bottom-2 lg:bottom-32 -rotate-[25deg]"
     >
-      <Sticker class="-rotate-[25deg]">
-        <Fire size="manual" class="h-full" />
-      </Sticker>
-    </div>
-    <div
-      role="presentation"
-      use:parallax={80}
-      class="absolute z-1 -left-20 lg:-left-14 -bottom-4 xl:bottom-16"
-    >
-      <Sticker
-        title="Delicious!"
-        sub="...and also probably good for you!"
-        class="-rotate-12"
-      />
-    </div>
-    <h2 class="text-4xl md:text-5xl lg:text-6xl font-display">
-      What’s on the menu today?
-    </h2>
-    <p class="mt-6 max-w-sm text-lg md:text-xl">
-      Let’s do some taste testing with a showreel and other bits.
-    </p>
-    <div class="mt-6">
-      <Arrow size="manual" class="h-3.5" long={true} />
+      <Fire size="manual" class="h-full" />
+    </Sticker>
+    <Sticker
+      title="Delicious!"
+      sub="...and also probably good for you!"
+      parallax={80}
+      class="absolute z-2 -left-20 lg:-left-10 -bottom-8 lg:bottom-20 -rotate-12"
+    />
+    <div class="p-6 md:p-14">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-display">
+        What’s on the menu today?
+      </h2>
+      <p class="mt-6 max-w-sm text-lg md:text-xl">
+        Let’s do some taste testing with a showreel and other bits.
+      </p>
+      <div class="mt-6">
+        <Arrow size="manual" class="h-3.5" long={true} />
+      </div>
     </div>
   </div>
-  <div class="basis-1/2 p-4 rounded-xl bg-cream">
+  <div class="basis-1/2 relative p-4 rounded-xl bg-cream">
+    <Sticker
+      kind="invert"
+      title="Handmade!"
+      sub="Don’t ask us how. It’s a secret recipe."
+      parallax={80}
+      class="absolute z-2 -bottom-10 -right-12 md:right-0 lg:right-12 rotate-[8deg]"
+    />
     <div class="aspect-video md:aspect-[9/10] bg-gray-200">
     </div>
   </div>

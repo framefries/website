@@ -1,6 +1,7 @@
 import { debounce } from 'throttle-debounce';
 
 export default function(node, amplitude = 100) {
+  if (!amplitude) return;
   const container = document.documentElement;
   let target;
 
@@ -16,7 +17,7 @@ export default function(node, amplitude = 100) {
       const distance = Math.min(1, Math.abs(container.scrollTop - target) / container.clientHeight);
       const direction = container.scrollTop > target ? 1 : -1;
       const shift = amplitude * direction * distance;
-      node.style.transform = `translateY(${-shift}px)`;
+      node.style.setProperty('--parallax', `${-shift}px`);
     }
   };
 

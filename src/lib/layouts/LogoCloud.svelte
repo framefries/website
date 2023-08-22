@@ -42,18 +42,20 @@
           <img
             src={item.src}
             alt={item.name}
+            loading="lazy"
             class={`block w-full h-full object-cover`}
           />
         </figure>
       {/each}
       </div>
   </div>
-  <aside class="grid grid-cols-2 gap-12 items-center justify-items-center">
+  <aside class="px-12 md:px-0 grid grid-cols-2 gap-12 items-center justify-items-center">
     {#each logos as item}
       <figure>
         <img
           src={item.src}
           alt={item.name}
+          loading="lazy"
           class={`block max-w-full w-auto object-contain ${item.class}`}
         />
       </figure>
