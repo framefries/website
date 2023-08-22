@@ -12,11 +12,11 @@
 <div
   role="img"
   class={cx(
-    'w-fit inline-flex items-center justify-center gap-3 md:gap-4',
+    'inline-flex items-center justify-center gap-3 md:gap-4',
     'border-2 border-black/20',
     {
-      'min-w-16 h-16 md:min-w-20 md:h-20 rounded-full p-2': iconOnly,
-      'rounded-xl md:rounded-2xl px-3 md:px-4': !iconOnly,
+      'w-16 h-16 md:w-20 md:h-20 rounded-full p-2': iconOnly,
+      'w-fit rounded-xl md:rounded-2xl px-3 md:px-4': !iconOnly,
       'bg-cream text-accent': kind === 'default',
       'bg-accent text-cream': kind === 'invert',
     },
