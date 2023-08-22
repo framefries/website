@@ -33,7 +33,7 @@
         >
           <Burger />
         </button>
-        <ul class="hidden md:flex items-center justify-center gap-6 text-xl font-light max-xl:drop-shadow-2xl">
+        <ul class="hidden md:flex items-center justify-center gap-6 text-xl max-xl:drop-shadow-2xl">
           {#each nav as link}
             <li>
               <a
@@ -67,7 +67,7 @@
       >
         <Burger open />
       </button>
-      <ul class="h-full flex flex-col items-center justify-center gap-6 text-2xl font-light">
+      <ul class="h-full flex flex-col items-center justify-center gap-6 text-2xl">
         {#each nav as link}
           <li>
             <a href={link.href} class:font-medium={link.accent}>
@@ -90,7 +90,7 @@
 
   <header class="relative z-1 mt-12 max-xl:drop-shadow-2xl">
     <h1 class="sr-only">Frame Fries, 3D illustration studio</h1>
-    <h2 class="flex flex-col items-start gap-2 font-light font-display text-accent">
+    <h2 class="flex flex-col items-start gap-2 font-display text-accent">
       <span class="text-xl md:text-2xl">Hello there,</span>
       <span class="text-4xl md:text-5xl lg:text-6xl">What can we get you?</span>
     </h2>

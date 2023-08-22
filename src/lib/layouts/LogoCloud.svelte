@@ -29,7 +29,7 @@
 
 <section class={cx('flex max-lg:flex-col gap-12 lg:gap-20 sm:p-6 md:p-20 items-center lg:items-start justify-between', $$props.class)}>
   <div class="lg:basis-1/2">
-    <h2 class="text-2xl md:text-4xl lg:text-5xl md:leading-tight font-display">
+    <h2 class="text-2xl md:text-4xl md:!leading-tight font-display">
       More than a decade of experience in the field with average project complexity ranging from nuggets to nougat.
     </h2>
     <p class="mt-4 md:mt-12 lg:mt-20 max-w-4xl md:text-xl text-gray-600">

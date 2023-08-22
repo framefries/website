@@ -13,7 +13,7 @@
       <Heart size="manual" class="-mx-1 md:-mx-2 h-8 sm:h-12 md:h-14" />
     </Sticker>
   </div>
-  <h2 class="max-w-5xl text-center text-2xl md:text-5xl md:leading-tight font-display">
+  <h2 class="max-w-5xl text-center text-3xl md:text-5xl md:!leading-tight  font-display">
     At heart we’re illustrators, animators, artisans.
     The work we do is inherently not complicated.
     <br /><b class="text-accent">Everything around</b> the work typically is.
