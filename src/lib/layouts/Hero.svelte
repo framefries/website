@@ -5,7 +5,7 @@
   import Logo from '$lib/components/Logo.svelte';
   import Arrow from '$lib/components/Arrow.svelte';
   import Burger from '$lib/components/Burger.svelte';
-  import smooth from '$lib/features/smooth.action.js';
+  import smooth from '$lib/utils/smooth.action.js';
 
   let navOpen = false;
   function toggleNav() {

@@ -11,7 +11,8 @@
     <Sticker
       title="Made by Humans"
       sub="No egos were hurt while making your design."
-      parallax={80}
+      parallax={{ yAmp: 40 }}
+      class="relative z-1"
     >
       <Heart size="manual" class="-mx-1 md:-mx-2 h-8 sm:h-12 md:h-14" />
     </Sticker>

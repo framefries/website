@@ -1,7 +1,7 @@
 <script>
   import cx from 'clsx';
 
-  import parallaxAction from '$lib/features/parallax.action.js';
+  import parallaxAction from '$lib/utils/parallax.action.js';
 
   export let title = null;
   export let sub = null;
@@ -17,8 +17,7 @@
   use:parallaxAction={parallax}
   class={cx(
     'scale-50 md:scale-75 lg:scale-100',
-    'translate-y-[var(--parallax)]',
-    // 'select-none pointer-events-none', 
+    'select-none pointer-events-none', 
     $$props.class
   )}
 >

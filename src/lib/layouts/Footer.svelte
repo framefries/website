@@ -5,7 +5,7 @@
   import Logo from '$lib/components/Logo.svelte';
   import Sticker from '$lib/components/Sticker.svelte';
   import Arrow from '$lib/components/Arrow.svelte';
-  import smooth from '$lib/features/smooth.action.js';
+  import smooth from '$lib/utils/smooth.action.js';
 
   const nav = [
     { label: 'Back to top', href: '#home' },
@@ -78,7 +78,8 @@
       <Sticker
         title="Heartfelt"
         sub="But not in a cholesterol way"
-        parallax={80}
+        parallax={{ yAmp: 80, dAmp: -10 }}
+        class="relative z-1"
       />
     </div>
   </div>

@@ -1,23 +1,28 @@
 import { debounce } from 'throttle-debounce';
+import { isObject } from './helpers.js';
 
-export default function(node, amplitude = 100) {
-  if (!amplitude) return;
+export default function(node, params) {
+  if (!isObject(params)) return;
+  const options = { yAmp: 0, dAmp: 0, dInit: 0, ...params };
+
   const container = document.documentElement;
   let target;
 
   const init = () => {
     node.style.willChange = 'transform';
+    node.classList.add('translate-y-0', 'rotate-0');
     const pos = node.getBoundingClientRect();
-    const center = (pos.top + pos.bottom) / 2 + container.scrollTop - container.clientHeight/2;
-    target = Math.max(0, Math.min(center, container.scrollHeight - container.clientHeight));
+    const center = (pos.top + pos.bottom) / 2 + container.scrollTop;
+    target = Math.max(0, Math.min(center - container.clientHeight/2, container.scrollHeight - container.clientHeight));
   };
 
   const update = () => {
     if (typeof target !== 'undefined') {
-      const distance = Math.min(1, Math.abs(container.scrollTop - target) / container.clientHeight);
-      const direction = container.scrollTop > target ? 1 : -1;
-      const shift = amplitude * direction * distance;
-      node.style.setProperty('--parallax', `${-shift}px`);
+      const ratio = Math.min(1, Math.abs(target - container.scrollTop) / (container.clientHeight / 2));
+      const dir = container.scrollTop > target ? -1 : 1;
+      console.log(options.yAmp * dir * ratio);
+      node.style.setProperty('--tw-translate-y', `${options.yAmp * dir * ratio}px`);
+      node.style.setProperty('--tw-rotate', `${options.dInit + (options.dAmp * dir * ratio)}deg`);
     }
   };
 
