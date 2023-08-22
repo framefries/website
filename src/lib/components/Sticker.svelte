@@ -12,11 +12,12 @@
 <div
   role="img"
   class={cx(
-    'inline-flex items-center justify-center gap-3 md:gap-4',
+    'inline-flex items-center justify-center gap-4',
     'border-2 border-black/20',
+    'scale-50 md:scale-75 lg:scale-100',
     {
-      'w-16 h-16 md:w-20 md:h-20 rounded-full p-2': iconOnly,
-      'w-fit rounded-xl md:rounded-2xl px-3 md:px-4': !iconOnly,
+      'w-20 h-20 rounded-full p-2': iconOnly,
+      'w-fit rounded-2xl px-4': !iconOnly,
       'bg-cream text-accent': kind === 'default',
       'bg-accent text-cream': kind === 'invert',
     },
@@ -28,18 +29,18 @@
   {#if !iconOnly}
     <div
       class={cx(
-        'py-1.5 md:py-2',
+        'py-2',
         {
           'text-center': !icon,
           'text-left': icon,
         }
       )}
     >
-      <div class="!leading-none text-2xl sm:text-4xl md:text-5xl font-display">
+      <div class="!leading-none text-5xl font-display">
         {title}
       </div>
       {#if sub}
-        <div class="-mt-1 md:-mt-2 text-xs md:text-sm italic">
+        <div class="-mt-2 text-sm italic">
           {sub}
         </div>
       {/if}

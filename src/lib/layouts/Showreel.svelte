@@ -8,21 +8,21 @@
   import parallax from '$lib/features/parallax.action.js';
 </script>
 
-<section class={cx('flex max-md:flex-col gap-6 sm:px-6 md:px-20', $$props.class)}>
+<section class={cx('flex max-lg:flex-col gap-6 sm:px-6 md:px-20', $$props.class)}>
   <div class="basis-1/2 relative p-6 md:p-14 rounded-xl bg-accent text-cream">
     <div
       role="presentation"
       use:parallax={40}
-      class="absolute z-1 -top-8 md:-top-10 right-4"
+      class="absolute z-1 top-0 right-2 md:right-4"
     >
-      <Sticker class="rotate-12">
+      <Sticker class="-translate-y-1/2 rotate-12">
         <Check size="manual" class="h-full" />
       </Sticker>
     </div>
     <div
       role="presentation"
       use:parallax={40}
-      class="absolute z-1 -left-6 bottom-28"
+      class="absolute z-1 -left-8 lg:-left-6 bottom-0 md:bottom-4 xl:bottom-28"
     >
       <Sticker class="-rotate-[25deg]">
         <Fire size="manual" class="h-full" />
@@ -31,7 +31,7 @@
     <div
       role="presentation"
       use:parallax={80}
-      class="absolute z-1 -left-14 bottom-16"
+      class="absolute z-1 -left-20 lg:-left-14 -bottom-4 xl:bottom-16"
     >
       <Sticker
         title="Delicious!"
@@ -50,7 +50,7 @@
     </div>
   </div>
   <div class="basis-1/2 p-4 rounded-xl bg-cream">
-    <div class="md:aspect-[9/10] bg-gray-200">
+    <div class="aspect-video md:aspect-[9/10] bg-gray-200">
     </div>
   </div>
 </section>
