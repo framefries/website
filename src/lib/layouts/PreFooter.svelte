@@ -7,14 +7,14 @@
 </script>
 
 <section class={cx('flex flex-col items-center gap-6 md:gap-12 sm:p-6 md:p-20', $$props.class)}>
-  <div class="text-center">
+  <div class="w-full -mx-6 md:-mx-20 text-center">
     <Sticker
       title="Made by Humans"
       sub="No egos were hurt while making your design."
-      parallax={{ yAmp: 40 }}
+      parallax={{ amplitude: 5 }}
       class="relative z-1"
     >
-      <Heart size="manual" class="-mx-1 md:-mx-2 h-8 sm:h-12 md:h-14" />
+      <Heart size="manual" class="-mx-2 h-14" />
     </Sticker>
   </div>
   <h2 class="max-w-5xl text-center text-3xl md:text-5xl md:!leading-tight  font-display">

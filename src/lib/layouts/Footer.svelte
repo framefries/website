@@ -78,7 +78,7 @@
       <Sticker
         title="Heartfelt"
         sub="But not in a cholesterol way"
-        parallax={{ yAmp: 80, dAmp: -10 }}
+        parallax={{ amplitude: 10, angle: -10 }}
         class="relative z-1"
       />
     </div>

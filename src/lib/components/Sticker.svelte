@@ -37,7 +37,7 @@
     {#if !iconOnly}
       <div
         class={cx(
-          'py-2',
+          'py-2 whitespace-nowrap',
           {
             'text-center': !icon,
             'text-left': icon,
