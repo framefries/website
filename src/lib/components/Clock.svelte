@@ -22,17 +22,19 @@
 
 <div
   role="presentation"
-  class={cx('flex md:flex-col max-md:items-baseline gap-x-2', $$props.class)}
+  class={cx('@container', $$props.class)}
 >
-  <time
-    datetime={time.toISOString()}
-    class="inline-flex gap-1 leading-none text-4xl md:text-5xl lg:text-7xl font-display"
-  >
-    {time.format('HH')}
-    <span class="animate-blink">:</span>
-    {time.format('mm')}
-  </time>
-  <span class="md:-mt-2 leading-none uppercase md:text-lg lg:text-xl">
-    {city}
-  </span>
+  <div class="flex flex-col gap-x-2">
+    <time
+      datetime={time.toISOString()}
+      class="inline-flex gap-1 leading-none text-2xl @[8rem]:text-4xl @[16rem]:text-7xl font-display"
+    >
+      {time.format('HH')}
+      <span class="animate-blink">:</span>
+      {time.format('mm')}
+    </time>
+    <span class="@[8rem]:-mt-2 leading-none uppercase text-xs @[8rem]:text-lg @[16rem]:text-xl">
+      {city}
+    </span>
+  </div>
 </div>

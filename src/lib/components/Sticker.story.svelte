@@ -1,5 +1,4 @@
 <script>
-  import Fire from './Fire.svelte';
   import Heart from './Heart.svelte';
   import Check from './Check.svelte';
   import Sticker from './Sticker.svelte';
@@ -7,7 +6,6 @@
   export let Hst;
 
   let title = 'Heartfelt';
-  let number = 3;
   let kind = 'default';
   let sub = 'But not in a cholesterol way';
 </script>

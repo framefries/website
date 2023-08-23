@@ -65,7 +65,7 @@
       </ul>
     </nav>
   </div>
-  <div class="md:order-first grid md:grid-cols-3 gap-6">
+  <div class="md:order-first grid grid-cols-3 gap-6">
     {#each ['Europe/Paris', 'Europe/Bratislava', 'Europe/Tallinn'] as timezone}
       <Clock timezone={timezone} />
     {/each}
@@ -78,7 +78,7 @@
       <Sticker
         title="Heartfelt"
         sub="But not in a cholesterol way"
-        parallax={{ amplitude: 10, angle: -10 }}
+        parallax={{ amplitude: 10, rotation: -10 }}
         class="relative z-1"
       />
     </div>

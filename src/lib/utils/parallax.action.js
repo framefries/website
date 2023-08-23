@@ -3,7 +3,7 @@ import { isObject } from './helpers.js';
 
 export default function(node, params) {
   if (!isObject(params)) return;
-  const options = { amplitude: 0, angle: 0, rotation: 0, ...params };
+  const options = { amplitude: 0, rotation: 0, angle: 0, ...params };
 
   const container = document.documentElement;
   let target;
@@ -23,7 +23,7 @@ export default function(node, params) {
       const ratio = Math.min(1, Math.abs(target - container.scrollTop) / (container.clientHeight / 2));
       const dir = container.scrollTop > target ? -1 : 1;
       node.style.setProperty('--tw-translate-y', `${amplitude * dir * ratio}px`);
-      node.style.setProperty('--tw-rotate', `${options.rotation + (options.angle * dir * ratio)}deg`);
+      node.style.setProperty('--tw-rotate', `${options.angle + (options.rotation * dir * ratio)}deg`);
     }
   };
 
