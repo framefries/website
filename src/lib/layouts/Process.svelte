@@ -1,6 +1,6 @@
 <script>
   import cx from 'clsx';
-  import Step from '$lib/components/Step.svelte';
+  import Step from './Step.svelte';
 
   const steps = [
     { title: 'Set the table', content: 'Let’s start things off right! We need some basic details about the project you have in mind. It’s a simple browser-based form. <a href="#">Start right here!</a>' },

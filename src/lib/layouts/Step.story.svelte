@@ -4,7 +4,7 @@
   export let Hst;
 </script>
 
-<Hst.Story title="Components/Step">
+<Hst.Story title="Cards/Step">
   <Step title="Set the table">
     <div class="prose prose-gray @lg:prose-xl @lg:!leading-snug">
       <p>Dignissim urna fusce velit facilisi elementum magna vel vulputate. Lacus integer consectetur sit neque ullamcorper nec turpis. Ac tristique tortor scelerisque.</p>

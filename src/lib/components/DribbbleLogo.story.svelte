@@ -1,16 +1,16 @@
 <script>
-  import Dribbble from './Dribbble.svelte';
+  import DribbbleLogo from './DribbbleLogo.svelte';
 
   export let Hst;
   
-  let color = '#ff3c3c';
+  let color = '#ea4c89';
   let fontSize = 1;
 </script>
 
-<Hst.Story title="Icons/Dribbble">
+<Hst.Story title="Icons/DribbbleLogo">
   <Hst.Variant title="current font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Dribbble />
+      <DribbbleLogo />
     </div>
 
     <svelte:fragment slot="controls">
@@ -29,7 +29,7 @@
   </Hst.Variant>
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
-      <Dribbble size="manual" class="h-12" />
+      <DribbbleLogo size="manual" class="h-12" />
     </div>
 
     <svelte:fragment slot="controls">
