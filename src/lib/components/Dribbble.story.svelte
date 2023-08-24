@@ -1,5 +1,5 @@
 <script>
-  import Fire from './Fire.svelte';
+  import Dribbble from './Dribbble.svelte';
 
   export let Hst;
   
@@ -7,10 +7,10 @@
   let fontSize = 1;
 </script>
 
-<Hst.Story title="Icons/Fire">
+<Hst.Story title="Icons/Dribbble">
   <Hst.Variant title="current font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Fire />
+      <Dribbble />
     </div>
 
     <svelte:fragment slot="controls">
@@ -29,7 +29,7 @@
   </Hst.Variant>
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
-      <Fire size="manual" class="h-12" />
+      <Dribbble size="manual" class="h-12" />
     </div>
 
     <svelte:fragment slot="controls">

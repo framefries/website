@@ -1,10 +1,80 @@
 <script>
   import cx from 'clsx';
+  import interact from 'interactjs';
+  import { onMount } from 'svelte';
+
+  export let items = [];
+  export let speed = 100; // px/s
+  export let flip = false;
+
+  let inner;
+  let duplicates = 1;
+  let pos = 0;
+  let time = null;
+  let frame;
+
+  function shift(diff) {
+    const bound = inner.scrollWidth/duplicates;
+    pos = (bound + pos + diff) % bound;
+    inner.style.transform = `translate3d(${-pos}px, 0, 0)`;
+    return pos;
+  }
+
+  function play(t) {
+    if (time === null) return;
+    frame = requestAnimationFrame(play);
+    const dir = flip ? -1 : 1;
+    shift(dir * speed * (t - time)/1000);
+    time = t;
+  }
+
+  function start() {
+    time = performance.now();
+    frame = requestAnimationFrame(play);
+  }
+  
+  function pause() {
+    time = null;
+    cancelAnimationFrame(frame);
+  }
+  
+  onMount(() => {
+    const childrenWidth = Array.from(inner.children).reduce((s, n) => s+n.clientWidth, 0);
+    duplicates = 1 + Math.ceil(inner.clientWidth/childrenWidth);
+    interact(inner).draggable({
+      listeners: {
+        move(e) { shift(-e.dx) },
+      },
+    });
+    start();
+		return pause;
+  });
 </script>
 
 <div
-  class={cx($$props.class)}
+  role="region"
+  tabindex="-1"
+  on:focus={pause}
+  on:mouseover={pause}
+  on:mouseleave={start}
+  class={cx('min-h-20 overflow-hidden', $$props.class)}
 >
-  <div class="overflow-hidden">
+  <div
+    bind:this={inner}
+    role="marquee"
+    class="h-full flex items-stretch will-change-transform"
+  >
+    {#each Array.from(Array(duplicates).keys()) as _}
+      {#each items as item}
+        <div
+          role="figure"
+          class="shrink-0 h-full px-3"
+        >
+          <div class="relative shrink-0 flex items-center justify-center h-full aspect-square rounded-md bg-gray-100 overflow-hidden">
+            <slot {item} />
+          </div>
+        </div>
+      {/each}
+    {/each}
   </div>
 </div>

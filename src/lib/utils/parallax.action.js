@@ -36,6 +36,7 @@ export default function(node, params) {
   update();
   
   return {
+    update,
     destroy: () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);

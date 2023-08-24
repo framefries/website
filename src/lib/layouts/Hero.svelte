@@ -21,7 +21,16 @@
   ];
 </script>
 
-<section class={cx('relative overflow-hidden md:flex md:flex-col md:aspect-[1396/820] md:justify-between p-6 md:py-12 md:px-20 rounded-md bg-cream', $$props.class)}>
+<section
+  role="banner"
+  class={cx(
+    'relative overflow-hidden',
+    'md:flex md:flex-col md:aspect-[1396/820] md:justify-between',
+    'p-6 md:py-12 md:px-20',
+    'rounded-md bg-cream',
+    $$props.class
+  )}
+>
   <div class="relative z-2">
     <div class="flex items-center justify-between gap-8">
       <Logo size="original" class="text-accent" />
@@ -81,9 +90,9 @@
 
   <figure class="absolute z-0 inset-0 select-none pointer-events-none">
     <img
+      loading="lazy"
       src={HeroImg}
       alt="Hero illustration"
-      loading="lazy"
       class="block w-full h-full object-cover"
     />
     <div class="xl:hidden absolute z-1 inset-0 bg-gradient-to-tr from-cream/90 from-10% via-cream/30 via-60% to-cream/90" />

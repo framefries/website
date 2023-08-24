@@ -7,7 +7,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"postbuild": "node sitemap.js",
+		"postbuild": "node scripts/sitemap.js",
 		"story:dev": "histoire dev",
 		"story:build": "histoire build",
 		"story:preview": "histoire preview"
@@ -16,6 +16,7 @@
 		"@histoire/plugin-svelte": "^0.16.5",
 		"@sveltejs/adapter-static": "^2.0.3",
 		"@sveltejs/kit": "^1.22.6",
+		"@tailwindcss/container-queries": "^0.1.1",
 		"@tailwindcss/forms": "^0.5.4",
 		"@tailwindcss/typography": "^0.5.9",
 		"autoprefixer": "^10.4.15",
@@ -29,9 +30,9 @@
 		"vite": "^4.4.9"
 	},
 	"dependencies": {
-		"@tailwindcss/container-queries": "^0.1.1",
 		"clsx": "^2.0.0",
 		"dayjs": "^1.11.9",
+		"interactjs": "^1.10.18",
 		"throttle-debounce": "^5.0.0"
 	}
 }

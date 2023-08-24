@@ -2,9 +2,31 @@
   import cx from 'clsx';
 
   import Arrow from '$lib/components/Arrow.svelte';
+  import Carousel from '$lib/components/Carousel.svelte';
   import Check from '$lib/components/Check.svelte';
   import Fire from '$lib/components/Fire.svelte';
   import Sticker from '$lib/components/Sticker.svelte';
+
+  import Roman01 from '$lib/assets/showreel/roman-01.png';
+  import Roman02 from '$lib/assets/showreel/roman-02.png';
+  import Roman03 from '$lib/assets/showreel/roman-03.png';
+  import Roman04 from '$lib/assets/showreel/roman-04.png';
+  import Roman05 from '$lib/assets/showreel/roman-05.png';
+  import Roman06 from '$lib/assets/showreel/roman-06.png';
+  import Roman07 from '$lib/assets/showreel/roman-07.png';
+  import Roman08 from '$lib/assets/showreel/roman-08.png';
+  import Roman09 from '$lib/assets/showreel/roman-09.png';
+  import Reijo01 from '$lib/assets/showreel/reijo-01.png';
+  import Reijo02 from '$lib/assets/showreel/reijo-02.png';
+  import Reijo03 from '$lib/assets/showreel/reijo-03.png';
+  import Reijo04 from '$lib/assets/showreel/reijo-04.png';
+  import Reijo05 from '$lib/assets/showreel/reijo-05.png';
+  import Reijo06 from '$lib/assets/showreel/reijo-06.png';
+  import Reijo07 from '$lib/assets/showreel/reijo-07.png';
+  import Reijo08 from '$lib/assets/showreel/reijo-08.png';
+  import Reijo09 from '$lib/assets/showreel/reijo-09.png';
+  import Reijo10 from '$lib/assets/showreel/reijo-10.png';
+  import Reijo11 from '$lib/assets/showreel/reijo-11.png';
 </script>
 
 <section class={cx('flex max-lg:flex-col gap-6 sm:px-6 md:px-20', $$props.class)}>
@@ -51,3 +73,31 @@
     </div>
   </div>
 </section>
+
+<Carousel
+  items={[Roman01, Roman02, Roman03, Roman04, Roman05, Roman06, Roman07, Roman08, Roman09]}
+  let:item={src}
+  speed={50}
+  class="h-[410px]"
+>
+  <img
+    loading="lazy"
+    src={src}
+    alt={src}
+    class="block w-full h-full object-cover"
+  />
+</Carousel>
+<Carousel
+  items={[Reijo01, Reijo02, Reijo03, Reijo04, Reijo05, Reijo06, Reijo07, Reijo08, Reijo09, Reijo10, Reijo11]}
+  let:item={src}
+  speed={50}
+  flip={true}
+  class="h-[410px]"
+>
+  <img
+    loading="lazy"
+    src={src}
+    alt={src}
+    class="block w-full h-full object-cover"
+  />
+</Carousel>

@@ -1,5 +1,6 @@
 <script>
 	import '$lib/styles/app.css';
+	import OGImage from '$lib/assets/framefries-opengraph.png';
 	export let data;
 </script>
 
@@ -10,8 +11,8 @@
 	<meta property="og:title" content={data.title} />
 	<meta property="og:description" content={data.description} />
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="/framefries-opengraph.png" />
-	<meta property="og:image:alt" content="/framefries-opengraph.png" />
+	<meta property="og:image" content={OGImage} />
+	<meta property="og:image:alt" content={data.title} />
 	<meta name="robots" content={data.indexing} />
 </svelte:head>
 

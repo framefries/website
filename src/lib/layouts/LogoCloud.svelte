@@ -1,15 +1,15 @@
 <script>
   import cx from 'clsx';
 
-  import LogoAsus from '$lib/assets/logo-asus.png';
-  import LogoEA from '$lib/assets/logo-ea.png';
-  import LogoIntel from '$lib/assets/logo-intel.png';
-  import LogoNI from '$lib/assets/logo-native-instruments.png';
-  import LogoNVIDIA from '$lib/assets/logo-nvidia.png';
-  import LogoWaze from '$lib/assets/logo-waze.png';
-  import ProfileNicolas from '$lib/assets/profile-nicolas.png';
-  import ProfileReijo from '$lib/assets/profile-reijo.png';
-  import ProfileRoman from '$lib/assets/profile-roman.png';
+  import LogoAsus from '$lib/assets/logos/asus.png';
+  import LogoEA from '$lib/assets/logos/ea.png';
+  import LogoIntel from '$lib/assets/logos/intel.png';
+  import LogoNI from '$lib/assets/logos/native-instruments.png';
+  import LogoNVIDIA from '$lib/assets/logos/nvidia.png';
+  import LogoWaze from '$lib/assets/logos/waze.png';
+  import ProfileNicolas from '$lib/assets/profiles/nicolas.png';
+  import ProfileReijo from '$lib/assets/profiles/reijo.png';
+  import ProfileRoman from '$lib/assets/profiles/roman.png';
 
   const logos = [
     { name: 'Electronic Arts', src: LogoEA, class: 'h-16' },
@@ -40,9 +40,9 @@
       {#each members as item}
         <figure class="w-14 h-14 rounded-full overflow-hidden">
           <img
+            loading="lazy"
             src={item.src}
             alt={item.name}
-            loading="lazy"
             class={`block w-full h-full object-cover`}
           />
         </figure>
@@ -53,9 +53,9 @@
     {#each logos as item}
       <figure>
         <img
+          loading="lazy"
           src={item.src}
           alt={item.name}
-          loading="lazy"
           class={`block max-w-full w-auto object-contain ${item.class}`}
         />
       </figure>

@@ -45,10 +45,10 @@ export default {
         'none': '0s',
       },
       animation: {
-        blink: 'blink 1s steps(5, start) infinite',
+        'blink': 'blink 1s steps(5, start) infinite',
       },
       keyframes: {
-        blink: { 'to': { visibility: 'hidden' } },
+        'blink': { 'to': { 'visibility': 'hidden' } },
       },
     },
   },
