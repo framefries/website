@@ -17,7 +17,7 @@
       </svelte:element>
       <span
         role="img"
-        class="shrink-0 inline-flex items-center justify-center w-12 @lg:w-16 h-12 @lg:h-16 pt-1 @lg:pt-2 rounded-full ring-2 ring-black/10 bg-accent text-cream select-none pointer-events-none"
+        class="shrink-0 inline-flex items-center justify-center w-12 @lg:w-16 h-12 @lg:h-16 pt-1 @lg:pt-2 rounded-full ring-2 ring-black/10 bg-accent text-cream pointer-events-none"
       >
         {value}
       </span>

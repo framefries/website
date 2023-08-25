@@ -32,6 +32,8 @@
     $$props.class
   )}
 >
+  <div role="none" class="absolute z-0 top-0 inset-x-0 h-64 bg-gradient-to-b from-white/40 to-transparent pointer-events-none" />
+
   <div class="relative z-2">
     <div class="flex items-center justify-between gap-8">
       <Logo class="h-16 md:h-[72px] text-accent" />
@@ -61,23 +63,39 @@
       </nav>
     </div>
     <nav class={cx(
-      'md:hidden fixed inset-0 z-30 p-12',
-      'bg-accent text-cream',
+      'fixed inset-0 z-30 py-12 px-6 bg-accent text-cream',
       'transition ease-in-out duration-300',
       {
-        'opacity-100 translate-y-0 pointer-events-auto': navOpen,
-        'opacity-0 -translate-y-full pointer-events-none': !navOpen,
+        'max-md:opacity-100 pointer-events-auto': navOpen,
+        'opacity-0 pointer-events-none': !navOpen,
       }
     )}>
-      <Logo class="absolute top-6 left-6 h-10" />
-      <button
-        class="absolute top-6 right-6 z-1 btn variant-alt variant-icon !text-xl"
-        aria-label="Close menu"
-        on:click={toggleNav}
-      >
-        <Burger open class="h-current" />
-      </button>
-      <ul class="h-full flex flex-col items-center justify-center gap-6 text-2xl">
+      <div class={cx(
+        'absolute top-6 inset-x-6 z-1',
+        'flex items-center justify-between',
+        'transition ease-in-out duration-300',
+        {
+          'opacity-100 translate-y-0': navOpen,
+          'opacity-0 -translate-y-[4rem]': !navOpen,
+        }
+      )}>
+        <Logo class="h-10" />
+        <button
+          class="btn variant-alt variant-icon !text-xl"
+          aria-label="Close menu"
+          on:click={toggleNav}
+        >
+          <Burger open class="h-current" />
+        </button>
+      </div>
+      <ul class={cx(
+        'h-full flex flex-col items-center justify-center gap-6 text-2xl',
+        'transition ease-in-out duration-300',
+        {
+          'opacity-100 translate-y-0': navOpen,
+          'opacity-0 translate-y-[4rem]': !navOpen,
+        }
+      )}>
         {#each nav as link}
           <li>
             <a href={link.href} class:font-medium={link.accent}>
@@ -108,7 +126,7 @@
     </a>
   </header>
 
-  <figure class="relative z-0 md:hidden -m-6 h-[420px] select-none pointer-events-none">
+  <figure class="relative z-0 md:hidden -m-6 h-[420px] pointer-events-none">
     <img
       loading="lazy"
       src={Hero}
@@ -118,13 +136,13 @@
     <div class="absolute z-1 inset-0 h-12 bg-gradient-to-b from-cream to-transparent" />
   </figure>
 
-  <figure class="max-md:hidden absolute z-0 inset-0 select-none pointer-events-none">
+  <figure class="max-md:hidden absolute z-0 inset-0 pointer-events-none">
     <img
       loading="lazy"
       src={HeroDesktop}
       alt="Hero illustration"
       class="block w-full h-full object-cover"
     />
-    <div class="xl:hidden absolute z-1 inset-0 bg-gradient-to-tr from-cream/90 from-10% via-transparent via-60% to-cream/90" />
+    <div class="xl:hidden absolute z-1 inset-0 bg-gradient-to-tr from-cream/90 from-30% via-transparent via-60% to-cream/90" />
   </figure>
 </section>
