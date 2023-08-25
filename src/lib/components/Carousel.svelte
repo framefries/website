@@ -47,8 +47,7 @@
     interact(inner).draggable({
       onmove(e) {
         pause();
-        const dir = e._interaction.pointerType === 'touch' ? 1 : -1;
-        shift(dir * e.dx);
+        shift(-e.dx);
       },
     });
     start();
