@@ -27,7 +27,7 @@
   role="banner"
   class={cx(
     'relative overflow-hidden',
-    'md:flex md:flex-col md:aspect-[1396/820] md:justify-between',
+    'md:flex md:flex-col md:h-[600px] xl:h-[820px] md:justify-between',
     'p-6 md:py-12 md:px-20',
     'md:rounded-md bg-cream',
     'animate-fade-in',
@@ -154,7 +154,7 @@
       loading="lazy"
       src={HeroDesktop}
       alt="Hero illustration"
-      class="block w-full h-full object-cover"
+      class="block w-full h-full object-cover object-right"
     />
     <div class="xl:hidden absolute z-1 inset-0 bg-gradient-to-tr from-cream/90 from-30% via-transparent via-60% to-cream/90" />
   </figure>
