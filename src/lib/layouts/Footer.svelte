@@ -1,7 +1,7 @@
 <script>
   import cx from 'clsx';
 
-  import Clock from '$lib/components/Clock.svelte';
+  import Timezone from '$lib/components/Timezone.svelte';
   import Logo from '$lib/components/Logo.svelte';
   import Sticker from '$lib/components/Sticker.svelte';
   import Arrow from '$lib/components/Arrow.svelte';
@@ -32,14 +32,14 @@
   $$props.class
 )}>
   <div class="grid grid-cols-3 gap-6">
-    {#each ['Europe/Paris', 'Europe/Bratislava', 'Europe/Tallinn'] as timezone, i}
+    {#each ['Europe/Paris', 'Europe/Bratislava', 'Europe/Tallinn'] as tz, i}
       <div
         role="presentation"
         use:animate
         class="animate-fade-down after-[var(--delay)] pause"
         style={`--delay:${i*150}ms`}
       >
-        <Clock timezone={timezone} />
+        <Timezone tz={tz} />
       </div>
     {/each}
   </div>
