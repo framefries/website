@@ -44,74 +44,100 @@
   ];
 </script>
 
-<section class={cx('flex max-lg:flex-col gap-6 sm:px-6 md:px-20', $$props.class)}>
-  <div class="basis-1/2 relative z-1 rounded-xl bg-accent text-cream">
-    <Sticker
-      parallax={{ amplitude: 5, rotation: 20, angle: 15 }}
-      class="absolute z-1 -top-10 right-2 md:right-4"
-    >
-      <Check class="h-full" />
-    </Sticker>
-    <Sticker
-      parallax={{ amplitude: 5, rotation: -20, angle: -15 }}
-      class="absolute z-1 -left-8 lg:-left-4 -bottom-1 md:bottom-2 lg:bottom-32"
-    >
-      <Fire class="h-full" />
-    </Sticker>
-    <Sticker
-      title="Delicious!"
-      sub="...and also probably good for you!"
-      parallax={{ amplitude: 10, rotation: 5, angle: -15 }}
-      class="absolute z-2 -left-20 lg:-left-10 -bottom-8 lg:bottom-20"
-    />
-    <div class="p-6 md:p-14">
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-display">
-        What’s on the menu today?
-      </h2>
-      <p class="mt-6 max-w-sm text-lg md:text-xl">
-        Let’s do some taste testing with a showreel and other bits.
-      </p>
-      <div class="mt-6">
-        <Arrow class="h-3.5" long={true} />
+<section
+  id="work"
+  class={cx(
+    'sm:px-6 md:px-12 lg:px-20 space-y-6',
+    $$props.class
+  )}
+>
+  <section class="flex max-lg:flex-col sm:gap-6">
+    <div class="basis-1/2 relative z-1 sm:rounded-xl bg-accent text-cream">
+      <div class="px-6 py-12 sm:p-14">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-display">
+          What’s on the menu today?
+        </h2>
+        <p class="mt-6 max-w-sm text-lg md:text-xl">
+          Let’s do some taste testing with a showreel and other bits.
+        </p>
+        <div class="mt-6">
+          <Arrow class="h-3.5" long={true} />
+        </div>
+      </div>
+      <Sticker
+        parallax={{ amplitude: 5, rotation: 20, angle: 15 }}
+        class="absolute z-1 -top-10 right-2 md:right-4"
+      >
+        <Check class="h-full" />
+      </Sticker>
+      <Sticker
+        parallax={{ amplitude: 5, rotation: -20, angle: -15 }}
+        class="absolute z-1 -left-8 lg:-left-4 -bottom-1 md:bottom-2 lg:bottom-32"
+      >
+        <Fire class="h-full" />
+      </Sticker>
+      <Sticker
+        title="Delicious!"
+        sub="...and also probably good for you!"
+        parallax={{ amplitude: 10, rotation: 5, angle: -15 }}
+        class="absolute z-2 -left-20 lg:-left-10 -bottom-8 lg:bottom-20"
+      />
+    </div>
+    <div class="basis-1/2 p-4 sm:rounded-xl bg-cream">
+      <div class="aspect-video lg:aspect-[9/10] bg-gray-200">
       </div>
     </div>
-  </div>
-  <div class="basis-1/2 relative p-4 rounded-xl bg-cream">
+  </section>
+
+  <section class="relative space-y-6">
+    {#each designers as item, i}
+      <div class="relative z-1 h-[220px] md:h-[410px]">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-screen h-full">
+          <Carousel
+            items={[...item.images, null]}
+            let:item={src}
+            speed={50}
+            flip={i%2}
+            class="h-full"
+          >
+            {#if src}
+              <img
+                loading="lazy"
+                src={src}
+                alt={src}
+                class="block w-full h-full object-cover"
+              />
+            {:else}
+              <Dribbble
+                title="There's more!"
+                description={`Follow ${item.name} on Dribbble to stay up to date with his works.`}
+                action={`${item.name} on Dribbble`}
+                url={item.url}
+                class="h-full"
+              />
+            {/if}
+          </Carousel>
+        </div>
+      </div>
+    {/each}
     <Sticker
       kind="invert"
       title="Handmade!"
       sub="Don’t ask us how. It’s a secret recipe."
       parallax={{ amplitude: 10, rotation: -5, angle: 10 }}
-      class="absolute z-2 -bottom-10 -right-12 md:right-0 lg:right-12"
+      class="absolute z-2 -top-20 -right-12 md:right-0 lg:right-12"
     />
-    <div class="aspect-video md:aspect-[9/10] bg-gray-200">
-    </div>
-  </div>
+    <Sticker
+      title="Sous Video"
+      sub="Just takes a while to prepare, that’s all."
+      parallax={{ amplitude: 10, rotation: 5, angle: 15 }}
+      class="absolute z-2 top-[170px] md:top-[360px] -left-14 lg:left-4"
+    />
+    <Sticker
+      title="Crossing Streams"
+      sub="Despite Spenglers advice, we’re venturing ahead."
+      parallax={{ amplitude: 10, rotation: -5, angle: -5 }}
+      class="absolute z-2 -bottom-12 left-1/2 -translate-x-1/2"
+    />
+  </section>
 </section>
-
-{#each designers as item, i}
-  <Carousel
-    items={[...item.images, null]}
-    let:item={src}
-    speed={50}
-    flip={i%2}
-    class="h-[410px]"
-  >
-    {#if src}
-      <img
-        loading="lazy"
-        src={src}
-        alt={src}
-        class="block w-full h-full object-cover"
-      />
-    {:else}
-      <Dribbble
-        title="There's more!"
-        description={`Follow ${item.name} on Dribbble to stay up to date with his works.`}
-        action={`${item.name} on Dribbble`}
-        url={item.url}
-        class="h-full"
-      />
-    {/if}
-  </Carousel>
-{/each}

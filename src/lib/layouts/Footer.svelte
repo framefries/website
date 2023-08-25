@@ -24,6 +24,7 @@
 </script>
 
 <section class={cx(
+  'overflow-hidden',
   'flex flex-col gap-12 md:gap-20',
   'p-6 md:p-12 lg:p-20 lg:pt-28 xl:px-44',
   'md:rounded-md bg-accent',

@@ -11,13 +11,13 @@
 </script>
 
 <div class={cx('@container w-full', $$props.class)}>
-  <div class="h-full p-6 @sm:p-10 flex flex-col justify-between gap-6 bg-accent text-cream text-lg @sm:text-xl">
+  <div class="h-full p-6 @sm:p-10 flex flex-col justify-between gap-2 @sm:gap-6 bg-accent text-cream @sm:text-xl">
     <div>
       <DribbbleLogo class="h-12 @sm:h-16" />
-      <h2 class="mt-4 @sm:mt-8 text-4xl @sm:text-5xl font-display">
+      <h2 class="mt-4 @sm:mt-8 text-2xl @sm:text-5xl font-display">
         {title}
       </h2>
-      <p class="mt-2 @sm:mt-6">
+      <p class="hidden @sm:block @sm:mt-6">
         {description}
       </p>
     </div>

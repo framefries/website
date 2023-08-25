@@ -6,7 +6,7 @@
   import Heart from '$lib/components/Heart.svelte';
 </script>
 
-<section class={cx('flex flex-col items-center gap-6 md:gap-12 sm:p-6 md:p-20', $$props.class)}>
+<section class={cx('flex flex-col items-center gap-6 md:gap-12 sm:p-6 md:p-20 overflow-hidden', $$props.class)}>
   <div class="w-full -mx-6 md:-mx-20 text-center">
     <Sticker
       title="Made by Humans"

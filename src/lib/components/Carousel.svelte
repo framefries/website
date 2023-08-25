@@ -11,6 +11,7 @@
   let duplicates = 1;
   let pos = 0;
   let time = null;
+  let timeout;
   let frame;
 
   function shift(diff) {
@@ -36,14 +37,18 @@
   function pause() {
     time = null;
     cancelAnimationFrame(frame);
+    clearTimeout(timeout);
+    timeout = setTimeout(start, 3000);
   }
   
   onMount(() => {
     const childrenWidth = Array.from(inner.children).reduce((s, n) => s+n.clientWidth, 0);
     duplicates = 1 + Math.ceil(inner.clientWidth/childrenWidth);
     interact(inner).draggable({
-      listeners: {
-        move(e) { shift(-e.dx) },
+      onmove(e) {
+        pause();
+        const dir = e._interaction.pointerType === 'touch' ? 1 : -1;
+        shift(dir * e.dx);
       },
     });
     start();
@@ -53,10 +58,8 @@
 
 <div
   role="region"
-  tabindex="-1"
-  on:focus={pause}
-  on:mouseover={pause}
-  on:mouseleave={start}
+  on:drag={(e) => e.preventDefault()}
+  on:touchmove={(e) => e.preventDefault()}
   class={cx('min-h-20 overflow-hidden', $$props.class)}
 >
   <div
