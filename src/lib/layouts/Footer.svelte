@@ -45,22 +45,32 @@
   </div>
   <div class="grid md:grid-cols-3 gap-6">
     <div class="md:col-span-2 space-y-5">
-      <h3 class="text-5xl font-display">Sounds good?</h3>
-      <p class="max-w-lg">
+      <h3
+        use:animate
+        class="text-5xl font-display animate-fade-up pause"
+      >
+        Sounds good?
+      </h3>
+      <p
+        use:animate
+        class="max-w-lg animate-fade-up pause"
+      >
         Let’s get a fire going and create something memorable for you and your brand.
       </p>
-      <p>
-        <a
-          use:smooth
-          href="#contact"
-          class="btn variant-neutral"
-        >
-          Get in touch
-          <Arrow class="h-3.5" long={true} />
-        </a>
-      </p>
+      <a
+        href="#contact"
+        use:smooth
+        use:animate
+        class="btn variant-neutral animate-fade-up pause"
+      >
+        Get in touch
+        <Arrow class="h-3.5" long={true} />
+      </a>
     </div>
-    <nav class="grid grid-cols-2 gap-6">
+    <nav
+      use:animate
+      class="grid grid-cols-2 gap-6 animate-fade-up pause"
+    >
       <ul class="flex flex-col gap-2">
         {#each nav as link}
           <li>
@@ -86,7 +96,10 @@
     </nav>
   </div>
   <div class="grid md:grid-cols-3 max-md:justify-items-center md:content-center gap-6">
-    <div class="md:col-span-2">
+    <div
+      use:animate
+      class="md:col-span-2 animate-fade-up pause"
+    >
       <Logo class="h-[72px]" />
     </div>
     <div>
