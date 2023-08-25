@@ -57,11 +57,11 @@ export default {
           '100%': { 'opacity': 100 },
         },
         'fade-down': {
-          '0%': { 'opacity': 0, 'transform': 'translateY(-5%)' },
+          '0%': { 'opacity': 0, 'transform': 'translateY(-1rem)' },
           '100%': { 'opacity': 100, 'transform': 'none' },
         },
         'fade-up': {
-          '0%': { 'opacity': 0, 'transform': 'translateY(5%)' },
+          '0%': { 'opacity': 0, 'transform': 'translateY(1rem)' },
           '100%': { 'opacity': 100, 'transform': 'none' },
         },
       },
