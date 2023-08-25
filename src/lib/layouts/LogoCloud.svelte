@@ -34,7 +34,7 @@
   id="team"
   class={cx(
     'flex max-lg:flex-col gap-12 lg:gap-20 items-center lg:items-start justify-between',
-    'p-6 md:py-16 md:px-12 lg:px-20',
+    'px-6 md:px-12 lg:px-20',
     $$props.class
   )}
 >

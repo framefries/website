@@ -24,7 +24,7 @@
       'bg-cream text-accent': kind === 'default',
       'bg-accent text-cream': kind === 'invert',
     },
-    'pointer-events-none', 
+    'select-none pointer-events-none', 
     'scale-50 md:scale-75 lg:scale-100',
     $$props.class
   )}

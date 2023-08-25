@@ -1,5 +1,6 @@
 <script>
   import cx from 'clsx';
+  
   import Step from './Step.svelte';
   import animate from '$lib/utils/animate.action.js';
 
@@ -12,10 +13,11 @@
 </script>
 
 <section class={cx(
-  'space-y-6 md:space-y-8',
+  'px-6 md:px-12 lg:px-20',
+  'space-y-6 md:space-y-12',
   $$props.class
 )}>
-  <div class="max-w-6xl mx-auto p-6 md:py-20 lg:px-20 text-center">
+  <div class="max-w-[1080px] mx-auto text-center">
     <p
       use:animate
       class="text-3xl md:text-5xl md:!leading-tight font-display animate-fade-up pause"
@@ -25,7 +27,7 @@
     </p>
   </div>
 
-  <section class="p-6 md:px-20">
+  <section>
     <div class="max-w-4xl mx-auto text-center">
       <h3 class="text-xl md:text-3xl md:!leading-tight font-display">
         Let's talk about how we serve.
