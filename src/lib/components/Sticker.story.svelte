@@ -41,7 +41,7 @@
       sub={sub}
       kind={kind}
     >
-      <Heart size="manual" class="-mx-1 md:-mx-2 h-12 md:h-14" />
+      <Heart class="-mx-1 md:-mx-2 h-12 md:h-14" />
     </Sticker>
 
     <svelte:fragment slot="controls">
@@ -63,7 +63,7 @@
 
   <Hst.Variant title="icon only">
     <Sticker kind={kind}>
-      <Check size="manual" class="h-full" />
+      <Check class="h-full" />
     </Sticker>
 
     <svelte:fragment slot="controls">

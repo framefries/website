@@ -1,7 +1,6 @@
 <script>
   import cx from 'clsx';
   
-  export let size = 'current';
   export let long = false;
 </script>
 
@@ -10,9 +9,6 @@
   stroke-linecap="round"
   class={cx(
     'shrink-0 inline-flex w-auto stroke-current fill-none select-none',
-    {
-      'h-[1em]': size === 'current',
-    },
     $$props.class,
   )}
 >

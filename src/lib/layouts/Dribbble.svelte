@@ -13,7 +13,7 @@
 <div class={cx('@container w-full', $$props.class)}>
   <div class="h-full p-6 @sm:p-10 flex flex-col justify-between gap-6 bg-accent text-cream text-lg @sm:text-xl">
     <div>
-      <DribbbleLogo size="manual" class="h-12 @sm:h-16" />
+      <DribbbleLogo class="h-12 @sm:h-16" />
       <h2 class="mt-4 @sm:mt-8 text-4xl @sm:text-5xl font-display">
         {title}
       </h2>
@@ -28,7 +28,7 @@
         class="btn variant-neutral"
       >
         {action}
-        <Arrow size="manual" class="h-3.5 -rotate-45" />
+        <Arrow class="h-3.5 -rotate-45" />
       </a>
     </div>
   </div>

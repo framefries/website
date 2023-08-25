@@ -8,9 +8,9 @@
 </script>
 
 <Hst.Story title="Icons/Fire">
-  <Hst.Variant title="current font size">
+  <Hst.Variant title="font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Fire />
+      <Fire class="h-current" />
     </div>
 
     <svelte:fragment slot="controls">
@@ -27,9 +27,10 @@
       />
     </svelte:fragment>
   </Hst.Variant>
+
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
-      <Fire size="manual" class="h-12" />
+      <Fire class="h-12" />
     </div>
 
     <svelte:fragment slot="controls">

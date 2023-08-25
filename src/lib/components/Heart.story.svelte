@@ -8,9 +8,9 @@
 </script>
 
 <Hst.Story title="Icons/Heart">
-  <Hst.Variant title="current font size">
+  <Hst.Variant title="font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Heart />
+      <Heart class="h-current" />
     </div>
 
     <svelte:fragment slot="controls">
@@ -29,7 +29,7 @@
   </Hst.Variant>
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
-      <Heart size="manual" class="h-12" />
+      <Heart class="h-12" />
     </div>
 
     <svelte:fragment slot="controls">

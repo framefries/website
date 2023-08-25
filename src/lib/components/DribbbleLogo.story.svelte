@@ -7,10 +7,10 @@
   let fontSize = 1;
 </script>
 
-<Hst.Story title="Icons/DribbbleLogo">
-  <Hst.Variant title="current font size">
+<Hst.Story title="Icons/Dribbble Logo">
+  <Hst.Variant title="font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <DribbbleLogo />
+      <DribbbleLogo class="h-current" />
     </div>
 
     <svelte:fragment slot="controls">
@@ -29,7 +29,7 @@
   </Hst.Variant>
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
-      <DribbbleLogo size="manual" class="h-12" />
+      <DribbbleLogo class="h-12" />
     </div>
 
     <svelte:fragment slot="controls">

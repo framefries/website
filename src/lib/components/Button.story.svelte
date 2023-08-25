@@ -9,14 +9,14 @@
   <Hst.Variant title="default">
     <button class="btn">
       Get started
-      <Arrow size="manual" class="h-3.5" long={true} />
+      <Arrow class="h-3.5" long={true} />
     </button>
   </Hst.Variant>
 
   <Hst.Variant title="neutral">
     <button class="btn variant-neutral text-accent">
       Get started
-      <Arrow size="manual" class="h-3.5" long={true} />
+      <Arrow class="h-3.5" long={true} />
     </button>
   </Hst.Variant>
 

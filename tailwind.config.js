@@ -23,6 +23,9 @@ export default {
       gray: colors.stone,
     },
     extend: {
+      height: {
+        current: '1em',
+      },
       minWidth: defaultTheme.spacing,
       maxWidth: defaultTheme.spacing,
       minHeight: defaultTheme.spacing,

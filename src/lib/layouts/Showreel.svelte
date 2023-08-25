@@ -50,13 +50,13 @@
       parallax={{ amplitude: 5, rotation: 20, angle: 15 }}
       class="absolute z-1 -top-10 right-2 md:right-4"
     >
-      <Check size="manual" class="h-full" />
+      <Check class="h-full" />
     </Sticker>
     <Sticker
       parallax={{ amplitude: 5, rotation: -20, angle: -15 }}
       class="absolute z-1 -left-8 lg:-left-4 -bottom-1 md:bottom-2 lg:bottom-32"
     >
-      <Fire size="manual" class="h-full" />
+      <Fire class="h-full" />
     </Sticker>
     <Sticker
       title="Delicious!"
@@ -72,7 +72,7 @@
         Let’s do some taste testing with a showreel and other bits.
       </p>
       <div class="mt-6">
-        <Arrow size="manual" class="h-3.5" long={true} />
+        <Arrow class="h-3.5" long={true} />
       </div>
     </div>
   </div>

@@ -1,7 +1,8 @@
 <script>
   import cx from 'clsx';
 
-  import HeroImg from '$lib/assets/hero-desktop.png';
+  import HeroDesktop from '$lib/assets/hero-desktop.png';
+  import Hero from '$lib/assets/hero.png';
   import Logo from '$lib/components/Logo.svelte';
   import Arrow from '$lib/components/Arrow.svelte';
   import Burger from '$lib/components/Burger.svelte';
@@ -27,20 +28,20 @@
     'relative overflow-hidden',
     'md:flex md:flex-col md:aspect-[1396/820] md:justify-between',
     'p-6 md:py-12 md:px-20',
-    'rounded-md bg-cream',
+    'md:rounded-md bg-cream',
     $$props.class
   )}
 >
   <div class="relative z-2">
     <div class="flex items-center justify-between gap-8">
-      <Logo size="original" class="text-accent" />
+      <Logo class="h-16 md:h-[72px] text-accent" />
       <nav>
         <button
           class="md:hidden btn variant-primary variant-icon !text-xl"
           aria-label="Open menu"
           on:click={toggleNav}
         >
-          <Burger />
+          <Burger class="h-current" />
         </button>
         <ul class="hidden md:flex items-center justify-center gap-6 text-xl max-xl:drop-shadow-2xl">
           {#each nav as link}
@@ -68,13 +69,13 @@
         'opacity-0 -translate-y-full pointer-events-none': !navOpen,
       }
     )}>
-      <Logo size="manual" class="absolute top-6 left-6 h-10" />
+      <Logo class="absolute top-6 left-6 h-10" />
       <button
         class="absolute top-6 right-6 z-1 btn variant-alt variant-icon !text-xl"
         aria-label="Close menu"
         on:click={toggleNav}
       >
-        <Burger open />
+        <Burger open class="h-current" />
       </button>
       <ul class="h-full flex flex-col items-center justify-center gap-6 text-2xl">
         {#each nav as link}
@@ -87,16 +88,6 @@
       </ul>
     </nav>
   </div>
-
-  <figure class="absolute z-0 inset-0 select-none pointer-events-none">
-    <img
-      loading="lazy"
-      src={HeroImg}
-      alt="Hero illustration"
-      class="block w-full h-full object-cover"
-    />
-    <div class="xl:hidden absolute z-1 inset-0 bg-gradient-to-tr from-cream/90 from-10% via-cream/30 via-60% to-cream/90" />
-  </figure>
 
   <header class="relative z-1 mt-12 max-xl:drop-shadow-2xl">
     <h1 class="sr-only">Frame Fries, 3D illustration studio</h1>
@@ -113,7 +104,27 @@
       class="mt-6 btn variant-neutral text-lg md:text-xl text-accent"
     >
       Get in touch
-      <Arrow size="manual" class="h-3.5" long={true} />
+      <Arrow class="h-3.5" long={true} />
     </a>
   </header>
+
+  <figure class="relative z-0 md:hidden -m-6 h-[420px] select-none pointer-events-none">
+    <img
+      loading="lazy"
+      src={Hero}
+      alt="Hero illustration"
+      class="block w-full h-full object-cover"
+    />
+    <div class="absolute z-1 inset-0 h-12 bg-gradient-to-b from-cream to-transparent" />
+  </figure>
+
+  <figure class="max-md:hidden absolute z-0 inset-0 select-none pointer-events-none">
+    <img
+      loading="lazy"
+      src={HeroDesktop}
+      alt="Hero illustration"
+      class="block w-full h-full object-cover"
+    />
+    <div class="xl:hidden absolute z-1 inset-0 bg-gradient-to-tr from-cream/90 from-10% via-transparent via-60% to-cream/90" />
+  </figure>
 </section>

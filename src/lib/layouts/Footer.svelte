@@ -36,7 +36,7 @@
           class="btn variant-neutral"
         >
           Get in touch
-          <Arrow size="manual" class="h-3.5" long={true} />
+          <Arrow class="h-3.5" long={true} />
         </a>
       </p>
     </div>
@@ -72,7 +72,7 @@
   </div>
   <div class="grid md:grid-cols-3 max-md:justify-items-center md:content-center gap-6">
     <div class="md:col-span-2">
-      <Logo size="original" />
+      <Logo class="h-[72px]" />
     </div>
     <div>
       <Sticker

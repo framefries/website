@@ -9,9 +9,9 @@
 </script>
 
 <Hst.Story title="Icons/Arrow">
-  <Hst.Variant title="current font size">
+  <Hst.Variant title="font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Arrow {long} size="current" />
+      <Arrow class="h-current" />
     </div>
 
     <svelte:fragment slot="controls">
@@ -35,7 +35,7 @@
 
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
-      <Arrow {long} size="manual" class="h-12" />
+      <Arrow {long} class="h-12" />
     </div>
 
     <svelte:fragment slot="controls">

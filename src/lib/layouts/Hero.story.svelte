@@ -5,7 +5,7 @@
 </script>
 
 <Hst.Story title="Sections/Hero">
-  <div class="p-6 bg-white">
+  <div class="md:p-6 bg-white">
     <Hero />
   </div>
 </Hst.Story>

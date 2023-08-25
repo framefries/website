@@ -9,9 +9,9 @@
 </script>
 
 <Hst.Story title="Icons/Burger">
-  <Hst.Variant title="current font size">
+  <Hst.Variant title="font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Burger {open} />
+      <Burger {open} class="h-current" />
     </div>
 
     <svelte:fragment slot="controls">
@@ -35,7 +35,7 @@
   
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
-      <Burger {open} size="manual" class="h-12" />
+      <Burger {open} class="h-12" />
     </div>
 
     <svelte:fragment slot="controls">

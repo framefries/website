@@ -1,16 +1,11 @@
 <script>
   import cx from 'clsx';
-  
-  export let size = 'current';
 </script>
 
 <svg
   viewBox="0 0 64 64"
   class={cx(
     'shrink-0 inline-flex w-auto stroke-none fill-current select-none',
-    {
-      'h-[1em]': size === 'current',
-    },
     $$props.class,
   )}
 >

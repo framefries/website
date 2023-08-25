@@ -14,7 +14,7 @@
       parallax={{ amplitude: 5 }}
       class="relative z-1"
     >
-      <Heart size="manual" class="-mx-2 h-14" />
+      <Heart class="-mx-2 h-14" />
     </Sticker>
   </div>
   <h2 class="max-w-5xl text-center text-3xl md:text-5xl md:!leading-tight  font-display">

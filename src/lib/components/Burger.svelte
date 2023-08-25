@@ -1,7 +1,6 @@
 <script>
   import cx from 'clsx';
   
-  export let size = 'current';
   export let open = false;
 </script>
 
@@ -13,7 +12,6 @@
   class={cx(
     'shrink-0 inline-flex w-auto select-none',
     {
-      'h-[1em]': size === 'current',
       'stroke-0 stroke-none fill-current': !open,
       'stroke-[1.5] stroke-current fill-none': open,
     },
