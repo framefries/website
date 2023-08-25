@@ -10,7 +10,7 @@ export default function(node, params) {
   let amplitude = 0;
 
   const init = () => {
-    node.style.willChange = 'transform';
+    node.style.setProperty('willChange', 'transform');
     node.classList.add('translate-y-0', 'rotate-0');
     const pos = node.getBoundingClientRect();
     const center = (pos.top + pos.bottom) / 2 + container.scrollTop;
@@ -36,8 +36,7 @@ export default function(node, params) {
   update();
   
   return {
-    update,
-    destroy: () => {
+    destroy() {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('touchmove', handleScroll);

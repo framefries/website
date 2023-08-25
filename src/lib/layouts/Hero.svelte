@@ -7,6 +7,7 @@
   import Arrow from '$lib/components/Arrow.svelte';
   import Burger from '$lib/components/Burger.svelte';
   import smooth from '$lib/utils/smooth.action.js';
+  import parallax from '$lib/utils/parallax.action.js';
 
   let navOpen = false;
   function toggleNav() {
@@ -29,15 +30,21 @@
     'md:flex md:flex-col md:aspect-[1396/820] md:justify-between',
     'p-6 md:py-12 md:px-20',
     'md:rounded-md bg-cream',
+    'animate-fade-in',
     $$props.class
   )}
 >
   <div role="none" class="absolute z-0 top-0 inset-x-0 h-64 bg-gradient-to-b from-white/40 to-transparent pointer-events-none" />
 
   <div class="relative z-2">
-    <div class="flex items-center justify-between gap-8">
-      <Logo class="h-16 md:h-[72px] text-accent" />
-      <nav>
+    <div
+      use:parallax={{ amplitude: 5 }}
+      class="flex items-center justify-between gap-8"
+    >
+      <div class="animate-fade-down">
+        <Logo class="h-16 md:h-[72px] text-accent" />
+      </div>
+      <nav class="animate-fade-down after-150">
         <button
           class="md:hidden btn variant-primary variant-icon !text-xl"
           aria-label="Open menu"
@@ -107,26 +114,29 @@
     </nav>
   </div>
 
-  <header class="relative z-1 mt-12 max-xl:drop-shadow-2xl">
+  <header
+    use:parallax={{ amplitude: 5 }}
+    class="relative z-1 mt-12 max-xl:drop-shadow-2xl"
+  >
     <h1 class="sr-only">Frame Fries, 3D illustration studio</h1>
-    <h2 class="flex flex-col items-start gap-2 font-display text-accent">
+    <h2 class="flex flex-col items-start gap-2 font-display text-accent animate-fade-up">
       <span class="text-xl md:text-2xl">Hello there,</span>
       <span class="text-4xl md:text-5xl lg:text-6xl">What can we get you?</span>
     </h2>
-    <p class="mt-3 max-w-lg text-lg md:text-xl">
+    <p class="mt-3 max-w-lg text-lg md:text-xl animate-fade-up after-150">
       Frame Fries is a small independent illustration studio serving with speed, efficiency and transparency
     </p>
     <a
       use:smooth
       href="#contact"
-      class="mt-6 btn variant-neutral text-lg md:text-xl text-accent"
+      class="mt-6 btn variant-neutral text-lg md:text-xl text-accent animate-fade-up after-300"
     >
       Get in touch
       <Arrow class="h-3.5" long={true} />
     </a>
   </header>
 
-  <figure class="relative z-0 md:hidden -m-6 h-[420px] pointer-events-none">
+  <figure class="relative z-0 md:hidden -m-6 h-[420px] pointer-events-none animate-fade-up">
     <img
       loading="lazy"
       src={Hero}
@@ -136,7 +146,7 @@
     <div class="absolute z-1 inset-0 h-12 bg-gradient-to-b from-cream to-transparent" />
   </figure>
 
-  <figure class="max-md:hidden absolute z-0 inset-0 pointer-events-none">
+  <figure class="max-md:hidden absolute z-0 inset-0 pointer-events-none animate-fade-in">
     <img
       loading="lazy"
       src={HeroDesktop}

@@ -44,14 +44,26 @@ export default {
         '8': 8,
         '9': 9,
       },
-      animationDelay: {
-        'none': '0s',
-      },
       animation: {
         'blink': 'blink 1s steps(5, start) infinite',
+        'fade-in': 'fade-in .5s ease-in-out both',
+        'fade-down': 'fade-down .5s ease-in-out both',
+        'fade-up': 'fade-up .5s ease-in-out both',
       },
       keyframes: {
         'blink': { 'to': { 'visibility': 'hidden' } },
+        'fade-in': {
+          '0%': { 'opacity': 0 },
+          '100%': { 'opacity': 100 },
+        },
+        'fade-down': {
+          '0%': { 'opacity': 0, 'transform': 'translateY(-5%)' },
+          '100%': { 'opacity': 100, 'transform': 'none' },
+        },
+        'fade-up': {
+          '0%': { 'opacity': 0, 'transform': 'translateY(5%)' },
+          '100%': { 'opacity': 100, 'transform': 'none' },
+        },
       },
     },
   },
@@ -59,6 +71,23 @@ export default {
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/container-queries'),
+    plugin(({ addUtilities, matchUtilities, theme }) => {
+      matchUtilities({
+        'after': (value) => ({
+          'animation-delay': value,
+        }),
+      }, {
+        values: theme('transitionDelay'),
+      });
+      addUtilities({
+        '.pause': {
+          'animation-play-state': 'pause',
+        },
+        '.play': {
+          'animation-play-state': 'running',
+        },
+      });
+    }),
     plugin(({ addBase, theme }) => {
       addBase({
         'body': {

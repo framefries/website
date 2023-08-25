@@ -11,7 +11,7 @@ export default function(node) {
 
   node.addEventListener('click', handleClick);
   return {
-    destroy: () => {
+    destroy() {
       node.removeEventListener('click', handleClick);
     },
   };
