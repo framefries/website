@@ -1,8 +1,6 @@
 <script>
   import cx from 'clsx';
 
-  import animate from '$lib/utils/animate.action.js';
-
   import LogoAsus from '$lib/assets/logos/asus.png';
   import LogoEA from '$lib/assets/logos/ea.png';
   import LogoIntel from '$lib/assets/logos/intel.png';
@@ -12,6 +10,7 @@
   import ProfileNicolas from '$lib/assets/profiles/nicolas.png';
   import ProfileReijo from '$lib/assets/profiles/reijo.png';
   import ProfileRoman from '$lib/assets/profiles/roman.png';
+  import animate from '$lib/utils/animate.action.js';
 
   const logos = [
     { name: 'Electronic Arts', src: LogoEA, class: 'h-16' },
@@ -32,6 +31,7 @@
 </script>
 
 <section
+  id="team"
   class={cx(
     'flex max-lg:flex-col gap-12 lg:gap-20 items-center lg:items-start justify-between',
     'p-6 md:py-16 md:px-12 lg:px-20',

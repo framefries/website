@@ -1,12 +1,11 @@
 <script>
   import cx from 'clsx';
 
-  import animate from '$lib/utils/animate.action.js';
-
   import Clock from '$lib/components/Clock.svelte';
   import Logo from '$lib/components/Logo.svelte';
   import Sticker from '$lib/components/Sticker.svelte';
   import Arrow from '$lib/components/Arrow.svelte';
+  import animate from '$lib/utils/animate.action.js';
   import smooth from '$lib/utils/smooth.action.js';
 
   const nav = [
@@ -98,7 +97,7 @@
   <div class="grid md:grid-cols-3 max-md:justify-items-center md:content-center gap-6">
     <div
       use:animate
-      class="md:col-span-2 animate-fade-up pause"
+      class="md:col-span-2 md:animate-fade-up pause"
     >
       <Logo class="h-[72px]" />
     </div>
