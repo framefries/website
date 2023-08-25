@@ -28,7 +28,7 @@
   class={cx(
     'relative overflow-hidden',
     'md:flex md:flex-col md:h-[600px] xl:h-[820px] md:justify-between',
-    'p-6 md:pt-12 md:pb-16 md:px-20',
+    'p-6 md:p-12 lg:pb-16 lg:px-20',
     'md:rounded-md bg-cream',
     'animate-fade-in',
     $$props.class

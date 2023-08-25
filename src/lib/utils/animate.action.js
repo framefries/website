@@ -6,7 +6,7 @@ export default function(node) {
   function check() {
     requestAnimationFrame(() => {
       const pos = trigger.getBoundingClientRect();
-      if (pos.top < document.documentElement.clientHeight*.9) {
+      if (pos.top < document.documentElement.clientHeight*0.9) {
         node.classList.remove('pause');
         destroy();
       }

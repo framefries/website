@@ -34,7 +34,7 @@
 <section
   class={cx(
     'flex max-lg:flex-col gap-12 lg:gap-20 items-center lg:items-start justify-between',
-    'p-6 md:py-16 md:px-20',
+    'p-6 md:py-16 md:px-12 lg:px-20',
     $$props.class
   )}
 >
@@ -71,12 +71,12 @@
   </div>
   <aside
     bind:this={logosContainer}
-    class="px-12 md:px-0 grid grid-cols-2 gap-12 items-center justify-items-center"
+    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-1 rounded-md overflow-hidden"
   >
     {#each logos as item, i}
       <figure
         use:animate={{ trigger: logosContainer }}
-        class="animate-fade-up after-[var(--delay)] pause"
+        class="h-28 flex items-center justify-center px-6 max-lg:bg-gray-100 animate-fade-up after-[var(--delay)] pause"
         style={`--delay:${i*150}ms`}
       >
         <img

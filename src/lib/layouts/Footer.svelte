@@ -1,6 +1,8 @@
 <script>
   import cx from 'clsx';
 
+  import animate from '$lib/utils/animate.action.js';
+
   import Clock from '$lib/components/Clock.svelte';
   import Logo from '$lib/components/Logo.svelte';
   import Sticker from '$lib/components/Sticker.svelte';
@@ -22,7 +24,25 @@
   ];
 </script>
 
-<section class={cx('flex flex-col gap-12 md:gap-20 p-6 md:p-20 rounded-md bg-accent text-cream md:text-xl', $$props.class)}>
+<section class={cx(
+  'flex flex-col gap-12 md:gap-20',
+  'p-6 md:p-12 lg:p-20 lg:pt-28 xl:px-44',
+  'md:rounded-md bg-accent',
+  'text-cream md:text-xl',
+  $$props.class
+)}>
+  <div class="grid grid-cols-3 gap-6">
+    {#each ['Europe/Paris', 'Europe/Bratislava', 'Europe/Tallinn'] as timezone, i}
+      <div
+        role="presentation"
+        use:animate
+        class="animate-fade-down after-[var(--delay)] pause"
+        style={`--delay:${i*150}ms`}
+      >
+        <Clock timezone={timezone} />
+      </div>
+    {/each}
+  </div>
   <div class="grid md:grid-cols-3 gap-6">
     <div class="md:col-span-2 space-y-5">
       <h3 class="text-5xl font-display">Sounds good?</h3>
@@ -64,11 +84,6 @@
         {/each}
       </ul>
     </nav>
-  </div>
-  <div class="md:order-first grid grid-cols-3 gap-6">
-    {#each ['Europe/Paris', 'Europe/Bratislava', 'Europe/Tallinn'] as timezone}
-      <Clock timezone={timezone} />
-    {/each}
   </div>
   <div class="grid md:grid-cols-3 max-md:justify-items-center md:content-center gap-6">
     <div class="md:col-span-2">
