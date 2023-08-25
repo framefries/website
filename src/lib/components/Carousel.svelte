@@ -45,6 +45,8 @@
     const childrenWidth = Array.from(inner.children).reduce((s, n) => s+n.clientWidth, 0);
     duplicates = 1 + Math.ceil(inner.clientWidth/childrenWidth);
     interact(inner).draggable({
+      startAxis: 'x',
+      lockAxis: 'x',
       onmove(e) {
         pause();
         shift(-e.dx);
