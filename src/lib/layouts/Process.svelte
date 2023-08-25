@@ -13,7 +13,7 @@
 </script>
 
 <section class={cx(
-  'px-6 md:px-12 lg:px-20',
+  'p-6 md:px-12 lg:py-16 lg:px-20',
   'space-y-6 md:space-y-12',
   $$props.class
 )}>

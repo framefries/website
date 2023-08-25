@@ -8,7 +8,7 @@
 </script>
 
 <section class={cx(
-  'px-6 md:px-12 lg:px-20',
+  'p-6 md:px-12 lg:px-20',
   'space-y-6 md:space-y-12',
   $$props.class
 )}>
@@ -36,7 +36,7 @@
   <div class="text-center">
     <p
       use:animate
-      class="md:text-xl text-gray-600 animate-fade-up after-150 pause"
+      class="md:text-xl text-gray-600 animate-fade-up pause"
     >
       Reduce friction and noise, take away everything unnecessary.
       <br />What is left is Frame Fries.
@@ -44,7 +44,7 @@
   </div>
   <div
     use:animate
-    class="text-center text-gray-600 animate-fade-up after-300 pause"
+    class="text-center text-gray-600 animate-fade-up pause"
   >
     <Divider />
   </div>
