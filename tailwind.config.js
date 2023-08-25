@@ -81,7 +81,7 @@ export default {
       });
       addUtilities({
         '.pause': {
-          'animation-play-state': 'pause',
+          'animation-play-state': 'paused',
         },
         '.play': {
           'animation-play-state': 'running',

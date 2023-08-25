@@ -1,13 +1,11 @@
 import { debounce } from 'throttle-debounce';
-import { isObject } from './helpers.js';
 
-export default function(node, params) {
-  if (!isObject(params)) return;
-  const options = { amplitude: 0, rotation: 0, angle: 0, ...params };
+export default function(node, options) {
+  const { amplitude, rotation, angle } = { amplitude: 0, rotation: 0, angle: 0, ...options };
 
   const container = document.documentElement;
   let target;
-  let amplitude = 0;
+  let dy = 0;
 
   const init = () => {
     node.style.setProperty('willChange', 'transform');
@@ -15,15 +13,15 @@ export default function(node, params) {
     const pos = node.getBoundingClientRect();
     const center = (pos.top + pos.bottom) / 2 + container.scrollTop;
     target = Math.max(0, Math.min(center - container.clientHeight/2, container.scrollHeight - container.clientHeight));
-    amplitude = options.amplitude / 100 * container.clientHeight / 2;
+    dy = amplitude / 100 * container.clientHeight / 2;
   };
 
   const update = () => {
     if (typeof target !== 'undefined') {
       const ratio = Math.min(1, Math.abs(target - container.scrollTop) / (container.clientHeight / 2));
       const dir = container.scrollTop > target ? -1 : 1;
-      node.style.setProperty('--tw-translate-y', `${amplitude * dir * ratio}px`);
-      node.style.setProperty('--tw-rotate', `${options.angle + (options.rotation * dir * ratio)}deg`);
+      node.style.setProperty('--tw-translate-y', `${dy * dir * ratio}px`);
+      node.style.setProperty('--tw-rotate', `${angle + (rotation * dir * ratio)}deg`);
     }
   };
 
@@ -32,6 +30,7 @@ export default function(node, params) {
   window.addEventListener('resize', handleResize);
   window.addEventListener('scroll', handleScroll);
   window.addEventListener('touchmove', handleScroll);
+  
   init();
   update();
   

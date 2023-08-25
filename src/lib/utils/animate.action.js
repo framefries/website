@@ -1,19 +1,22 @@
-// import { debounce } from 'throttle-debounce';
+import { throttle } from 'throttle-debounce';
 
-export default function(node, { container }) {
-  let target = container || node;
-  node.classList.add('pause');
-
+export default function(node) {
+  let trigger = node;
+  
   function check() {
-    const pos = target.getBoundingClientRect();
-    if (pos.top < document.documentElement.clientHeight*.8) {
-      node.classList.remove('pause');
-      destroy();
-    }
+    requestAnimationFrame(() => {
+      const pos = trigger.getBoundingClientRect();
+      if (pos.top < document.documentElement.clientHeight*.9) {
+        node.classList.remove('pause');
+        destroy();
+      }
+    });
   }
 
+  const handleResize = throttle(100, check);
+
   function destroy() {
-    window.removeEventListener('resize', check);
+    window.removeEventListener('resize', handleResize);
     window.removeEventListener('scroll', check);
     window.removeEventListener('touchmove', check);
   }
@@ -25,6 +28,11 @@ export default function(node, { container }) {
   check();
 
   return {
+    update(options) {
+      if (options?.trigger) {
+        trigger = options.trigger;
+      }
+    },
     destroy,
   };
 }

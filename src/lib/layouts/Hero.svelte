@@ -28,7 +28,7 @@
   class={cx(
     'relative overflow-hidden',
     'md:flex md:flex-col md:h-[600px] xl:h-[820px] md:justify-between',
-    'p-6 md:py-12 md:px-20',
+    'p-6 md:pt-12 md:pb-16 md:px-20',
     'md:rounded-md bg-cream',
     'animate-fade-in',
     $$props.class
@@ -98,16 +98,13 @@
           <Burger open class="h-current" />
         </button>
       </div>
-      <ul class={cx(
-        'h-full flex flex-col items-center justify-center gap-6 text-2xl',
-        'transition ease-in-out duration-300',
-        {
-          'opacity-100 translate-y-0': navOpen,
-          'opacity-0 translate-y-[4rem]': !navOpen,
-        }
-      )}>
-        {#each nav as link}
-          <li>
+      <ul class="h-full flex flex-col items-center justify-center gap-6 text-2xl">
+        {#each nav as link, i}
+          <li
+            class="after-[var(--delay)]"
+            class:animate-fade-up={navOpen}
+            style={`--delay:${i*100}ms`}
+          >
             <a href={link.href} class:font-medium={link.accent}>
               {link.label}
             </a>
