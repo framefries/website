@@ -24,6 +24,8 @@
       duration: 'Less than a day.',
     },
   ];
+
+  let stepsContainer = null;
 </script>
 
 <section class={$$props.class}>
@@ -37,20 +39,32 @@
     </p>
   </div>
 
-  <h3 class="mt-6 px-6 text-center text-xl md:text-3xl md:!leading-tight font-display">
+  <h3
+    use:animate
+    class="mt-6 px-6 text-center text-xl md:text-3xl md:!leading-tight font-display animate-fade-up pause"
+  >
     Let's talk about how we serve.
   </h3>
 
-  <div class="mt-4 md:mt-10 px-6 w-full flex items-stretch snap-mandatory scrollbar-none snap-x overflow-x-auto sm:grid sm:grid-cols-2 gap-2 md:gap-6">
+  <div
+    bind:this={stepsContainer}
+    class="mt-4 md:mt-10 px-6 w-full flex snap-mandatory scrollbar-none snap-x overflow-x-auto sm:grid sm:grid-cols-2 gap-2 md:gap-6"
+  >
     {#each steps as step, i}
-      <Step
-        value={i+1}
-        title={step.title}
-        class="shrink-0 w-full h-full snap-center snap-always"
+      <div
+        use:animate={{ container: stepsContainer }}
+        class="shrink-0 w-full snap-center snap-always animate-fade-down after-[var(--delay)] pause"
+        style={`--delay:${i*150}ms`}
       >
-        <p slot="description">{@html step.description}</p>
-        <p slot="duration">{step.duration}</p>
-      </Step>
+        <Step
+          value={i+1}
+          title={step.title}
+          class="w-full h-full"
+        >
+          <p slot="description">{@html step.description}</p>
+          <p slot="duration">{step.duration}</p>
+        </Step>
+      </div>
     {/each}
   </div>
 </section>
