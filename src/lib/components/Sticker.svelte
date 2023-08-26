@@ -17,7 +17,7 @@
   use:parallaxAction={parallax}
   class={cx(
     'inline-flex items-center justify-center gap-4',
-    'border-2 border-black/20',
+    'border border-black/10',
     {
       'w-20 h-20 rounded-full p-2': iconOnly,
       'w-fit rounded-2xl px-4': !iconOnly,
@@ -44,7 +44,7 @@
         {title}
       </div>
       {#if sub}
-        <div class="-mt-2 text-sm italic">
+        <div class="-mt-1 text-sm italic">
           {sub}
         </div>
       {/if}
