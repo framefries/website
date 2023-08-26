@@ -1,6 +1,7 @@
 <script>
+  import { browser } from '$app/environment';
   import cx from 'clsx';
-
+  
   import HeroDesktop from '$lib/assets/hero-desktop.webp';
   import Hero from '$lib/assets/hero.webp';
   import Logo from '$lib/components/Logo.svelte';
@@ -10,9 +11,8 @@
   import parallax from '$lib/utils/parallax.action.js';
 
   let navOpen = false;
-  function toggleNav() {
-    navOpen = !navOpen;
-    document.body.classList.toggle('overflow-hidden', navOpen);
+  $: if (browser) {
+    document.body.classList.toggle('max-md:overflow-hidden', navOpen);
   }
 
   const nav = [
@@ -46,7 +46,7 @@
         <button
           class="md:hidden btn variant-primary variant-icon !text-xl animate-fade-down md:after-300"
           aria-label="Open menu"
-          on:click={toggleNav}
+          on:click={() => navOpen = true}
         >
           <Burger class="h-current" />
         </button>
@@ -71,10 +71,10 @@
       </nav>
     </div>
     <nav class={cx(
-      'fixed inset-0 z-30 py-12 px-6 bg-accent text-cream',
+      'md:hidden fixed inset-0 z-30 py-12 px-6 bg-accent text-cream',
       'transition ease-in-out duration-300',
       {
-        'max-md:opacity-100 pointer-events-auto': navOpen,
+        'opacity-100 pointer-events-auto': navOpen,
         'opacity-0 pointer-events-none': !navOpen,
       }
     )}>
@@ -91,7 +91,7 @@
         <button
           class="btn variant-alt variant-icon !text-xl"
           aria-label="Close menu"
-          on:click={toggleNav}
+          on:click={() => navOpen = false}
         >
           <Burger open class="h-current" />
         </button>
@@ -103,7 +103,12 @@
             class:animate-fade-up={navOpen}
             style={`--delay:${i*100}ms`}
           >
-            <a href={link.href} class:font-medium={link.accent}>
+            <a
+              use:smooth
+              on:click={() => navOpen = false}
+              href={link.href}
+              class:font-medium={link.accent}
+            >
               {link.label}
             </a>
           </li>
