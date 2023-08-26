@@ -16,9 +16,9 @@
   }
 
   const nav = [
-    { label: 'Work', href: '#work' },
-    { label: 'Pricing', href: '#pricing' },
+    { label: 'Work', href: '#showreel' },
     { label: 'Process', href: '#process' },
+    { label: 'Pricing', href: '#pricing' },
     { label: 'Get in touch', href: '#contact', accent: true },
   ];
 </script>
@@ -39,12 +39,12 @@
       use:parallax={{ amplitude: 5 }}
       class="flex items-center justify-between gap-8"
     >
-      <div class="md:animate-fade-down after-150">
+      <div class="md:animate-fade-down md:after-150">
         <Logo class="h-16 md:h-[72px] text-accent" />
       </div>
       <nav>
         <button
-          class="md:hidden btn variant-primary variant-icon !text-xl md:animate-fade-down after-300"
+          class="md:hidden btn variant-primary variant-icon !text-xl md:animate-fade-down md:after-300"
           aria-label="Open menu"
           on:click={toggleNav}
         >
@@ -117,17 +117,17 @@
     class="relative z-1 mt-12 max-xl:drop-shadow-2xl"
   >
     <h1 class="sr-only">Frame Fries, 3D illustration studio</h1>
-    <h2 class="flex flex-col items-start gap-2 font-display text-accent md:animate-fade-up after-300">
+    <h2 class="flex flex-col items-start gap-2 font-display text-accent md:animate-fade-up md:after-300">
       <span class="text-xl md:text-2xl">Hello there,</span>
       <span class="text-4xl md:text-5xl lg:text-6xl">What can we get you?</span>
     </h2>
-    <p class="mt-3 max-w-lg text-lg md:text-xl md:animate-fade-up after-300">
+    <p class="mt-3 max-w-lg text-lg md:text-xl md:animate-fade-up md:after-300">
       Frame Fries is a small independent illustration studio serving with speed, efficiency and transparency
     </p>
     <a
       use:smooth
       href="#contact"
-      class="mt-6 btn variant-neutral text-lg md:text-xl text-accent md:animate-fade-up after-500"
+      class="mt-6 btn variant-neutral text-lg md:text-xl text-accent md:animate-fade-up md:after-500"
     >
       Get in touch
       <Arrow class="h-3.5" long={true} />
@@ -135,7 +135,7 @@
   </header>
 
   <div role="none" class="md:hidden absolute z-0 inset-x-0 top-0 bottom-[420px] bg-gradient-to-b from-cream to-[#F7F4F0] pointer-events-none" />
-  <figure class="relative z-0 md:hidden -m-6 h-[420px] pointer-events-none md:animate-fade-up after-150">
+  <figure class="relative z-0 md:hidden -m-6 h-[420px] pointer-events-none md:animate-fade-up md:after-150">
     <img
       src={Hero}
       alt="Hero illustration"

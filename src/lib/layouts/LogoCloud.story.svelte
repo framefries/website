@@ -5,7 +5,7 @@
 </script>
 
 <Hst.Story title="Sections/Logo Cloud">
-  <div class="p-6 bg-white">
+  <div class="md:p-6 bg-white">
     <LogoCloud />
   </div>
 </Hst.Story>

@@ -45,7 +45,7 @@
 </script>
 
 <section
-  id="work"
+  id="showreel"
   class={cx(
     'sm:px-6 md:px-12 lg:px-20 space-y-6',
     $$props.class

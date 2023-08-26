@@ -4,6 +4,7 @@
   import LogoCloud from '$lib/layouts/LogoCloud.svelte';
 	import PreFooter from '$lib/layouts/PreFooter.svelte';
 	import Process from '$lib/layouts/Process.svelte';
+	import Pricing from '$lib/layouts/Pricing.svelte';
 	import Showreel from '$lib/layouts/Showreel.svelte';
 </script>
 
@@ -12,6 +13,7 @@
 	<LogoCloud />
 	<Showreel />
 	<Process />
+	<Pricing />
 	<PreFooter />
 	<Footer />
 </main>

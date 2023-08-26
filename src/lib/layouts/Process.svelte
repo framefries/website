@@ -5,30 +5,33 @@
   const steps = [
     {
       title: 'Set the table',
-      description: 'Let’s start things off right! We need some basic details about the project you have in mind. It’s a simple browser-based form. <a href="#">Start right here!</a>',
-      duration: 'Takes you about 5 minutes.',
+      description: `Let’s start things off right! We need some basic details about the project you have in mind. It’s a simple browser-based form. <a href="#">Start right here!</a>`,
+      duration: `Takes you about 5 minutes.`,
     },
     {
       title: 'Confirm order',
-      description: 'We’ve received your order and we’re reviewing it. You should get a detailed quote & work plan soon. We might decline some orders based on mismatch in style, scope or timeline. ',
-      duration: 'We’ll be in touch in next 24 hours.',
+      description: `We’ve received your order and we’re reviewing it. You should get a detailed quote & work plan soon. We might decline some orders based on mismatch in style, scope or timeline.`,
+      duration: `We’ll be in touch in next 24 hours.`,
     },
     {
       title: 'Stove are lit',
-      description: 'After receiving the deposit - time to get to work! We’ll go through each step detailed in the work plan with plenty of opportunity for you to provide feedback & adjustments.',
-      duration: '1-5 days depending on the scope.',
+      description: `After receiving the deposit - time to get to work! We’ll go through each step detailed in the work plan with plenty of opportunity for you to provide feedback & adjustments.`,
+      duration: `1-5 days depending on the scope.`,
     },
     {
       title: 'Goods plated',
-      description: 'We’re close to the finish line! After the last round of feedback we’ll take a moment to package everything up and send you a tidy link for downloading your order.',
-      duration: 'Less than a day.',
+      description: `We’re close to the finish line! After the last round of feedback we’ll take a moment to package everything up and send you a tidy link for downloading your order.`,
+      duration: `Less than a day.`,
     },
   ];
 
   let stepsContainer = null;
 </script>
 
-<section class={$$props.class}>
+<section
+  id="process"
+  class={$$props.class}
+>
   <div class="px-6 md:px-6 lg:px-14 lg:py-16">
     <p
       use:animate
