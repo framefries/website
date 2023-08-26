@@ -61,7 +61,7 @@
 <div
   role="region"
   on:drag={(e) => e.preventDefault()}
-  on:touchmove={(e) => e.preventDefault()}
+  on:touchmove|passive={(e) => e.preventDefault()}
   class={cx('min-h-20 overflow-hidden touch-none select-none', $$props.class)}
 >
   <div

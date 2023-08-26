@@ -83,6 +83,8 @@
           loading="lazy"
           src={item.src}
           alt={item.name}
+          width="100%"
+          height={item.height}
           style={`height: ${item.height}px`}
           class={`block max-w-full object-contain`}
         />
