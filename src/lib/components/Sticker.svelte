@@ -13,7 +13,7 @@
 </script>
 
 <div
-  role="img"
+  role="presentation"
   use:parallaxAction={parallax}
   class={cx(
     'inline-flex items-center justify-center gap-4',
