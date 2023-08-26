@@ -47,7 +47,11 @@
       />
     </div>
     <nav>
-      <button
+      <a
+        use:smooth
+        on:click={() => navOpen = !navOpen}
+        href="#home"
+        aria-label={navOpen ? 'Close menu' : 'Open menu'}
         class={cx(
           'relative z-30 md:hidden btn variant-icon !text-xl animate-fade-down md:after-300',
           'transition-colors',
@@ -56,11 +60,9 @@
             'variant-alt md:variant-primary': navOpen,
           }
         )}
-        aria-label={navOpen ? 'Close menu' : 'Open menu'}
-        on:click={() => navOpen = !navOpen}
       >
         <Burger class="h-current" open={navOpen} />
-      </button>
+      </a>
       <ul
         class={cx(
           'max-md:fixed inset-0 z-20 max-md:p-6 max-md:pt-24 max-md:bg-accent max-md:overflow-auto',
