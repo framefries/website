@@ -56,7 +56,7 @@
     {#each steps as step, i}
       <div
         use:animate={{ container: stepsContainer }}
-        class="shrink-0 w-full snap-center snap-always animate-fade-down after-[var(--delay)] pause"
+        class="shrink-0 w-full min-h-4 snap-center snap-always animate-fade-down after-[var(--delay)] pause"
         style={`--delay:${i*150}ms`}
       >
         <Step
