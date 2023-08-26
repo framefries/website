@@ -8,4 +8,7 @@ export default defineConfig({
 		setupFile: '/src/histoire.setup.js',
 		plugins: [HstSvelte()],
 	},
+	build: {
+		assetsInlineLimit: 0,
+	},
 });

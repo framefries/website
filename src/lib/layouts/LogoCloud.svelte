@@ -13,12 +13,12 @@
   import animate from '$lib/utils/animate.action.js';
 
   const logos = [
-    { name: 'Electronic Arts', src: LogoEA, class: 'h-16' },
-    { name: 'Native Instruments', src: LogoNI, class: 'h-7' },
-    { name: 'Waze', src: LogoWaze, class: 'h-8' },
-    { name: 'NVIDIA', src: LogoNVIDIA, class: 'h-14' },
-    { name: 'Asus', src: LogoAsus, class: 'h-8' },
-    { name: 'Intel', src: LogoIntel, class: 'h-9' },
+    { name: 'Electronic Arts', src: LogoEA, height: 68 },
+    { name: 'Native Instruments', src: LogoNI, height: 26 },
+    { name: 'Waze', src: LogoWaze, height: 34 },
+    { name: 'NVIDIA', src: LogoNVIDIA, height: 57 },
+    { name: 'Asus', src: LogoAsus, height: 28 },
+    { name: 'Intel', src: LogoIntel, height: 37 },
   ];
 
   const members = [
@@ -83,7 +83,8 @@
           loading="lazy"
           src={item.src}
           alt={item.name}
-          class={`block max-w-full w-auto object-contain ${item.class}`}
+          style={`height: ${item.height}px`}
+          class={`block max-w-full object-contain`}
         />
       </figure>
     {/each}

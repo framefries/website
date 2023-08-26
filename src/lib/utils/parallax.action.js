@@ -28,8 +28,8 @@ export default function(node, options) {
   const handleResize = debounce(200, init);
   const handleScroll = () => { requestAnimationFrame(update); };
   window.addEventListener('resize', handleResize);
-  window.addEventListener('scroll', handleScroll);
-  window.addEventListener('touchmove', handleScroll);
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  window.addEventListener('touchmove', handleScroll, { passive: true });
   
   init();
   update();

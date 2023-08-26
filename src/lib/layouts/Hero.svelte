@@ -137,7 +137,6 @@
   <div role="none" class="md:hidden absolute z-0 inset-x-0 top-0 bottom-[420px] bg-gradient-to-b from-cream to-[#F7F4F0] pointer-events-none" />
   <figure class="relative z-0 md:hidden -m-6 h-[420px] pointer-events-none animate-fade-up after-150">
     <img
-      loading="lazy"
       src={Hero}
       alt="Hero illustration"
       class="block w-full h-full object-cover"
@@ -147,7 +146,6 @@
 
   <figure class="max-md:hidden absolute z-0 inset-0 pointer-events-none animate-fade-in">
     <img
-      loading="lazy"
       src={HeroDesktop}
       alt="Hero illustration"
       class="block w-full h-full object-cover object-right"

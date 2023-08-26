@@ -17,8 +17,8 @@ export default function(node, options) {
 
   function init() {
     window.addEventListener('resize', check);
-    window.addEventListener('scroll', check);
-    window.addEventListener('touchmove', check);
+    window.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('touchmove', check, { passive: true });
     check();
   }
 
