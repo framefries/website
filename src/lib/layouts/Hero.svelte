@@ -34,80 +34,65 @@
     $$props.class
   )}
 >
-  <div class="relative z-2">
-    <div
-      use:parallax={{ amplitude: 5 }}
-      class="flex items-center justify-between gap-8"
-    >
-      <div class="animate-fade-down md:after-150">
-        <Logo class="h-16 md:h-[72px] text-accent" />
-      </div>
-      <nav>
-        <button
-          class="md:hidden btn variant-primary variant-icon !text-xl animate-fade-down md:after-300"
-          aria-label="Open menu"
-          on:click={() => navOpen = true}
-        >
-          <Burger class="h-current" />
-        </button>
-        <ul class="hidden md:flex items-center justify-center gap-6 text-xl max-xl:drop-shadow-2xl">
-          {#each nav as link, i}
-            <li
-              class="animate-fade-down after-[var(--delay)]"
-              style={`--delay:${300+i*100}ms`}
-            >
-              <a
-                use:smooth
-                href={link.href}
-                class="btn variant-neutral"
-                class:font-normal={link.accent}
-                class:text-accent={link.accent}
-              >
-                {link.label}
-              </a>
-            </li>
-          {/each}
-        </ul>
-      </nav>
+  <div class="relative z-2 flex items-center justify-between gap-8">
+    <div class="relative z-30 animate-fade-down md:after-150">
+      <Logo
+        class={cx(
+          'h-16 md:h-[72px] transition-colors',
+          {
+            'text-accent': !navOpen,
+            'text-cream md:text-accent': navOpen,
+          }
+        )}
+      />
     </div>
-    <nav class={cx(
-      'md:hidden fixed inset-0 z-30 py-12 px-6 bg-accent text-cream',
-      'transition ease-in-out duration-300',
-      {
-        'opacity-100 pointer-events-auto': navOpen,
-        'opacity-0 pointer-events-none': !navOpen,
-      }
-    )}>
-      <div class={cx(
-        'absolute top-6 inset-x-6 z-1',
-        'flex items-center justify-between',
-        'transition ease-in-out duration-300',
-        {
-          'opacity-100 translate-y-0': navOpen,
-          'opacity-0 -translate-y-[4rem]': !navOpen,
-        }
-      )}>
-        <Logo class="h-10" />
-        <button
-          class="btn variant-alt variant-icon !text-xl"
-          aria-label="Close menu"
-          on:click={() => navOpen = false}
-        >
-          <Burger open class="h-current" />
-        </button>
-      </div>
-      <ul class="h-full flex flex-col items-center justify-center gap-6 text-2xl">
+    <nav>
+      <button
+        class={cx(
+          'relative z-30 md:hidden btn variant-icon !text-xl animate-fade-down md:after-300',
+          'transition-colors',
+          {
+            'variant-primary': !navOpen,
+            'variant-alt md:variant-primary': navOpen,
+          }
+        )}
+        aria-label={navOpen ? 'Close menu' : 'Open menu'}
+        on:click={() => navOpen = !navOpen}
+      >
+        <Burger class="h-current" open={navOpen} />
+      </button>
+      <ul
+        class={cx(
+          'max-md:fixed inset-0 z-20 max-md:p-6 max-md:pt-24 max-md:bg-accent max-md:overflow-auto',
+          'flex max-md:flex-col items-center justify-center gap-6',
+          'text-xl md:max-xl:drop-shadow-2xl',
+          'transition-opacity ease-in-out duration-300',
+          {
+            'max-md:opacity-100 max-md:pointer-events-auto': navOpen,
+            'max-md:opacity-0 max-md:pointer-events-none': !navOpen,
+          }
+        )}
+      >
         {#each nav as link, i}
           <li
-            class="after-[var(--delay)]"
-            class:animate-fade-up={navOpen}
             style={`--delay:${i*100}ms`}
+            class={cx({
+              'animate-fade-down after-[var(--delay)]': navOpen,
+              'md:animate-fade-down md:after-[var(--delay)]': !navOpen,
+            })}
           >
             <a
               use:smooth
               on:click={() => navOpen = false}
               href={link.href}
-              class:font-medium={link.accent}
+              class={cx(
+                'btn md:variant-neutral',
+                {
+                  'max-md:text-cream': navOpen,
+                  'max-md:font-medium': navOpen && link.accent,
+                  'md:text-accent': link.accent,
+                }
+              )}
             >
               {link.label}
             </a>
