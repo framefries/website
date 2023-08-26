@@ -8,27 +8,27 @@
   import Sticker from '$lib/components/Sticker.svelte';
   import Dribbble from '$lib/layouts/Dribbble.svelte';
 
-  import Roman01 from '$lib/assets/showreel/roman-01.png';
-  import Roman02 from '$lib/assets/showreel/roman-02.png';
-  import Roman03 from '$lib/assets/showreel/roman-03.png';
-  import Roman04 from '$lib/assets/showreel/roman-04.png';
-  import Roman05 from '$lib/assets/showreel/roman-05.png';
-  import Roman06 from '$lib/assets/showreel/roman-06.png';
-  import Roman07 from '$lib/assets/showreel/roman-07.png';
-  import Roman08 from '$lib/assets/showreel/roman-08.png';
-  import Roman09 from '$lib/assets/showreel/roman-09.png';
+  import Roman01 from '$lib/assets/showreel/roman-01.webp';
+  import Roman02 from '$lib/assets/showreel/roman-02.webp';
+  import Roman03 from '$lib/assets/showreel/roman-03.webp';
+  import Roman04 from '$lib/assets/showreel/roman-04.webp';
+  import Roman05 from '$lib/assets/showreel/roman-05.webp';
+  import Roman06 from '$lib/assets/showreel/roman-06.webp';
+  import Roman07 from '$lib/assets/showreel/roman-07.webp';
+  import Roman08 from '$lib/assets/showreel/roman-08.webp';
+  import Roman09 from '$lib/assets/showreel/roman-09.webp';
 
-  import Reijo01 from '$lib/assets/showreel/reijo-01.png';
-  import Reijo02 from '$lib/assets/showreel/reijo-02.png';
-  import Reijo03 from '$lib/assets/showreel/reijo-03.png';
-  import Reijo04 from '$lib/assets/showreel/reijo-04.png';
-  import Reijo05 from '$lib/assets/showreel/reijo-05.png';
-  import Reijo06 from '$lib/assets/showreel/reijo-06.png';
-  import Reijo07 from '$lib/assets/showreel/reijo-07.png';
-  import Reijo08 from '$lib/assets/showreel/reijo-08.png';
-  import Reijo09 from '$lib/assets/showreel/reijo-09.png';
-  import Reijo10 from '$lib/assets/showreel/reijo-10.png';
-  import Reijo11 from '$lib/assets/showreel/reijo-11.png';
+  import Reijo01 from '$lib/assets/showreel/reijo-01.webp';
+  import Reijo02 from '$lib/assets/showreel/reijo-02.webp';
+  import Reijo03 from '$lib/assets/showreel/reijo-03.webp';
+  import Reijo04 from '$lib/assets/showreel/reijo-04.webp';
+  import Reijo05 from '$lib/assets/showreel/reijo-05.webp';
+  import Reijo06 from '$lib/assets/showreel/reijo-06.webp';
+  import Reijo07 from '$lib/assets/showreel/reijo-07.webp';
+  import Reijo08 from '$lib/assets/showreel/reijo-08.webp';
+  import Reijo09 from '$lib/assets/showreel/reijo-09.webp';
+  import Reijo10 from '$lib/assets/showreel/reijo-10.webp';
+  import Reijo11 from '$lib/assets/showreel/reijo-11.webp';
 
   const designers = [
     {

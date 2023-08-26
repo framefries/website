@@ -1,6 +1,6 @@
 <script>
 	import '$lib/styles/app.css';
-	import OGImage from '$lib/assets/framefries-opengraph.png';
+	import OGImage from '$lib/assets/framefries-opengraph.webp';
 	export let data;
 </script>
 

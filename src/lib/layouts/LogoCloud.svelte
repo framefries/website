@@ -1,15 +1,15 @@
 <script>
   import cx from 'clsx';
 
-  import LogoAsus from '$lib/assets/logos/asus.png';
-  import LogoEA from '$lib/assets/logos/ea.png';
-  import LogoIntel from '$lib/assets/logos/intel.png';
-  import LogoNI from '$lib/assets/logos/native-instruments.png';
-  import LogoNVIDIA from '$lib/assets/logos/nvidia.png';
-  import LogoWaze from '$lib/assets/logos/waze.png';
-  import ProfileNicolas from '$lib/assets/profiles/nicolas.png';
-  import ProfileReijo from '$lib/assets/profiles/reijo.png';
-  import ProfileRoman from '$lib/assets/profiles/roman.png';
+  import LogoAsus from '$lib/assets/logos/asus.webp';
+  import LogoEA from '$lib/assets/logos/ea.webp';
+  import LogoIntel from '$lib/assets/logos/intel.webp';
+  import LogoNI from '$lib/assets/logos/native-instruments.webp';
+  import LogoNVIDIA from '$lib/assets/logos/nvidia.webp';
+  import LogoWaze from '$lib/assets/logos/waze.webp';
+  import ProfileNicolas from '$lib/assets/profiles/nicolas.webp';
+  import ProfileReijo from '$lib/assets/profiles/reijo.webp';
+  import ProfileRoman from '$lib/assets/profiles/roman.webp';
   import animate from '$lib/utils/animate.action.js';
 
   const logos = [

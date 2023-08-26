@@ -1,8 +1,8 @@
 <script>
   import cx from 'clsx';
 
-  import HeroDesktop from '$lib/assets/hero-desktop.png';
-  import Hero from '$lib/assets/hero.png';
+  import HeroDesktop from '$lib/assets/hero-desktop.webp';
+  import Hero from '$lib/assets/hero.webp';
   import Logo from '$lib/components/Logo.svelte';
   import Arrow from '$lib/components/Arrow.svelte';
   import Burger from '$lib/components/Burger.svelte';
