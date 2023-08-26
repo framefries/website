@@ -30,7 +30,7 @@
   'text-cream md:text-xl',
   $$props.class
 )}>
-  <div class="max-w-[1080px] mx-auto space-y-12 md:space-y-20">
+  <div class="max-w-[1032px] mx-auto space-y-12 md:space-y-20">
     <div class="grid grid-cols-3 gap-6 md:gap-12">
       {#each ['Europe/Paris', 'Europe/Bratislava', 'Europe/Tallinn'] as tz, i}
         <div

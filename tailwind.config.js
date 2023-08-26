@@ -71,6 +71,8 @@ export default {
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/container-queries'),
+
+    // animation delay
     plugin(({ addUtilities, matchUtilities, theme }) => {
       matchUtilities({
         'after': (value) => ({
@@ -88,6 +90,8 @@ export default {
         },
       });
     }),
+
+    // body reset
     plugin(({ addBase, theme }) => {
       addBase({
         'body': {
@@ -98,6 +102,20 @@ export default {
         },
       });
     }),
+
+    // hide scrollbar
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        '.scrollbar-none': {
+          'scrollbarWidth': 'none',
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          }
+        },
+      })
+    }),
+
+    // buttons
     plugin(({ addComponents, theme }) => {
       addComponents({
         '.btn': {

@@ -61,7 +61,7 @@
   role="region"
   on:drag={(e) => e.preventDefault()}
   on:touchmove={(e) => e.preventDefault()}
-  class={cx('min-h-20 overflow-hidden', $$props.class)}
+  class={cx('min-h-20 overflow-hidden touch-none select-none', $$props.class)}
 >
   <div
     bind:this={inner}

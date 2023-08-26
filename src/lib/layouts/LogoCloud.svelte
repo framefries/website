@@ -27,7 +27,7 @@
     { name: 'Nicolas', src: ProfileNicolas },
   ];
   
-  let logosContainer;
+  let logosContainer = null;
 </script>
 
 <section
@@ -75,7 +75,7 @@
   >
     {#each logos as item, i}
       <figure
-        use:animate={{ trigger: logosContainer }}
+        use:animate={{ container: logosContainer }}
         class="h-28 flex items-center justify-center px-6 max-lg:bg-gray-100 animate-fade-up after-[var(--delay)] pause"
         style={`--delay:${i*150}ms`}
       >
