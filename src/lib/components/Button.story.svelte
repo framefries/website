@@ -34,10 +34,10 @@
 
   <Hst.Variant title="icon">
     <button
-      class="btn variant-primary variant-icon"
+      class="btn variant-primary variant-icon !text-xl"
       aria-label="Toggle menu"
     >
-      <Burger />
+      <Burger class="h-current" />
     </button>
   </Hst.Variant>
 </Hst.Story>

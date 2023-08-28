@@ -16,6 +16,8 @@ export default function(node, options) {
   const handleResize = throttle(100, check);
 
   function init() {
+    destroy();
+    node.classList.add('pause');
     window.addEventListener('resize', check);
     window.addEventListener('scroll', check, { passive: true });
     window.addEventListener('touchmove', check, { passive: true });

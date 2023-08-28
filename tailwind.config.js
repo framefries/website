@@ -72,25 +72,6 @@ export default {
     require('@tailwindcss/forms'),
     require('@tailwindcss/container-queries'),
 
-    // animation delay
-    plugin(({ addUtilities, matchUtilities, theme }) => {
-      matchUtilities({
-        'after': (value) => ({
-          'animation-delay': value,
-        }),
-      }, {
-        values: theme('transitionDelay'),
-      });
-      addUtilities({
-        '.pause': {
-          'animation-play-state': 'paused',
-        },
-        '.play': {
-          'animation-play-state': 'running',
-        },
-      });
-    }),
-
     // body reset
     plugin(({ addBase, theme }) => {
       addBase({
@@ -115,6 +96,25 @@ export default {
       })
     }),
 
+    // animation delay
+    plugin(({ addUtilities, matchUtilities, theme }) => {
+      matchUtilities({
+        'after': (value) => ({
+          'animation-delay': value,
+        }),
+      }, {
+        values: theme('transitionDelay'),
+      });
+      addUtilities({
+        '.pause': {
+          'animation-play-state': 'paused',
+        },
+        '.play': {
+          'animation-play-state': 'running',
+        },
+      });
+    }),
+
     // buttons
     plugin(({ addComponents, theme }) => {
       addComponents({
@@ -129,37 +129,98 @@ export default {
           'font-weight': '200',
           'color': 'inherit',
           'cursor': 'pointer',
+
+          '&.variant-neutral': {
+            'text-decoration-thickness': '1px',
+            'text-underline-offset': '4px',
+            '@media (hover: hover) and (pointer: fine)': {
+              '&:hover': {
+                'text-decoration': 'underline',
+              },
+            }
+          },
+
+          '&.variant-primary, &.variant-alt': {
+            'height': theme('spacing.10'),
+            'padding-left': theme('spacing.6'),
+            'padding-right': theme('spacing.6'),
+            'border-radius': theme('borderRadius.md'),
+            'line-height': theme('lineHeight.6'),
+            'font-size': theme('fontSize.base'),
+            'font-weight': '500',
+          },
+
+          '&.variant-primary': {
+            'background-color': theme('colors.accent'),
+            'color': theme('colors.cream'),
+          },
+
+          '&.variant-alt': {
+            'background-color': theme('colors.cream'),
+            'color': theme('colors.accent'),
+          },
+
+          '&.variant-icon': {
+            'width': theme('spacing.10'),
+            'padding-left': '0',
+            'padding-right': '0',
+          },
         },
-        '.btn.variant-neutral': {
-          'text-decoration-thickness': '1px',
-          'text-underline-offset': '4px',
-          '@media (hover: hover) and (pointer: fine)': {
-            '&:hover': {
-              'text-decoration': 'underline',
-            },
-          }
-        },
-        '.btn.variant-primary,.btn.variant-alt': {
-          'height': theme('spacing.10'),
-          'padding-left': theme('spacing.6'),
-          'padding-right': theme('spacing.6'),
-          'border-radius': theme('borderRadius.md'),
-          'line-height': theme('lineHeight.6'),
-          'font-size': theme('fontSize.base'),
-          'font-weight': '500',
-        },
-        '.btn.variant-primary': {
-          'background-color': theme('colors.accent'),
-          'color': theme('colors.cream'),
-        },
-        '.btn.variant-alt': {
-          'background-color': theme('colors.cream'),
-          'color': theme('colors.accent'),
-        },
-        '.btn.variant-icon': {
-          'width': theme('spacing.10'),
-          'padding-left': '0',
-          'padding-right': '0',
+      });
+    }),
+
+    // checkbox
+    plugin(({ addComponents, theme }) => {
+      addComponents({
+        'input[type="checkbox"]': {
+          'appearance': 'none',
+          'position': 'relative',
+          'display': 'grid',
+          'place-content': 'center',
+          'width': 'fit-content',
+          'height': 'fit-content',
+          'margin': '0',
+          'border': 'none',
+          'outline': 'none',
+          'background': 'transparent',
+          'color': 'transparent',
+          'cursor': 'pointer',
+          
+          '&::before': {
+            'content': '""',
+            'width': '1em',
+            'height': '1em',
+            'border-radius': '.25em',
+            'border': '1px solid rgba(0,0,0,.1)',
+            'background-color': theme('colors.cream'),
+          },
+
+          '&::after': {
+            'content': '""',
+            'position': 'absolute',
+            'left': '0',
+            'right': '0',
+            'width': '100%',
+            'height': '100%',
+            'background-color': theme('colors.accent'),
+            'mask-image': `url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' fill='none'%3E%3Cpath d='M6 11.43 10.36 16 18 8'/%3E%3C/svg%3E")`,
+            'mask-repeat': 'no-repeat',
+            'mask-position': 'center',
+            'mask-size': '1em',
+            'opacity': '0.1',
+            'transition': 'opacity .15s ease-in-out',
+          },
+
+          '&:checked::after': {
+            'opacity': '1',
+          },
+
+          '&.variant-alt::before': {
+            'background-color': theme('colors.accent'),
+          },
+          '&.variant-alt::after': {
+            'background-color': theme('colors.cream'),
+          },
         },
       });
     }),

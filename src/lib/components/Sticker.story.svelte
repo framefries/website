@@ -1,6 +1,6 @@
 <script>
   import Heart from './Heart.svelte';
-  import Check from './Check.svelte';
+  import HeavyCheck from './HeavyCheck.svelte';
   import Sticker from './Sticker.svelte';
 
   export let Hst;
@@ -63,7 +63,7 @@
 
   <Hst.Variant title="icon only">
     <Sticker kind={kind}>
-      <Check class="h-full" />
+      <HeavyCheck class="h-full" />
     </Sticker>
 
     <svelte:fragment slot="controls">

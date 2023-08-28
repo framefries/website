@@ -7,7 +7,7 @@
   let flip = false;
 </script>
 
-<Hst.Story title="Components/SlidCarouseler">
+<Hst.Story title="Components/Carousel">
   <div class="p-6 bg-white">
     <Carousel
       items={Array.from(Array(6).keys())}

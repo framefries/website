@@ -3,7 +3,7 @@
 
   import Arrow from '$lib/components/Arrow.svelte';
   import Carousel from '$lib/components/Carousel.svelte';
-  import Check from '$lib/components/Check.svelte';
+  import HeavyCheck from '$lib/components/HeavyCheck.svelte';
   import Fire from '$lib/components/Fire.svelte';
   import Sticker from '$lib/components/Sticker.svelte';
   import Dribbble from '$lib/layouts/Dribbble.svelte';
@@ -68,7 +68,7 @@
         parallax={{ amplitude: 5, rotation: 20, angle: 15 }}
         class="absolute z-1 -top-10 right-2 md:right-4"
       >
-        <Check class="h-full" />
+        <HeavyCheck class="h-full" />
       </Sticker>
       <Sticker
         parallax={{ amplitude: 5, rotation: -20, angle: -15 }}

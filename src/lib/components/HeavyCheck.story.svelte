@@ -1,5 +1,5 @@
 <script>
-  import Check from './Check.svelte';
+  import HeavyCheck from './HeavyCheck.svelte';
 
   export let Hst;
   
@@ -7,10 +7,10 @@
   let fontSize = 1;
 </script>
 
-<Hst.Story title="Icons/Check">
+<Hst.Story title="Icons/Heavy Check">
   <Hst.Variant title="font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Check class="h-current" />
+      <HeavyCheck class="h-current" />
     </div>
 
     <svelte:fragment slot="controls">
@@ -30,7 +30,7 @@
 
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
-      <Check class="h-12" />
+      <HeavyCheck class="h-12" />
     </div>
 
     <svelte:fragment slot="controls">

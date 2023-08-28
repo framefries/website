@@ -51,7 +51,7 @@
 
   <div
     bind:this={stepsContainer}
-    class="mt-4 md:mt-10 px-6 w-full flex snap-mandatory scrollbar-none snap-x overflow-x-auto sm:grid sm:grid-cols-2 gap-2 md:gap-6"
+    class="mt-4 md:mt-10 px-6 md:px-12 lg:px-20 w-full flex snap-mandatory scrollbar-none snap-x overflow-x-auto sm:grid sm:grid-cols-2 gap-2 md:gap-6"
   >
     {#each steps as step, i}
       <div
