@@ -21,5 +21,8 @@
     <p>
       Do bear in mind that this is just an estimate. After sending us your order, we’ll review it and provide you an exact quote.
     </p>
+    <p>
+      <input type="checkbox" />
+    </p>
   </header>
 </section>

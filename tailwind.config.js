@@ -170,40 +170,34 @@ export default {
     }),
 
     // checkbox
-    plugin(({ addComponents, theme }) => {
-      addComponents({
+    plugin(({ addBase, theme }) => {
+      addBase({
         'input[type="checkbox"]': {
           'appearance': 'none',
+          'flex-shrink': '0',
           'position': 'relative',
-          'display': 'grid',
-          'place-content': 'center',
-          'width': 'fit-content',
-          'height': 'fit-content',
+          'width': '1em',
+          'height': '1em',
           'margin': '0',
-          'border': 'none',
+          'border-radius': '.25em',
+          'border': '1px solid rgba(0,0,0,.1) !important',
           'outline': 'none',
-          'background': 'transparent',
-          'color': 'transparent',
+          'background-color': theme('colors.cream'),
+          'box-shadow': 'none !important',
+          'color': theme('colors.cream'),
           'cursor': 'pointer',
-          
-          '&::before': {
-            'content': '""',
-            'width': '1em',
-            'height': '1em',
-            'border-radius': '.25em',
-            'border': '1px solid rgba(0,0,0,.1)',
-            'background-color': theme('colors.cream'),
+
+          '&:focus': {
+            'outline': '2px solid rgba(0,0,0,.4)',
+            'outline-offset': '1px',
           },
 
           '&::after': {
             'content': '""',
             'position': 'absolute',
-            'left': '0',
-            'right': '0',
-            'width': '100%',
-            'height': '100%',
+            'inset': '0px',
             'background-color': theme('colors.accent'),
-            'mask-image': `url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' fill='none'%3E%3Cpath d='M6 11.43 10.36 16 18 8'/%3E%3C/svg%3E")`,
+            'mask-image': `url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'%3E%3Cpath d='M6 11.43 10.36 16 18 8'/%3E%3C/svg%3E")`,
             'mask-repeat': 'no-repeat',
             'mask-position': 'center',
             'mask-size': '1em',
@@ -213,13 +207,6 @@ export default {
 
           '&:checked::after': {
             'opacity': '1',
-          },
-
-          '&.variant-alt::before': {
-            'background-color': theme('colors.accent'),
-          },
-          '&.variant-alt::after': {
-            'background-color': theme('colors.cream'),
           },
         },
       });
