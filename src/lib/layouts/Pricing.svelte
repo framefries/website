@@ -120,6 +120,7 @@
       <figure class="shrink-0 grow basis-0 min-w-0">
         <img
           src={exampleSrc}
+          loading="lazy"
           alt="Illustration size comparison"
           class="w-full h-auto md:h-full rounded-md bg-[#F9F3E3] object-contain"
         />

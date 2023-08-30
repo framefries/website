@@ -18,12 +18,20 @@
 
   onMount(() => {
     popper = createPopper(button, tooltip, {
-      placement: 'top',
+      placement: 'top-end',
       modifiers: [
         {
           name: 'offset',
           options: {
             offset: [0, 8],
+          },
+        },
+        {
+          name: 'preventOverflow',
+          options: {
+            padding: 8,
+            mainAxis: true,
+            altAxis: true,
           },
         },
       ],
