@@ -30,6 +30,7 @@
 		"vite": "^4.4.9"
 	},
 	"dependencies": {
+		"@popperjs/core": "^2.11.8",
 		"clsx": "^2.0.0",
 		"dayjs": "^1.11.9",
 		"interactjs": "^1.10.18",

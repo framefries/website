@@ -210,5 +210,40 @@ export default {
         },
       });
     }),
+
+    // popper tooltip
+    plugin(({ addComponents, theme }) => {
+      addComponents({
+        '[data-popper-arrow]': {
+          'position': 'absolute',
+          'width': theme('spacing.2'),
+          'height': theme('spacing.2'),
+          'background-color': 'inherit',
+          'visibility': 'hidden',
+
+          '&::before': {
+            'content': '""',
+            'position': 'absolute',
+            'width': '100%',
+            'height': '100%',
+            'background-color': 'inherit',
+            'visibility': 'visible',
+            'transform': 'rotate(45deg)',
+          },
+        },
+        '[data-popper-placement^="top"] > [data-popper-arrow]': {
+          'bottom': `-${theme('spacing.1')}`,
+        },
+        '[data-popper-placement^="bottom"] > [data-popper-arrow]': {
+          'top': `-${theme('spacing.1')}`,
+        },
+        '[data-popper-placement^="left"] > [data-popper-arrow]': {
+          'right': `-${theme('spacing.1')}`,
+        },
+        '[data-popper-placement^="right"] > [data-popper-arrow]': {
+          'left': `-${theme('spacing.1')}`,
+        },
+      });
+    }),
   ],
 };
