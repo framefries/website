@@ -33,7 +33,7 @@
 <section
   id="team"
   class={cx(
-    'flex max-lg:flex-col gap-12 lg:gap-20 items-center lg:items-start justify-between',
+    'flex max-lg:flex-col gap-12 lg:gap-28 items-center lg:items-start justify-between',
     'p-6 md:px-12 lg:py-16 lg:px-20',
     $$props.class
   )}
@@ -71,7 +71,7 @@
   </div>
   <aside
     bind:this={logosContainer}
-    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-1 rounded-md overflow-hidden"
+    class="lg:basis-1/2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-1 rounded-md overflow-hidden"
   >
     {#each logos as item, i}
       <figure

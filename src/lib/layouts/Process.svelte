@@ -5,7 +5,11 @@
   const steps = [
     {
       title: 'Set the table',
-      description: `Let’s start things off right! We need some basic details about the project you have in mind. It’s a simple browser-based form. <a href="#">Start right here!</a>`,
+      description: `
+        Let’s start things off right! We need some basic details about the project you have in mind.
+        It’s a simple browser-based form.
+        <a href="${import.meta.env.VITE_FORM_URL}" target="_blank">Start right here!</a>
+      `,
       duration: `Takes you about 5 minutes.`,
     },
     {

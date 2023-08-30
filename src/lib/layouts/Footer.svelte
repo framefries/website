@@ -10,10 +10,10 @@
 
   const nav = [
     { label: 'Back to top', href: '#home' },
-    { label: 'Work', href: '#work' },
+    { label: 'Work', href: '#showreel' },
     { label: 'Pricing', href: '#pricing' },
     { label: 'Process', href: '#process' },
-    { label: 'Testimonials', href: '#testimonials' },
+    // { label: 'Testimonials', href: '#testimonials' },
   ];
 
   const social = [
@@ -43,7 +43,7 @@
         </div>
       {/each}
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 items-end">
       <div class="lg:col-span-2 space-y-5">
         <h3
           use:animate
