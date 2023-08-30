@@ -4,6 +4,7 @@
   import ExampleSmall from '$lib/assets/illustration-small.webp';
   import ExampleMedium from '$lib/assets/illustration-medium.webp';
   import ExampleLarge from '$lib/assets/illustration-large.webp';
+  import Arrow from '$lib/components/Arrow.svelte';
   import QuestionMark from '$lib/components/QuestionMark.svelte';
   import RadioGroup from '$lib/components/RadioGroup.svelte';
   import Tooltip from '$lib/components/Tooltip.svelte';
@@ -70,13 +71,13 @@
 <section
   id="pricing"
   class={cx(
-    'p-6 md:p-12 lg:px-20 lg:py-16',
-    'flex gap-28',
+    'p-6 md:px-12 lg:px-20',
+    'flex max-md:flex-col gap-6 md:gap-12 lg:gap-28',
     'md:rounded-md bg-accent',
     $$props.class
   )}
 >
-  <div class="space-y-14 text-cream">
+  <div class="shrink-0 grow basis-0 min-w-0 md:py-6 lg:py-10 space-y-6 md:space-y-14 text-cream">
     <header class="space-y-4 md:text-xl">
       <h2 class="text-3xl md:text-4xl lg:text-5xl md:!leading-tight font-display">
         Now, what’s the cost?
@@ -89,7 +90,7 @@
       </p>
     </header>
 
-    <form class="grid grid-cols-2 gap-6 items-start">
+    <form class="grid sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-6 items-start">
       {#each fields as field}
         <div>
           <div class="w-full flex items-center justify-between">
@@ -114,26 +115,37 @@
     </form>
   </div>
 
-  <div class="shrink-0 relative w-[416px]">
-    <div class="absolute inset-x-0 -top-[calc(4rem_+_3px)] bottom-0 flex flex-col items-stretch">
-      <div class="grow flex flex-col gap-4 px-8 pt-16 rounded-t bg-cream">
+  <div class="shrink-0 grow basis-0 min-w-0 relative md:-top-7 md:max-w-[416px] flex md:flex-col items-stretch">
+    <div class="grow flex flex-col sm:max-md:flex-row p-4 lg:p-8 gap-4 md:max-lg:pt-28 lg:gap-8 rounded md:rounded-b-0 bg-cream">
+      <figure class="shrink-0 grow basis-0 min-w-0">
         <img
           src={exampleSrc}
           alt="Illustration size comparison"
-          class="grow rounded-md bg-[#F9F3E3] object-contain"
+          class="w-full h-auto md:h-full rounded-md bg-[#F9F3E3] object-contain"
         />
-        <p class="py-4 flex flex-col gap-1 text-center">
-          <span class="md:text-xl">Your total might come to</span>
-          <span class="md:text-3xl text-accent font-display whitespace-nowrap">
+      </figure>
+      <div class={cx(
+        'shrink-0 max-md:grow basis-0 min-w-0 flex flex-col items-center justify-center',
+        'pt-4 sm:max-md:pl-4 sm:max-md:pt-0 lg:pt-8',
+        'border-t sm:max-md:border-l sm:max-md:border-t-0',
+        'border-dashed border-black/10 gap-4'
+      )}>
+        <p class="flex flex-col gap-1 text-center">
+          <span class="lg:text-xl">Your total might come to</span>
+          <span class="text-2xl lg:text-3xl text-accent font-display whitespace-nowrap">
             {priceLow.toLocaleString('en-US')} – {priceHigh.toLocaleString('en-US')} €
           </span>
         </p>
+        <button class="btn variant-primary">
+          Let's get started
+          <Arrow class="h-3.5" />
+        </button>
       </div>
-      <div>
-        <svg viewBox="0 0 416 67" class="-mt-1 w-full h-auto stroke-0 fill-cream">
-          <path d="M0 60.75V0h416v60.75a5.3 5.3 0 0 1-6.9 5.05 662.36 662.36 0 0 0-402.2 0A5.3 5.3 0 0 1 0 60.75Z" />
-        </svg>
-      </div>
+    </div>
+    <div class="max-md:hidden">
+      <svg viewBox="0 0 416 37" class="-mt-1 w-full h-auto stroke-0 fill-cream">
+        <path d="M0 30.75V0h416v30.75a5.33 5.33 0 0 1-6.9 5.05 662.45 662.45 0 0 0-402.2 0A5.3 5.3 0 0 1 0 30.75Z" />
+      </svg>
     </div>
   </div>
 </section>

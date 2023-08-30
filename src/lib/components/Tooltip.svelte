@@ -49,7 +49,7 @@
   id={id}
   role="tooltip"
   class={cx(
-    'z-10 max-w-64 p-3 rounded bg-gray-800 drop-shadow-lg',
+    'z-10 max-w-64 px-3 py-2 rounded bg-gray-800 drop-shadow-lg',
     'font-normal text-cream text-sm',
     {
       'hidden': !show,
