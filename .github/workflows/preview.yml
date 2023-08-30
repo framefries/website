@@ -19,6 +19,7 @@ jobs:
           NODE_ENV: production
           VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
           VITE_CONTACT_EMAIL: ${{ vars.VITE_CONTACT_EMAIL }}
+          VITE_FORM_URL: ${{ vars.VITE_FORM_URL }}
           VITE_CTA_URL: ${{ vars.VITE_CTA_URL }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
