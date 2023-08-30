@@ -7,6 +7,7 @@
   import Arrow from '$lib/components/Arrow.svelte';
   import QuestionMark from '$lib/components/QuestionMark.svelte';
   import RadioGroup from '$lib/components/RadioGroup.svelte';
+  import Sticker from '$lib/components/Sticker.svelte';
   import Tooltip from '$lib/components/Tooltip.svelte';
 
   const fields = [
@@ -71,12 +72,18 @@
 <section
   id="pricing"
   class={cx(
-    'p-6 md:px-12 lg:px-20',
+    'relative p-6 md:px-12 lg:px-20',
     'flex max-md:flex-col gap-6 md:gap-12 lg:gap-28',
     'md:rounded-md bg-accent',
     $$props.class
   )}
 >
+  <Sticker
+    title="Delivery?"
+    sub="Anywhere, any time, all the time."
+    parallax={{ amplitude: 10, rotation: -5, angle: 10 }}
+    class="absolute z-2 -top-10 -right-12 sm:-right-4 md:-top-8 md:right-0 lg:right-12"
+  />
   <div class="shrink-0 grow basis-0 min-w-0 md:py-6 lg:py-10 space-y-6 md:space-y-14 text-cream">
     <header class="space-y-4 md:text-xl">
       <h2 class="text-3xl md:text-4xl lg:text-5xl md:!leading-tight font-display">
