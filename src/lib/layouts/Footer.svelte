@@ -58,9 +58,9 @@
           Let’s get a fire going and create something memorable for you and your brand.
         </p>
         <a
-          href="#contact"
-          use:smooth
           use:animate
+          href={import.meta.env.VITE_FORM_URL}
+          target="_blank"
           class="btn variant-neutral animate-fade-up pause"
         >
           Get in touch

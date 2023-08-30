@@ -20,7 +20,7 @@
     { label: 'Work', href: '#showreel' },
     { label: 'Process', href: '#process' },
     { label: 'Pricing', href: '#pricing' },
-    { label: 'Get in touch', href: '#contact', accent: true },
+    { label: 'Get in touch', href: import.meta.env.VITE_FORM_URL, target: '_blank', accent: true },
   ];
 </script>
 
@@ -92,6 +92,7 @@
               use:smooth
               on:click={() => navOpen = false}
               href={link.href}
+              target={link.target}
               class={cx(
                 'btn md:variant-neutral',
                 {
@@ -122,8 +123,8 @@
       Frame Fries is a small independent illustration studio serving with speed, efficiency and transparency
     </p>
     <a
-      use:smooth
-      href="#contact"
+      href={import.meta.env.VITE_FORM_URL}
+      target="_blank"
       class="mt-6 btn variant-neutral text-lg md:text-xl text-accent animate-fade-up after-500"
     >
       Get in touch

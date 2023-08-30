@@ -136,10 +136,14 @@
             {priceLow.toLocaleString('en-US')} – {priceHigh.toLocaleString('en-US')} €
           </span>
         </p>
-        <button class="btn variant-primary">
+        <a
+          href={import.meta.env.VITE_FORM_URL}
+          target="_blank"
+          class="btn variant-primary"
+        >
           Let's get started
           <Arrow class="h-3.5" />
-        </button>
+        </a>
       </div>
     </div>
     <div class="max-md:hidden">
