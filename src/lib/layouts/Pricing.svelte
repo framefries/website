@@ -1,14 +1,15 @@
 <script>
   import cx from 'clsx';
 
-  import ExampleSmall from '$lib/assets/illustration-small.webp';
-  import ExampleMedium from '$lib/assets/illustration-medium.webp';
-  import ExampleLarge from '$lib/assets/illustration-large.webp';
+  import SketchSmall from '$lib/assets/pricing/sketch-small.webp';
+  import SketchMedium from '$lib/assets/pricing/sketch-medium.webp';
+  import SketchLarge from '$lib/assets/pricing/sketch-large.webp';
   import Arrow from '$lib/components/Arrow.svelte';
   import QuestionMark from '$lib/components/QuestionMark.svelte';
   import RadioGroup from '$lib/components/RadioGroup.svelte';
   import Sticker from '$lib/components/Sticker.svelte';
   import Tooltip from '$lib/components/Tooltip.svelte';
+  import animate from '$lib/utils/animate.action.js';
 
   const fields = [
     {
@@ -65,8 +66,10 @@
   $: priceLow = computePrice(values);
   $: priceHigh = computePrice(values, 1);
 
-  const examples = [ExampleSmall, ExampleMedium, ExampleLarge];
-  $: exampleSrc = examples[values.size] || ExampleSmall;
+  const examples = [SketchSmall, SketchMedium, SketchLarge];
+  $: exampleSrc = examples[values.size] || SketchSmall;
+
+  let form = null;
 </script>
 
 <section
@@ -86,20 +89,36 @@
   />
   <div class="shrink-0 grow basis-0 min-w-0 md:py-6 lg:py-10 space-y-6 md:space-y-14 text-cream">
     <header class="space-y-4 md:text-xl">
-      <h2 class="text-3xl md:text-4xl lg:text-5xl md:!leading-tight font-display">
+      <h2
+        use:animate
+        class="text-3xl md:text-4xl lg:text-5xl md:!leading-tight font-display animate-fade-up pause"
+      >
         Now, what’s the cost?
       </h2>
-      <p>
+      <p
+        use:animate
+        class="animate-fade-up after-150 pause"
+      >
         If you like what’s on the menu then here’s a simple way to get a ballpark estimate for your own order.
       </p>
-      <p>
+      <p
+        use:animate
+        class="animate-fade-up after-300 pause"
+      >
         Do bear in mind that this is just an estimate. After sending us your order, we’ll review it and provide you an exact quote.
       </p>
     </header>
 
-    <form class="grid sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-6 items-start">
-      {#each fields as field}
-        <div>
+    <form
+      bind:this={form}
+      class="grid sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-6 items-start"
+    >
+      {#each fields as field, i}
+        <div
+          use:animate={{ container: form }}
+          class="animate-fade-down after-[var(--delay)] pause"
+          style={`--delay:${i*150}ms`}
+        >
           <div class="w-full flex items-center justify-between">
             <span class="font-medium">{field.title}</span>
             <Tooltip class="p-3 -mr-3">
@@ -122,7 +141,10 @@
     </form>
   </div>
 
-  <div class="shrink-0 grow basis-0 min-w-0 relative md:-top-7 md:max-w-[416px] flex md:flex-col items-stretch">
+  <div
+    use:animate
+    class="shrink-0 grow basis-0 min-w-0 relative md:-top-7 md:max-w-[416px] flex md:flex-col items-stretch animate-fade-down pause"
+  >
     <div class="grow flex flex-col sm:max-md:flex-row p-4 lg:p-8 gap-4 md:max-lg:pt-28 lg:gap-8 rounded md:rounded-b-0 bg-cream">
       <figure class="shrink-0 grow basis-0 min-w-0">
         <img

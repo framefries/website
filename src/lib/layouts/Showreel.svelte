@@ -7,6 +7,7 @@
   import Fire from '$lib/components/Fire.svelte';
   import Sticker from '$lib/components/Sticker.svelte';
   import Dribbble from '$lib/layouts/Dribbble.svelte';
+  import animate from '$lib/utils/animate.action.js';
 
   import Roman01 from '$lib/assets/showreel/roman-01.webp';
   import Roman02 from '$lib/assets/showreel/roman-02.webp';
@@ -54,13 +55,22 @@
   <section class="flex max-lg:flex-col sm:gap-6">
     <div class="basis-1/2 relative z-1 sm:rounded-xl bg-accent text-cream">
       <div class="px-6 py-12 sm:p-14">
-        <h2 class="text-4xl md:text-5xl lg:text-6xl font-display">
+        <h2
+          use:animate
+          class="text-4xl md:text-5xl lg:text-6xl font-display animate-fade-up pause"
+        >
           What’s on the menu today?
         </h2>
-        <p class="mt-6 max-w-sm text-lg md:text-xl">
+        <p
+          use:animate
+          class="mt-6 max-w-sm text-lg md:text-xl animate-fade-up after-150 pause"
+        >
           Let’s do some taste testing with a showreel and other bits.
         </p>
-        <div class="mt-6">
+        <div
+          use:animate
+          class="mt-6 animate-fade-up after-300 pause"
+        >
           <Arrow class="h-3.5" long={true} />
         </div>
       </div>
