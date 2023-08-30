@@ -197,12 +197,11 @@ export default {
             'position': 'absolute',
             'inset': '0px',
             'background-color': theme('colors.accent'),
-            'mask-image': `url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'%3E%3Cpath d='M6 11.43 10.36 16 18 8'/%3E%3C/svg%3E")`,
+            'mask-image': `url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'%3E%3Cpath d='M6 11.43 10.36 16 18 8'/%3E%3C/svg%3E")`,
             'mask-repeat': 'no-repeat',
             'mask-position': 'center',
             'mask-size': '1em',
             'opacity': '0.1',
-            'transition': 'opacity .15s ease-in-out',
           },
 
           '&:checked::after': {

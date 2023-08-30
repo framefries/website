@@ -5,5 +5,13 @@
 </script>
 
 <Hst.Story title="Components/Radio Group">
-  <RadioGroup />
+  <RadioGroup
+    name="size"
+    value="M"
+    options={[
+      { value: 'S', label: 'Small' },
+      { value: 'M', label: 'Medium' },
+      { value: 'L', label: 'Large' },
+    ]}
+  />
 </Hst.Story>

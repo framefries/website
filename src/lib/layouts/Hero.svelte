@@ -7,6 +7,7 @@
   import Logo from '$lib/components/Logo.svelte';
   import Arrow from '$lib/components/Arrow.svelte';
   import Burger from '$lib/components/Burger.svelte';
+  import Close from '$lib/components/Close.svelte';
   import smooth from '$lib/utils/smooth.action.js';
   import parallax from '$lib/utils/parallax.action.js';
 
@@ -61,7 +62,11 @@
           }
         )}
       >
-        <Burger class="h-current" open={navOpen} />
+        {#if navOpen}
+          <Close class="h-current" />
+        {:else}
+          <Burger class="h-current" />
+        {/if}
       </a>
       <ul
         class={cx(

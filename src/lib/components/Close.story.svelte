@@ -1,5 +1,5 @@
 <script>
-  import Burger from './Burger.svelte';
+  import Close from './Close.svelte';
 
   export let Hst;
   
@@ -7,10 +7,10 @@
   let fontSize = 1;
 </script>
 
-<Hst.Story title="Icons/Burger">
+<Hst.Story title="Icons/Close">
   <Hst.Variant title="font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Burger class="h-current" />
+      <Close class="h-current" />
     </div>
 
     <svelte:fragment slot="controls">
@@ -30,7 +30,7 @@
   
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
-      <Burger class="h-12" />
+      <Close class="h-12" />
     </div>
 
     <svelte:fragment slot="controls">
