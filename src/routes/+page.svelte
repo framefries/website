@@ -1,5 +1,4 @@
 <script>
-	import Examples from '$lib/layouts/Examples.svelte';
 	import Footer from '$lib/layouts/Footer.svelte';
 	import Hero from '$lib/layouts/Hero.svelte';
   import LogoCloud from '$lib/layouts/LogoCloud.svelte';
@@ -15,7 +14,6 @@
 	<Showreel />
 	<Process />
 	<Pricing />
-	<Examples />
 	<PreFooter />
 	<Footer />
 </main>
