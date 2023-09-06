@@ -5,7 +5,7 @@ export function load({ url }) {
   const indexing = import.meta.env.VITE_INDEXING ? 'index, follow' : 'noindex, nofollow';
   return {
     title: "Frame Fries, 3D illustration studio",
-    description: "Frame Fries is an ultra-efficient and high quality 3D illustration studio, using a pricing configurator to cut the crap and get things done.",
+    description: "Get high-quality original 3D illustrations and animations for your project at the best possible cost thanks to our streamlined and transparent process.",
     canonical: canonical.href.replace(/\/$/, ''),
     indexing,
   };
