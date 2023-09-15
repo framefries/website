@@ -17,9 +17,8 @@
   ];
 
   const social = [
-    { label: 'Instagram', href: 'https://instagram.com' },
-    { label: 'Dribbble', href: 'https://dribbble.com' },
-    { label: 'Behance', href: 'https://behance.com' },
+    { label: 'Instagram', href: 'https://www.instagram.com/polygonrunway/' },
+    { label: 'Dribbble', href: 'https://dribbble.com/romanklco' },
   ];
 </script>
 

@@ -19,29 +19,12 @@
   import Roman08 from '$lib/assets/showreel/roman-08.webp';
   import Roman09 from '$lib/assets/showreel/roman-09.webp';
 
-  import Reijo01 from '$lib/assets/showreel/reijo-01.webp';
-  import Reijo02 from '$lib/assets/showreel/reijo-02.webp';
-  import Reijo03 from '$lib/assets/showreel/reijo-03.webp';
-  import Reijo04 from '$lib/assets/showreel/reijo-04.webp';
-  import Reijo05 from '$lib/assets/showreel/reijo-05.webp';
-  import Reijo06 from '$lib/assets/showreel/reijo-06.webp';
-  import Reijo07 from '$lib/assets/showreel/reijo-07.webp';
-  import Reijo08 from '$lib/assets/showreel/reijo-08.webp';
-  import Reijo09 from '$lib/assets/showreel/reijo-09.webp';
-  import Reijo10 from '$lib/assets/showreel/reijo-10.webp';
-  import Reijo11 from '$lib/assets/showreel/reijo-11.webp';
-
   const designers = [
     {
       name: 'Roman',
       url: 'https://dribbble.com/romanklco',
       images: [Roman01, Roman02, Roman03, Roman04, Roman05, Roman06, Roman07, Roman08, Roman09],
     },
-    {
-      name: 'Reijo',
-      url: 'https://dribbble.com/reijo',
-      images: [Reijo01, Reijo02, Reijo03, Reijo04, Reijo05, Reijo06, Reijo07, Reijo08, Reijo09, Reijo10, Reijo11],
-    }
   ];
 </script>
 
@@ -137,7 +120,7 @@
       parallax={{ amplitude: 10, rotation: -5, angle: 10 }}
       class="absolute z-2 -top-20 -right-12 md:right-0 lg:right-12"
     />
-    <Sticker
+    <!-- <Sticker
       title="Sous Video"
       sub="Just takes a while to prepare, that’s all."
       parallax={{ amplitude: 10, rotation: 5, angle: 15 }}
@@ -148,6 +131,6 @@
       sub="Despite Spenglers advice, we’re venturing ahead."
       parallax={{ amplitude: 10, rotation: -5, angle: -5 }}
       class="absolute z-2 -bottom-12 left-1/2 -translate-x-1/2"
-    />
+    /> -->
   </section>
 </section>

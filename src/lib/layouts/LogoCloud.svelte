@@ -8,7 +8,6 @@
   import LogoNVIDIA from '$lib/assets/logos/nvidia.webp';
   import LogoWaze from '$lib/assets/logos/waze.webp';
   import ProfileNicolas from '$lib/assets/profiles/nicolas.webp';
-  import ProfileReijo from '$lib/assets/profiles/reijo.webp';
   import ProfileRoman from '$lib/assets/profiles/roman.webp';
   import animate from '$lib/utils/animate.action.js';
 
@@ -23,7 +22,6 @@
 
   const members = [
     { name: 'Roman', src: ProfileRoman },
-    { name: 'Reijo', src: ProfileReijo },
     { name: 'Nicolas', src: ProfileNicolas },
   ];
   
@@ -50,7 +48,7 @@
       class="mt-4 md:mt-12 lg:mt-20 max-w-4xl md:text-xl text-gray-600 animate-fade-up pause"
     >
       Yours, signed
-      <br />Roman, Reijo and Nicolas
+      <br />Roman and Nicolas
     </p>
     <div class="mt-4 md:mt-6 flex items-center gap-4">
       {#each members as item, i}
