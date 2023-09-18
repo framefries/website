@@ -2,8 +2,6 @@
   import cx from 'clsx';
 
   import LogoAsus from '$lib/assets/logos/asus.webp';
-  import LogoEA from '$lib/assets/logos/ea.webp';
-  import LogoIntel from '$lib/assets/logos/intel.webp';
   import LogoNI from '$lib/assets/logos/native-instruments.webp';
   import LogoNVIDIA from '$lib/assets/logos/nvidia.webp';
   import LogoWaze from '$lib/assets/logos/waze.webp';
