@@ -12,12 +12,10 @@
   import animate from '$lib/utils/animate.action.js';
 
   const logos = [
-    { name: 'Electronic Arts', src: LogoEA, height: 68 },
     { name: 'Native Instruments', src: LogoNI, height: 26 },
     { name: 'Waze', src: LogoWaze, height: 34 },
     { name: 'NVIDIA', src: LogoNVIDIA, height: 57 },
     { name: 'Asus', src: LogoAsus, height: 28 },
-    { name: 'Intel', src: LogoIntel, height: 37 },
   ];
 
   const members = [
@@ -69,7 +67,7 @@
   </div>
   <aside
     bind:this={logosContainer}
-    class="lg:basis-1/2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-1 rounded-md overflow-hidden"
+    class="lg:basis-1/2 grid grid-cols-2 gap-1 rounded-md overflow-hidden"
   >
     {#each logos as item, i}
       <figure
