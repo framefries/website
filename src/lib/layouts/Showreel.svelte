@@ -18,6 +18,7 @@
   import Roman07 from '$lib/assets/showreel/roman-07.webp';
   import Roman08 from '$lib/assets/showreel/roman-08.webp';
   import Roman09 from '$lib/assets/showreel/roman-09.webp';
+  import DemoreelVideo from '$lib/assets/demoreel.mp4';
 
   const designers = [
     {
@@ -77,8 +78,13 @@
       />
     </div>
     <div class="basis-1/2 p-4 sm:rounded-xl bg-cream">
-      <div class="aspect-video lg:aspect-[9/10] bg-gray-200">
-      </div>
+      <!-- svelte-ignore a11y-media-has-caption -->
+      <video width="720" height="720" controls class="relative aspect-video lg:aspect-square bg-black">
+        <source src={DemoreelVideo} type=video/mp4 />
+        <p class="p-4 flex items-center justify-center text-white">
+          Your browser doesn't support HTML video. Here is a <a href={DemoreelVideo}>link to the video</a> instead.
+        </p>
+      </video>
     </div>
   </section>
 
