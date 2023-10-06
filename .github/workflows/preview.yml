@@ -1,0 +1,29 @@
+name: Deploy preview
+
+on: pull_request
+
+jobs:
+  build:
+    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+      - run: npm ci --ignore-scripts
+      - run: npm run build
+        env:
+          NODE_ENV: production
+          VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
+          VITE_CONTACT_EMAIL: ${{ vars.VITE_CONTACT_EMAIL }}
+          VITE_FORM_URL: ${{ vars.VITE_FORM_URL }}
+          VITE_CTA_URL: ${{ vars.VITE_CTA_URL }}
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_FRAME_FRIES }}"
+          expires: 15d
+          projectId: frame-fries

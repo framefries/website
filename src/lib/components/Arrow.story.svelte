@@ -4,14 +4,14 @@
   export let Hst;
   
   let color = '#ff3c3c';
-  let long = false;
   let fontSize = 1;
+  let long = false;
 </script>
 
-<Hst.Story title="Arrow">
-  <Hst.Variant title="current font size">
+<Hst.Story title="Icons/Arrow">
+  <Hst.Variant title="font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Arrow long={long} />
+      <Arrow class="h-current" />
     </div>
 
     <svelte:fragment slot="controls">
@@ -32,13 +32,10 @@
       />
     </svelte:fragment>
   </Hst.Variant>
+
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
-      <Arrow
-        long={long}
-        size="manual"
-        class="h-3.5"
-      />
+      <Arrow {long} class="h-12" />
     </div>
 
     <svelte:fragment slot="controls">

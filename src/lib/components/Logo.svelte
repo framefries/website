@@ -1,19 +1,12 @@
 <script>
   import cx from 'clsx';
-  
-  export let size;
 </script>
 
 <svg
   aria-label="Frame Fries logo"
   viewBox="0 0 107 72"
   class={cx(
-    'inline-flex w-auto fill-current select-none',
-    {
-      'h-[1em]': size === 'current',
-      'h-[72px]': size === 'original',
-      'h-full': size === 'fit',
-    },
+    'shrink-0 inline-flex w-auto fill-current select-none',
     $$props.class,
   )}
 >

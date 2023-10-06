@@ -1,18 +1,14 @@
 <script>
   import cx from 'clsx';
   
-  export let size;
-  export let long;
+  export let long = false;
 </script>
 
 <svg
   viewBox={long ? "0 0 41 16" : "0 0 16 16"}
   stroke-linecap="round"
   class={cx(
-    'inline-flex w-auto stroke-current select-none',
-    {
-      'h-[1em]': size !== 'manual',
-    },
+    'shrink-0 inline-flex w-auto stroke-current fill-none select-none',
     $$props.class,
   )}
 >

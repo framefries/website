@@ -5,13 +5,12 @@
   
   let color = '#ff3c3c';
   let fontSize = 3;
-  let height = 96;
 </script>
 
-<Hst.Story title="Logo">
-  <Hst.Variant title="current font size">
+<Hst.Story title="Components/Logo">
+  <Hst.Variant title="font size">
     <div style={`color: ${color}; font-size: ${fontSize}rem;`}>
-      <Logo size="current" />
+      <Logo class="h-current" />
     </div>
 
     <svelte:fragment slot="controls">
@@ -28,40 +27,10 @@
       />
     </svelte:fragment>
   </Hst.Variant>
-  <Hst.Variant title="original">
-    <div style={`color: ${color};`}>
-      <Logo size="original" />
-    </div>
 
-    <svelte:fragment slot="controls">
-      <Hst.ColorSelect
-        bind:value={color}
-        title="Color"
-      />
-    </svelte:fragment>
-  </Hst.Variant>
-  <Hst.Variant title="fit">
-    <div style={`color: ${color}; height: ${height}px;`}>
-      <Logo size="fit" />
-    </div>
-
-    <svelte:fragment slot="controls">
-      <Hst.ColorSelect
-        bind:value={color}
-        title="Color"
-      />
-      <Hst.Slider
-        bind:value={height}
-        title="Height (px)"
-        step="16"
-        min="16"
-        max="256"
-      />
-    </svelte:fragment>
-  </Hst.Variant>
   <Hst.Variant title="manual">
     <div style={`color: ${color};`}>
-      <Logo class="h-48" />
+      <Logo class="h-[72px]" />
     </div>
 
     <svelte:fragment slot="controls">

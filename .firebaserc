@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "frame-fries",
+    "staging": "frame-fries"
+  },
+  "targets": {},
+  "etags": {}
+}

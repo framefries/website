@@ -3,29 +3,27 @@
 @tailwind utilities;
 @tailwind variants;
 
-@layer base {
-  @font-face {
-    font-family: "Benfritz";
-    src: url("/fonts/Benfritz.ttf") format("truetype-variations");
-    font-weight: 100 300;
-    font-stretch: 75% 125%;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Instrument Sans";
-    src: url("/fonts/InstrumentSans.ttf") format("truetype-variations");
-    font-weight: 100 1000;
-    font-stretch: 75% 125%;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Instrument Sans";
-    src: url("/fonts/InstrumentSans-Italic.ttf") format("truetype-variations");
-    font-weight: 100 1000;
-    font-stretch: 75% 125%;
-    font-style: italic;
-    font-display: swap;
-  }
+@font-face {
+  font-family: "Benfritz";
+  src: local("Benfritz"), url("/fonts/Benfritz.ttf") format("truetype-variations");
+  font-weight: 100 300;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: local("Instrument Sans"), url("/fonts/InstrumentSans.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: local("Instrument Sans"), url("/fonts/InstrumentSans-Italic.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: italic;
+  font-display: swap;
 }
