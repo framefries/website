@@ -1,7 +1,6 @@
 <script>
   import cx from 'clsx';
 
-  import Timezone from '$lib/components/Timezone.svelte';
   import Logo from '$lib/components/Logo.svelte';
   import Sticker from '$lib/components/Sticker.svelte';
   import Arrow from '$lib/components/Arrow.svelte';
@@ -13,7 +12,6 @@
     { label: 'Work', href: '#showreel' },
     { label: 'Pricing', href: '#pricing' },
     { label: 'Process', href: '#process' },
-    // { label: 'Testimonials', href: '#testimonials' },
   ];
 
   const social = [
@@ -24,24 +22,12 @@
 
 <section class={cx(
   'overflow-hidden',
-  'p-6 md:p-12 lg:p-20 lg:pt-28',
+  'p-6 md:p-12 lg:p-20',
   'md:rounded-md bg-accent',
   'text-cream md:text-xl',
   $$props.class
 )}>
   <div class="max-w-[1032px] mx-auto space-y-12 md:space-y-20">
-    <div class="grid grid-cols-3 gap-6 md:gap-12">
-      {#each ['Europe/Paris', 'Europe/Bratislava', 'Europe/Tallinn'] as tz, i}
-        <div
-          role="presentation"
-          use:animate
-          class="animate-fade-down after-[var(--delay)] pause"
-          style={`--delay:${i*150}ms`}
-        >
-          <Timezone tz={tz} />
-        </div>
-      {/each}
-    </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 items-end">
       <div class="lg:col-span-2 space-y-5">
         <h3
