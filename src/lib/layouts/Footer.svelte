@@ -10,7 +10,7 @@
   const nav = [
     { label: 'Back to top', href: '#home' },
     { label: 'Work', href: '#showreel' },
-    { label: 'Pricing', href: '#pricing' },
+    // { label: 'Pricing', href: '#pricing' },
     { label: 'Process', href: '#process' },
   ];
 

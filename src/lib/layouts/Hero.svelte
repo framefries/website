@@ -19,7 +19,7 @@
   const nav = [
     { label: 'Work', href: '#showreel' },
     { label: 'Process', href: '#process' },
-    { label: 'Pricing', href: '#pricing' },
+    // { label: 'Pricing', href: '#pricing' },
     { label: 'Get in touch', href: import.meta.env.VITE_FORM_URL, target: '_blank', accent: true },
   ];
 </script>
