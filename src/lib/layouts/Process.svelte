@@ -1,5 +1,6 @@
 <script>
   import Step from './Step.svelte';
+  import Arrow from '$lib/components/Arrow.svelte';
   import animate from '$lib/utils/animate.action.js';
 
   const steps = [
@@ -74,4 +75,15 @@
       </div>
     {/each}
   </div>
+
+  <footer class="mt-12 text-center">
+    <a
+      href={import.meta.env.VITE_FORM_URL}
+      target="_blank"
+      class="btn variant-primary !h-12 !text-xl"
+    >
+      Let's get started
+      <Arrow class="h-3.5" />
+    </a>
+  </footer>
 </section>
